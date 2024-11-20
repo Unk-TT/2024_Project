@@ -1,0 +1,35 @@
+﻿  TeskSkir.cpp
+C:\Users\unktt\source\repos\TeskSkir\TeskSkir\resource1.h(5,9): warning C4005: 'IDB_BITMAP1': 매크로 재정의
+  (소스 파일 'TeskSkir.cpp'을(를) 컴파일하는 중)
+      C:\Users\unktt\source\repos\TeskSkir\TeskSkir\resource.h(15,9):
+      'IDB_BITMAP1'의 이전 정의를 참조하십시오.
+  
+C:\Users\unktt\source\repos\TeskSkir\TeskSkir\TeskSkir.cpp(269,17): warning C4244: '=': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\unktt\source\repos\TeskSkir\TeskSkir\TeskSkir.cpp(270,16): warning C4244: '=': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\unktt\source\repos\TeskSkir\TeskSkir\TeskSkir.cpp(524,17): warning C4244: '=': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\unktt\source\repos\TeskSkir\TeskSkir\TeskSkir.cpp(525,16): warning C4244: '=': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\unktt\source\repos\TeskSkir\TeskSkir\TeskSkir.cpp(768,17): warning C4244: '=': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\unktt\source\repos\TeskSkir\TeskSkir\TeskSkir.cpp(769,16): warning C4244: '=': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\unktt\source\repos\TeskSkir\TeskSkir\TeskSkir.cpp(1012,17): warning C4244: '=': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\unktt\source\repos\TeskSkir\TeskSkir\TeskSkir.cpp(1013,16): warning C4244: '=': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\unktt\source\repos\TeskSkir\TeskSkir\TeskSkir.cpp(1145,25): warning C4244: '=': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\unktt\source\repos\TeskSkir\TeskSkir\TeskSkir.cpp(1146,24): warning C4244: '=': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\unktt\source\repos\TeskSkir\TeskSkir\TeskSkir.cpp(1151,25): warning C4244: '=': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\unktt\source\repos\TeskSkir\TeskSkir\TeskSkir.cpp(1152,24): warning C4244: '=': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\unktt\source\repos\TeskSkir\TeskSkir\TeskSkir.cpp(1157,25): warning C4244: '=': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\unktt\source\repos\TeskSkir\TeskSkir\TeskSkir.cpp(1158,24): warning C4244: '=': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\unktt\source\repos\TeskSkir\TeskSkir\TeskSkir.cpp(1163,25): warning C4244: '=': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\unktt\source\repos\TeskSkir\TeskSkir\TeskSkir.cpp(1164,24): warning C4244: '=': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\unktt\source\repos\TeskSkir\TeskSkir\TeskSkir.cpp(1213,39): warning C4244: '+=': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\unktt\source\repos\TeskSkir\TeskSkir\TeskSkir.cpp(1216,42): warning C4244: '+=': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\unktt\source\repos\TeskSkir\TeskSkir\TeskSkir.cpp(1268,25): warning C4244: '=': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\unktt\source\repos\TeskSkir\TeskSkir\TeskSkir.cpp(1269,24): warning C4244: '=': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\unktt\source\repos\TeskSkir\TeskSkir\TeskSkir.cpp(1278,25): warning C4244: '=': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\unktt\source\repos\TeskSkir\TeskSkir\TeskSkir.cpp(1279,24): warning C4244: '=': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\unktt\source\repos\TeskSkir\TeskSkir\TeskSkir.cpp(1288,25): warning C4244: '=': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\unktt\source\repos\TeskSkir\TeskSkir\TeskSkir.cpp(1289,24): warning C4244: '=': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  코드를 생성하고 있습니다.
+  Previous IPDB not found, fall back to full compilation.
+  All 29 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  코드를 생성했습니다.
+  TeskSkir.vcxproj -> C:\Users\unktt\source\repos\TeskSkir\Release\TeskSkir.exe

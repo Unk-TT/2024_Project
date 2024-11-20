@@ -1,0 +1,767 @@
+﻿// TeskSkir.cpp : 애플리케이션에 대한 진입점을 정의합니다.
+//
+
+#pragma comment(lib, "gdi32.lib")
+#pragma comment(lib, "Msimg32.lib")
+#include "windows.h"
+#include "framework.h"
+#include "TaskSkir.h"
+#include "math.h"
+#include <mmsystem.h>
+#include "resource1.h"
+#include "All_Block.h" // 모든 블럭 헤더
+#pragma comment(lib, "winmm.lib")
+#define MAX_LOADSTRING 100
+
+// 전역 변수:
+HINSTANCE hInst;                                // 현재 인스턴스입니다.
+WCHAR szTitle[MAX_LOADSTRING];                  // 제목 표시줄 텍스트입니다.
+WCHAR szWindowClass[MAX_LOADSTRING];            // 기본 창 클래스 이름입니다.
+
+// 이 코드 모듈에 포함된 함수의 선언을 전달합니다:
+ATOM                MyRegisterClass(HINSTANCE hInstance);
+BOOL                InitInstance(HINSTANCE, int);
+LRESULT CALLBACK    WndProc(HWND, UINT, WPARAM, LPARAM);
+INT_PTR CALLBACK    About(HWND, UINT, WPARAM, LPARAM);
+
+int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
+    _In_opt_ HINSTANCE hPrevInstance,
+    _In_ LPWSTR    lpCmdLine,
+    _In_ int       nCmdShow)
+{
+    UNREFERENCED_PARAMETER(hPrevInstance);
+    UNREFERENCED_PARAMETER(lpCmdLine);
+
+    // TODO: 여기에 코드를 입력합니다.
+
+    // 전역 문자열을 초기화합니다.
+    LoadStringW(hInstance, IDS_APP_TITLE, szTitle, MAX_LOADSTRING);
+    LoadStringW(hInstance, IDC_TESKSKIR, szWindowClass, MAX_LOADSTRING);
+    MyRegisterClass(hInstance);
+
+    // 애플리케이션 초기화를 수행합니다:
+    if (!InitInstance(hInstance, nCmdShow))
+    {
+        return FALSE;
+    }
+
+    HACCEL hAccelTable = LoadAccelerators(hInstance, MAKEINTRESOURCE(IDC_TESKSKIR));
+
+    MSG msg;
+    // 기본 메시지 루프입니다:
+    while (GetMessage(&msg, nullptr, 0, 0))
+    {
+        if (!TranslateAccelerator(msg.hwnd, hAccelTable, &msg))
+        {
+            TranslateMessage(&msg);
+            DispatchMessage(&msg);
+        }
+    }
+
+    return (int)msg.wParam;
+}
+
+
+
+//
+//  함수: MyRegisterClass()
+//
+//  용도: 창 클래스를 등록합니다.
+//
+ATOM MyRegisterClass(HINSTANCE hInstance)
+{
+    WNDCLASSEXW wcex;
+
+    wcex.cbSize = sizeof(WNDCLASSEX);
+
+    wcex.style = CS_HREDRAW | CS_VREDRAW;
+    wcex.lpfnWndProc = WndProc;
+    wcex.cbClsExtra = 0;
+    wcex.cbWndExtra = 0;
+    wcex.hInstance = hInstance;
+    wcex.hIcon = LoadIcon(hInstance, MAKEINTRESOURCE(IDI_TESKSKIR));
+    wcex.hCursor = LoadCursor(nullptr, IDC_ARROW);
+    wcex.hbrBackground = (HBRUSH)(COLOR_WINDOW + 1);
+    wcex.lpszMenuName = MAKEINTRESOURCEW(IDC_TESKSKIR);
+    wcex.lpszClassName = szWindowClass;
+    wcex.hIconSm = LoadIcon(wcex.hInstance, MAKEINTRESOURCE(IDI_SMALL));
+
+    return RegisterClassExW(&wcex);
+}
+
+//
+//   함수: InitInstance(HINSTANCE, int)
+//
+//   용도: 인스턴스 핸들을 저장하고 주 창을 만듭니다.
+//
+//   주석:
+//
+//        이 함수를 통해 인스턴스 핸들을 전역 변수에 저장하고
+//        주 프로그램 창을 만든 다음 표시합니다.
+//
+BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
+{
+    hInst = hInstance; // 인스턴스 핸들을 전역 변수에 저장합니다.
+
+    HWND hWnd = CreateWindowW(szWindowClass, szTitle, WS_OVERLAPPEDWINDOW,
+        CW_USEDEFAULT, 0, CW_USEDEFAULT, 0, nullptr, nullptr, hInstance, nullptr);
+
+    if (!hWnd)
+    {
+        return FALSE;
+    }
+
+    ShowWindow(hWnd, nCmdShow);
+    UpdateWindow(hWnd);
+
+    return TRUE;
+}
+
+const int Dead = YPOS(20);
+RECT ball; // 내가 움직일 공의 구조체
+double Speed1 = 0.0; //자유낙하 공식의 초기 속도 (top)
+double Speed2 = 0.0; //자유낙하 공식의 초기 속도 (bottom)
+bool K_Left = false;
+bool K_Right = false;
+bool Stop, Stop2 = false; // 자유낙하 멈춰!
+bool Elect = false;
+int Count; //게임 끝내는 걸 확인하는 함수 (별 획득 확인)
+int Stage = 99; //스테이지 확인용
+HBITMAP MyBitmap, OldBitmap;
+HBITMAP hBitmapWall, hBitmapStar, hBitmapJw, hBitmapGwl, hBitmapBb, hBitmapEe, hBitmapMain, hBitmapGwr, hBitmapDart;
+int MBR;
+int x, y;
+bool Moveth = false; //스레드 무브블럭 초기화
+bool Dart = false; //스레드 다트블럭 초기화
+double LeftSpeed, RightSpeed = 0.0;
+int dead = false; // 죽음 판정
+
+bool Side_Ball = false; // 블랙 on
+bool Jump_Ball = false;
+bool SuperJump = false;
+DWORD L_keydt = 0;
+DWORD L_keyut = 0;
+DWORD L_Firstkey = 0;
+bool L_SuperSide = false;
+bool L_keyd = true;
+DWORD R_keydt = 0;
+DWORD R_keyut = 0;
+DWORD R_Firstkey = 0;
+bool R_SuperSide = false;
+bool R_keyd = true;
+double Pspeed = 10.0;
+COLORREF Tr1 = RGB(246, 240, 8);
+
+int h_Width = 60;  // 한 프레임의 가로 크기
+int h_Height = 60; // 한 프레임의 세로 크기
+
+int F_frame = 0;   // 현재 프레임 인덱스
+int T_frame = 4; // 총 프레임 개수
+
+void LoadBit() {
+    hBitmapWall = LoadBitmap(hInst, MAKEINTRESOURCE(IDB_BITMAP1));
+    hBitmapStar = LoadBitmap(hInst, MAKEINTRESOURCE(IDB_BITMAP3));
+    hBitmapJw = LoadBitmap(hInst, MAKEINTRESOURCE(IDB_BITMAP4));
+    hBitmapGwl = LoadBitmap(hInst, MAKEINTRESOURCE(IDB_BITMAP5));
+    hBitmapBb = LoadBitmap(hInst, MAKEINTRESOURCE(IDB_BITMAP7));
+    hBitmapEe = LoadBitmap(hInst, MAKEINTRESOURCE(IDB_BITMAP6));
+    hBitmapMain = LoadBitmap(hInst, MAKEINTRESOURCE(IDB_BITMAP8));
+    hBitmapGwr = LoadBitmap(hInst, MAKEINTRESOURCE(IDB_BITMAP9));
+    hBitmapDart = LoadBitmap(hInst, MAKEINTRESOURCE(IDB_BITMAP10));
+}
+void DelBit() {
+    DeleteObject(hBitmapWall);
+    DeleteObject(hBitmapStar);
+    DeleteObject(hBitmapJw);
+    DeleteObject(hBitmapGwl);
+    DeleteObject(hBitmapBb);
+    DeleteObject(hBitmapEe);
+    DeleteObject(hBitmapMain);
+    DeleteObject(hBitmapGwr);
+    DeleteObject(hBitmapDart);
+}
+
+/*ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ이미지 생성ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ*/
+ 
+
+
+
+LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
+{
+    switch (message)
+    {
+    case WM_CREATE:
+    {
+        LoadBit();
+        if (Stage == 0) {
+            ball.left = XPOS(14.33);
+            ball.top = YPOS(9.33);
+            ball.right = ball.left + 20;
+            ball.bottom = ball.top + 20;
+        }
+        else if (Stage == 1) {
+            ball.left = XPOS(11.33);
+            ball.top = YPOS(11.33);
+            ball.right = ball.left + 20;
+            ball.bottom = ball.top + 20;
+        }
+        else if (Stage == 2) {
+            ball.left = XPOS(9.33);
+            ball.top = YPOS(4.33);
+            ball.right = ball.left + 20;
+            ball.bottom = ball.top + 20;
+        }
+        else if (Stage == 3) {
+            ball.left = XPOS(9.33);
+            ball.top = YPOS(0.33);
+            ball.right = ball.left + 20;
+            ball.bottom = ball.top + 20;
+        }
+        else if (Stage == 4) {
+            ball.left = XPOS(0.33);
+            ball.top = YPOS(1.33);
+            ball.right = ball.left + 20;
+            ball.bottom = ball.top + 20;
+        }
+        else if (Stage == 5) {
+            ball.left = XPOS(4.33);
+            ball.top = YPOS(1.33);
+            ball.right = ball.left + 20;
+            ball.bottom = ball.top + 20;
+        }
+        else if (Stage == 12) {
+            ball.left = XPOS(13.33);
+            ball.top = YPOS(13.33);
+            ball.right = ball.left + 20;
+            ball.bottom = ball.top + 20;
+        }
+        SetTimer(hWnd, 1, 1, NULL);
+        SetTimer(hWnd, 2, 100, NULL);
+    }
+    break;
+    case WM_LBUTTONDOWN:
+    {
+        x = LOWORD(lParam);
+        y = HIWORD(lParam);
+    }
+    break;
+    case WM_KEYDOWN:
+    {
+        switch (wParam)
+        {
+        case VK_LEFT:
+            if (!K_Left) { // 키가 처음 눌린 경우에만
+                L_keydt = timeGetTime(); // 눌렀을 때 시간 저장
+            }
+            K_Left = true;
+            if (Side_Ball) {
+                if (L_keydt - L_keyut <= 220 && L_Firstkey <= 300) {
+                    L_SuperSide = true;
+                    L_keyut = 0; // SuperSide가 작동이 안되게
+                }
+            }
+            if (Jump_Ball) {
+                if (L_keydt - L_keyut <= 220 && L_Firstkey <= 300) {
+                    SuperJump = true;
+                    L_keyut = 0; // SuperSide가 작동이 안되게
+                }
+            }
+            break;
+        case VK_RIGHT:
+        {
+            if (!K_Right) { // 키가 처음 눌린 경우에만
+                R_keydt = timeGetTime(); // 눌렀을 때 시간 저장
+            }
+            K_Right = true;
+            if (Side_Ball) {
+                if (R_keydt - R_keyut <= 220 && R_Firstkey <= 150) {
+                    R_SuperSide = true;
+                    R_keyut = 0; // SuperSide가 작동이 안되게
+                }
+            }
+            if (Jump_Ball) {
+                if (R_keydt - R_keyut <= 220 && R_Firstkey <= 150) {
+                    SuperJump = true;
+                    R_keyut = 0; // SuperSide가 작동이 안되게
+                }
+            }
+        }
+        break;
+        case VK_UP:
+        {
+            Side_Ball = true; // 테스트용
+            //Stage = 99;
+        }
+        break;
+        case VK_DOWN:
+        {
+            Jump_Ball = true;
+        }
+        break;
+        }
+        break;
+    }
+    case WM_KEYUP:
+    {
+        switch (wParam)
+        {
+        case VK_LEFT:
+            K_Left = false;
+            L_keyut = timeGetTime(); // 땠을 때 시간 저장
+            L_Firstkey = L_keyut - L_keydt; //눌렀을때의 총 시간 = 땐시간 - 누른시간
+            break;
+        case VK_RIGHT:
+            K_Right = false;
+            R_keyut = timeGetTime(); // 땠을 때 시간 저장
+            R_Firstkey = R_keyut - R_keydt; //눌렀을때의 총 시간 = 땐시간 - 누른시간
+            break;
+        }
+        break;
+    }
+    case WM_TIMER:
+    {
+        if (wParam == 2) {
+            F_frame = (F_frame + 1) % T_frame;
+        }
+        //왼쪽 방향키
+        if (K_Left)
+        {
+            if (L_SuperSide) {
+                ball.left -= LeftSpeed + Pspeed;
+                ball.right -= LeftSpeed + Pspeed;
+            }
+            else if (SuperJump) {
+                Jump_Ball = false;
+                SuperJump = false;
+                Speed1 = -60;
+                Speed2 = -60;
+            }
+            else { //천천히 속도 증가
+                ball.left -= LeftSpeed;
+                ball.right -= LeftSpeed;
+
+                if (LeftSpeed < 3.0) {
+                    LeftSpeed += 0.3;
+                }
+                else {
+                    LeftSpeed = 3.0;
+                }
+            }
+        }
+        else { //천천히 속도 감소
+            ball.left -= LeftSpeed;
+            ball.right -= LeftSpeed;
+
+            if (LeftSpeed > 0.0) {
+                LeftSpeed -= 0.2;
+            }
+            else {
+                LeftSpeed = 0.0;
+            }
+        }
+        //오른쪽 방향키
+        if (K_Right)
+        {
+            if (R_SuperSide) {
+                ball.left += RightSpeed + Pspeed;
+                ball.right += RightSpeed + Pspeed;
+            }
+            else if (SuperJump) {
+                Jump_Ball = false;
+                SuperJump = false;
+                Speed1 = -60;
+                Speed2 = -60;
+            }
+            else { //천천히 속도 증가
+                ball.left += RightSpeed;
+                ball.right += RightSpeed;
+
+                if (RightSpeed < 3.0) {
+                    RightSpeed += 0.3;
+                }
+                else {
+                    RightSpeed = 3.0;
+                }
+            }
+        }
+        else { //천천히 속도 감소
+            ball.left += RightSpeed;
+            ball.right += RightSpeed;
+
+            if (RightSpeed > 0.0) {
+                RightSpeed -= 0.2;
+            }
+            else {
+                RightSpeed = 0.0;
+            }
+        }
+        //속도증가 아이템 사용 시 속도 시간 제한 
+        if (R_SuperSide) {
+            Pspeed -= 0.3;
+            if (Pspeed <= 0.0) {
+                Side_Ball = false;
+                L_SuperSide = false;
+                R_SuperSide = false;
+                Pspeed = 10.0;
+            }
+        }
+        else if (L_SuperSide) {
+            Pspeed -= 0.3;
+            if (Pspeed <= 0.0) {
+                Side_Ball = false;
+                L_SuperSide = false;
+                R_SuperSide = false;
+                Pspeed = 10.0;
+            }
+        }
+
+        //전기블럭 닿으면?
+        if (Elect) { //찌릿찌릿 on
+            PlaySound(TEXT("DeadS.wav"), NULL, SND_FILENAME | SND_ASYNC);
+            Speed1 = 0;
+            Speed2 = 0;
+            Sleep(400);
+            ReSet(hWnd);
+            Elect = false;
+        }
+        // 떨어졌으면?
+        if (dead) { //죽음 on
+            PlaySound(TEXT("DeadS.wav"), NULL, SND_FILENAME | SND_ASYNC);
+            Speed1 = 0;
+            Speed2 = 0;
+            Sleep(400);
+            ReSet(hWnd);
+            dead = false;
+        }
+        
+        //화살표 블럭 방향키 설정
+        if (!Stop && !Stop2) {
+            ball.top += Speed1 * 0.15 + 0.5 * GRAVITY * pow(0.15, 2); //자유낙하 공식 볼 상단용  값을 수정하면 빨리 떨어짐
+            Speed1 += GRAVITY * 0.15;
+
+            ball.bottom += Speed2 * 0.15 + 0.5 * GRAVITY * pow(0.15, 2); //자유낙하 공식 볼 하단용
+            Speed2 += GRAVITY * 0.15;
+        }
+        else if (Stop) { //땡!
+            ball.left -= 5;
+            ball.right -= 5;
+            if (K_Left || K_Right) {
+                Stop = false;
+                Speed1 = 0;
+                Speed2 = 0;
+            }
+        }
+        else if (Stop2) {
+            ball.left += 5;
+            ball.right += 5;
+            if (K_Left || K_Right) {
+                Stop2 = false;
+                Speed1 = 0;
+                Speed2 = 0;
+            }
+        }
+
+        //스테이지 99가 아니면 블럭 로직 추가
+        if (Stage != 99) {
+            Wall();
+            Star();
+            Jump_Wall();
+            Break_Wall();
+            Ele_Wall();
+            Go_Wall_L();
+            Go_Wall_R();
+            Move();
+            Tele();
+            Side_Item();
+            Jump_Item();
+            Dart_Wall();
+        }
+
+        InvalidateRect(hWnd, NULL, FALSE);
+        
+        //스테이지 클리어 조건
+        if (Count == 8 && Stage == 0)
+        {
+            nb_ReSet(hWnd);
+            Stage += 1;
+
+            ball.left = XPOS(11.33);
+            ball.top = YPOS(11.33);
+            ball.right = ball.left + 20;
+            ball.bottom = ball.top + 20;
+        }
+        else if (Count == 12 && Stage == 1)
+        {
+            nb_ReSet(hWnd);
+            Stage += 1;
+
+            ball.left = XPOS(9.33);
+            ball.top = YPOS(4.33);
+            ball.right = ball.left + 20;
+            ball.bottom = ball.top + 20;
+        }
+        else if (Count == 6 && Stage == 2)
+        {
+            nb_ReSet(hWnd);
+            Stage += 1;
+
+            ball.left = XPOS(9.33);
+            ball.top = YPOS(0.33);
+            ball.right = ball.left + 20;
+            ball.bottom = ball.top + 20;
+        }
+        else if (Count == 12 && Stage == 3)
+        {
+            nb_ReSet(hWnd);
+            Stage += 1;
+
+            ball.left = XPOS(0.33);
+            ball.top = YPOS(1.33);
+            ball.right = ball.left + 20;
+            ball.bottom = ball.top + 20;
+        }
+        else if (Count == 15 && Stage == 4) {
+            nb_ReSet(hWnd);
+            Stage += 1;
+
+            ball.left = XPOS(0.33);
+            ball.top = YPOS(1.33);
+            ball.right = ball.left + 20;
+            ball.bottom = ball.top + 20;
+        }
+        
+        //스테이지 클리어! 나중에 쓰자
+       /* else if (Count == 15 && Stage == 4)
+        {
+            nb_ReSet(hWnd);
+            KillTimer(hWnd, 1);
+            MBR = MessageBox(hWnd, L"스테이지 클리어! 처음부터 다시 하시겠습니까?", L"축하합니다!", MB_YESNO);
+            if (MBR == IDYES) {
+                Stage = 0;
+                Stop = false;
+                Stop2 = false;
+                Speed1 = 0;
+                Speed2 = 0;
+                K_Left = false;
+                K_Right = false;
+
+                SetTimer(hWnd, 1, 1, NULL);
+                ball.left = XPOS(14.33);
+                ball.top = YPOS(9.33);
+                ball.right = ball.left + 20;
+                ball.bottom = ball.top + 20;
+                break;
+            }
+            else {
+                MBR = MessageBox(hWnd, L"메인화면으로 다시 가시겠습니까?", L"축하합니다!", MB_YESNO);
+                if (MBR == IDYES) {
+                    Stop = false;
+                    Stop2 = false;
+                    Speed1 = 0;
+                    Speed2 = 0;
+                    K_Left = false;
+                    K_Right = false;
+                    x = 0;
+                    y = 0;
+                    ReSet(hWnd);
+                    SetTimer(hWnd, 1, 1, NULL);
+                    Stage = 99;
+                    break;
+                }
+                else { PostQuitMessage(0); break; }
+            }
+        }*/
+
+        //사망 판정
+        if (ball.bottom > Dead || ball.left < XPOS(-1)) { //사망 판정
+            if (Stage != 99) {
+                dead = true;
+            }
+        }
+
+        //0~12(1~13)스테이지일때 스레드 만들기
+        if (Stage >= 0 && Stage <= 12) {
+            CreateThread(NULL, 0, move_T, (LPVOID)lParam, 0, NULL);
+            CreateThread(NULL, 0, move_dart, (LPVOID)lParam, 0, NULL);
+        }
+    }
+    break;
+    case WM_COMMAND:
+    {
+        int wmId = LOWORD(wParam);
+        // 메뉴 선택을 구문 분석합니다:
+        switch (wmId)
+        {
+        case IDM_ABOUT:
+            DialogBox(hInst, MAKEINTRESOURCE(IDD_ABOUTBOX), hWnd, About);
+            break;
+        case IDM_EXIT:
+            DestroyWindow(hWnd);
+            break;
+        default:
+            return DefWindowProc(hWnd, message, wParam, lParam);
+        }
+    }
+    break;
+    case WM_PAINT:
+    {
+        if (Side_Ball) {
+            Tr1 = RGB(5, 5, 5);
+            InvalidateRect(hWnd, NULL, FALSE);
+        }
+        else if (Jump_Ball) {
+            Tr1 = RGB(0, 255, 0);
+            InvalidateRect(hWnd, NULL, FALSE);
+        }
+        else {
+            Tr1 = RGB(246, 240, 8);
+            InvalidateRect(hWnd, NULL, FALSE);
+        }
+
+        PAINTSTRUCT ps;
+        HDC hdc, MemDC, MemDCw;
+        HBITMAP BackBit, oldBackBit;
+        RECT bufferRT;
+        HBRUSH myBrush, osBrush;
+
+        hdc = BeginPaint(hWnd, &ps);
+        GetClientRect(hWnd, &bufferRT);
+
+        MemDC = CreateCompatibleDC(hdc); // 메모리 DC 생성
+        MemDCw = CreateCompatibleDC(MemDC); //MemDC의 중간단계 HDC
+        BackBit = CreateCompatibleBitmap(hdc, bufferRT.right, bufferRT.bottom); // 윈도우 크기에 맞는 비트맵 생성
+        oldBackBit = (HBITMAP)SelectObject(MemDC, BackBit); // 생성한 비트맵을 메모리 DC에 선택
+        PatBlt(MemDC, 0, 0, bufferRT.right, bufferRT.bottom, WHITENESS); // 메모리 DC를 흰색으로 초기화
+
+        myBrush = CreateSolidBrush(Tr1);
+        osBrush = (HBRUSH)SelectObject(MemDC, myBrush);
+
+        if (Stage == 6) {
+            for (int x = 0; x < X_COUNT; x += 2) { //사각형의 좌측 변 위치 확인용
+                MoveToEx(MemDC, XPOS(x), YPOS(0), NULL);
+                LineTo(MemDC, XPOS(x), YPOS(Y_COUNT - 1));
+            }
+            for (int x = 1; x < X_COUNT; x += 2) { //사각형의 우측 변 위치 확인용
+                MoveToEx(MemDC, RXPOS(x), BYPOS(0), NULL);
+                LineTo(MemDC, RXPOS(x), BYPOS(Y_COUNT - 1));
+            }
+            for (int y = 0; y < Y_COUNT; y += 2) { //사각형의 상단 변 위치 확인용
+                MoveToEx(MemDC, XPOS(0), YPOS(y), NULL);
+                LineTo(MemDC, XPOS(X_COUNT - 1), YPOS(y));
+            }
+            for (int y = 1; y < Y_COUNT; y += 2) { //사각형의 하단 변 위치 확인용
+                MoveToEx(MemDC, RXPOS(0), BYPOS(y), NULL);
+                LineTo(MemDC, RXPOS(X_COUNT - 1), BYPOS(y));
+            }
+        }
+        if (Stage == 99) {
+            MoveToEx(MemDC, x, y, NULL);
+            RECT Mouse{ x, y, x + 1, y + 1 };
+            RECT Mainb = { XPOS(0), YPOS(10.6), RXPOS(8.4), BYPOS(13) };
+            RECT rect;
+            if (IntersectRect(&rect, &Mainb, &Mouse)) {
+                PlaySound(TEXT("B_Bauns.wav"), NULL, SND_FILENAME | SND_ASYNC);
+                ball.left = XPOS(14.33);
+                ball.top = YPOS(8.33);
+                ball.right = ball.left + 20;
+                ball.bottom = ball.top + 20;
+                Speed1 = 0;
+                Speed2 = 0;
+                Stage = 0;
+                x = 0;
+                y = 0;
+            }
+        }
+        //look 블럭
+        if (Stage >= 0 && Stage <= 12) {
+            lookWall(MemDC);
+            lookJump(MemDC);
+            lookStar(MemDC);
+            lookBreak(MemDC);
+            lookEe(MemDC);
+            lookGwL(MemDC);
+            lookGwR(MemDC);
+            lookMove(MemDC);
+            lookTele(MemDC);
+            lookTelew(MemDC);
+            lookSide(MemDC);
+            lookJi(MemDC);
+            //lookDt(MemDC);
+            lookDt_b(MemDC);
+            Ellipse(MemDC, ball.left, ball.top, ball.right, ball.bottom); //볼
+            if (Elect || dead) {
+                FillRect(MemDC, &ball, (HBRUSH)(COLOR_WINDOW + 1));
+            }
+        }
+
+        //블럭 이미지 처리
+        if (Stage >= 0 && Stage <= 12) {
+            Img_Dart(MemDC, MemDCw);
+            Img_Wall(MemDC, MemDCw);
+            Img_Star(MemDC, MemDCw);
+            Img_Jw(MemDC, MemDCw);
+            Img_Bb(MemDC, MemDCw);
+            Img_Ee(MemDC, MemDCw);
+            Img_GwL(MemDC, MemDCw);
+            Img_GwR(MemDC, MemDCw);
+        }
+        
+        if (Stage == 99) {
+            Img_Main(MemDC, MemDCw);
+        }
+        
+
+
+        BitBlt(hdc, 0, 0, bufferRT.right, bufferRT.bottom, MemDC, 0, 0, SRCCOPY); //메모리 DC에 그려진 그림을 실제 화면의 DC로 복사
+
+        SelectObject(MemDCw, OldBitmap);
+        DeleteDC(MemDCw);
+        DeleteObject(MyBitmap);
+        SelectObject(MemDC, oldBackBit); //이전에 선택된 비트맵으로 다시 복원
+        DeleteObject(BackBit); //우리가 사용한 비트맵 객체를 삭제
+        SelectObject(MemDC, osBrush);
+        DeleteObject(myBrush);
+        DeleteDC(MemDC); //자원 해체
+
+        EndPaint(hWnd, &ps);
+        break;
+    }
+    break;
+    case WM_DESTROY:
+        DelBit();
+        PostQuitMessage(0);
+        break;
+    default:
+        return DefWindowProc(hWnd, message, wParam, lParam);
+    }
+    return 0;
+}
+
+// 정보 대화 상자의 메시지 처리기입니다.
+INT_PTR CALLBACK About(HWND hDlg, UINT message, WPARAM wParam, LPARAM lParam)
+{
+    UNREFERENCED_PARAMETER(lParam);
+    switch (message)
+    {
+    case WM_INITDIALOG:
+        return (INT_PTR)TRUE;
+
+    case WM_COMMAND:
+        if (LOWORD(wParam) == IDOK || LOWORD(wParam) == IDCANCEL)
+        {
+            EndDialog(hDlg, LOWORD(wParam));
+            return (INT_PTR)TRUE;
+        }
+        break;
+    }
+    return (INT_PTR)FALSE;
+}
+
+
+/*
+MyBitmap = LoadBitmap(hInst, MAKEINTRESOURCE(IDB_BITMAP1));
+        OldBitmap = (HBITMAP)SelectObject(MemDC, MyBitmap);
+        BitBlt(hdc, 0, 0, 123, 160, MemDC, 0, 0, SRCCOPY);
+        SelectObject(MemDC, OldBitmap); // 메모리 DC에서 원래 비트맵으로 되돌리기
+        DeleteObject(MyBitmap);
+*/
