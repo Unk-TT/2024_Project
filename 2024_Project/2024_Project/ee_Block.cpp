@@ -94,7 +94,15 @@ RECT S9_ee[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
 RECT S10_ee[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
 RECT S11_ee[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
 RECT S12_ee[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
-RECT S13_ee[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
+RECT S13_ee[] = { 
+    {XPOS(11), YPOS(7), RXPOS(12) + 1, BYPOS(8) + 1 },
+    {XPOS(12), YPOS(7), RXPOS(13) + 1, BYPOS(8) + 1 },
+    {XPOS(13), YPOS(7), RXPOS(14) + 1, BYPOS(8) + 1 },
+    {XPOS(14), YPOS(7), RXPOS(15) + 1, BYPOS(8) + 1 },
+    {XPOS(15), YPOS(7), RXPOS(16) + 1, BYPOS(8) + 1 },
+    {XPOS(16), YPOS(7), RXPOS(17) + 1, BYPOS(8) + 1 },
+    {XPOS(17), YPOS(7), RXPOS(18) + 1, BYPOS(8) + 1 },
+};
 
 int Num_S1_Ee = sizeof(S1_ee) / sizeof(S1_ee[0]);
 int Num_S2_Ee = sizeof(S2_ee) / sizeof(S2_ee[0]);

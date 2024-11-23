@@ -199,7 +199,7 @@ DWORD WINAPI move_dart(LPVOID param) {
         }
         tru = true;
         tu, tld, td = false;
-        Sleep(1000);
+        Sleep(100);
         Dart = false;
     }
     return 0;

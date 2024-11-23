@@ -117,6 +117,7 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
     return TRUE;
 }
 
+int Stage = 12; //스테이지 확인용
 const int Dead = YPOS(20);
 RECT ball; // 내가 움직일 공의 구조체
 double Speed1 = 0.0; //자유낙하 공식의 초기 속도 (top)
@@ -126,15 +127,16 @@ bool K_Right = false;
 bool Stop, Stop2 = false; // 자유낙하 멈춰!
 bool Elect = false;
 int Count; //게임 끝내는 걸 확인하는 함수 (별 획득 확인)
-int Stage = 12; //스테이지 확인용
 HBITMAP MyBitmap, OldBitmap;
-HBITMAP hBitmapWall, hBitmapStar, hBitmapJw, hBitmapGwl, hBitmapBb, hBitmapEe, hBitmapMain, hBitmapGwr, hBitmapDart;
+HBITMAP hBitmapWall, hBitmapStar, hBitmapJw, hBitmapGwl, hBitmapBb, hBitmapEe, hBitmapMain, hBitmapGwr, hBitmapDart, hBitmapfs_on, hBitmapfs_off, Selecth, hBitmapthrom, hBitmapbh, hBitmapwh, hBitmapsidei, hBitmapjumpi, hBitmapMv, hBitmapMvs;
 int MBR;
 int x, y;
 bool Moveth = false; //스레드 무브블럭 초기화
 bool Dart = false; //스레드 다트블럭 초기화
 double LeftSpeed, RightSpeed = 0.0;
 int dead = false; // 죽음 판정
+int idkh;
+bool on_off = true;
 
 bool Side_Ball = false; // 블랙 on
 bool Jump_Ball = false;
@@ -151,11 +153,13 @@ bool R_SuperSide = false;
 bool R_keyd = true;
 double Pspeed = 10.0;
 COLORREF Tr1 = RGB(246, 240, 8);
+DWORD L_k;
+DWORD R_k;
 
 int h_Width = 60;  // 한 프레임의 가로 크기
 int h_Height = 60; // 한 프레임의 세로 크기
 
-int F_frame = 0;   // 현재 프레임 인덱스
+int F_frame = 0;   // 현재 프레임
 int T_frame = 4; // 총 프레임 개수
 
 void LoadBit() {
@@ -168,6 +172,15 @@ void LoadBit() {
     hBitmapMain = LoadBitmap(hInst, MAKEINTRESOURCE(IDB_BITMAP8));
     hBitmapGwr = LoadBitmap(hInst, MAKEINTRESOURCE(IDB_BITMAP9));
     hBitmapDart = LoadBitmap(hInst, MAKEINTRESOURCE(IDB_BITMAP10));
+    hBitmapfs_on = LoadBitmap(hInst, MAKEINTRESOURCE(IDB_BITMAP11));
+    hBitmapfs_off = LoadBitmap(hInst, MAKEINTRESOURCE(IDB_BITMAP12));
+    hBitmapthrom = LoadBitmap(hInst, MAKEINTRESOURCE(IDB_BITMAP13));
+    hBitmapbh = LoadBitmap(hInst, MAKEINTRESOURCE(IDB_BITMAP14));
+    hBitmapwh = LoadBitmap(hInst, MAKEINTRESOURCE(IDB_BITMAP15));
+    hBitmapsidei = LoadBitmap(hInst, MAKEINTRESOURCE(IDB_BITMAP16));
+    hBitmapjumpi = LoadBitmap(hInst, MAKEINTRESOURCE(IDB_BITMAP17));
+    hBitmapMv = LoadBitmap(hInst, MAKEINTRESOURCE(IDB_BITMAP18));
+    hBitmapMvs = LoadBitmap(hInst, MAKEINTRESOURCE(IDB_BITMAP2));
 }
 void DelBit() {
     DeleteObject(hBitmapWall);
@@ -179,6 +192,14 @@ void DelBit() {
     DeleteObject(hBitmapMain);
     DeleteObject(hBitmapGwr);
     DeleteObject(hBitmapDart);
+    DeleteObject(hBitmapfs_on);
+    DeleteObject(hBitmapfs_off);
+    DeleteObject(Selecth);
+    DeleteObject(hBitmapthrom);
+    DeleteObject(hBitmapbh);
+    DeleteObject(hBitmapwh);
+    DeleteObject(hBitmapsidei);
+    DeleteObject(hBitmapjumpi);
 }
 
 /*ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ이미지 생성ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ*/
@@ -320,10 +341,23 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
     break;
     case WM_TIMER:
     {
+        //톱니바퀴블럭 이미지 갱신 속도
         if (wParam == 2) {
             F_frame = (F_frame + 1) % T_frame;
         }
-        //왼쪽 방향키
+        //깜빡이블럭 on off 속도 조절 낮으면 빠르게, 높으면 느리게
+        if (idkh < 1000 ) {
+            idkh += 1;
+            if (idkh >= 150 && on_off) {
+                on_off = false;
+                idkh = 0;
+            }
+            if (idkh >= 150 && !on_off) {
+                on_off = true;
+                idkh = 0;
+            }
+        }
+        //왼쪽 방향키 가속도
         if (K_Left)
         {
             if (L_SuperSide) {
@@ -348,7 +382,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
                 }
             }
         }
-        else { //천천히 속도 감소
+        else { //왼쪽 방향키 가속도 천천히 속도 감소
             ball.left -= LeftSpeed;
             ball.right -= LeftSpeed;
 
@@ -359,7 +393,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
                 LeftSpeed = 0.0;
             }
         }
-        //오른쪽 방향키
+        //오른쪽 방향키 가속도
         if (K_Right)
         {
             if (R_SuperSide) {
@@ -384,7 +418,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
                 }
             }
         }
-        else { //천천히 속도 감소
+        else { //오른쪽 방향키 가속도 천천히 속도 감소
             ball.left += RightSpeed;
             ball.right += RightSpeed;
 
@@ -415,7 +449,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
             }
         }
 
-        //전기블럭 닿으면?
+        //전기블럭 닿으면? 사실상 닿으면 죽는 블럭 전부 포함
         if (Elect) { //찌릿찌릿 on
             PlaySound(TEXT("DeadS.wav"), NULL, SND_FILENAME | SND_ASYNC);
             Speed1 = 0;
@@ -434,7 +468,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
             dead = false;
         }
 
-        //화살표 블럭 방향키 설정
+        //화살표 블럭 설정
         if (!Stop && !Stop2) {
             ball.top += Speed1 * 0.15 + 0.5 * GRAVITY * pow(0.15, 2); //자유낙하 공식 볼 상단용  값을 수정하면 빨리 떨어짐
             Speed1 += GRAVITY * 0.15;
@@ -443,21 +477,36 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
             Speed2 += GRAVITY * 0.15;
         }
         else if (Stop) { //땡!
+            L_k = timeGetTime();
+            R_k = timeGetTime();
+            RightSpeed = 0.0;
+            LeftSpeed = 0.0;
             ball.left -= 5;
             ball.right -= 5;
             if (K_Left || K_Right) {
-                Stop = false;
-                Speed1 = 0;
-                Speed2 = 0;
+                //stop 시간 - 눌렀던 키 시간 <= 200 일때만 (움직이는 상태로 화살표 블럭에 닿을 시 바로 떨어지기 방지)
+                if (L_k - L_keydt <= 200 || R_k - R_keydt <= 200) {
+                    Stop = false;
+                    Speed1 = 0;
+                    Speed2 = 0;
+                }
+                
             }
         }
         else if (Stop2) {
+            L_k = timeGetTime();
+            R_k = timeGetTime();
+            RightSpeed = 0.0;
+            LeftSpeed = 0.0;
             ball.left += 5;
             ball.right += 5;
             if (K_Left || K_Right) {
-                Stop2 = false;
-                Speed1 = 0;
-                Speed2 = 0;
+                //stop 시간 - 눌렀던 키 시간 <= 200 일때만 (움직이는 상태로 화살표 블럭에 닿을 시 바로 떨어지기 방지)
+                if (L_k - L_keydt <= 200 || R_k - R_keydt <= 200) {
+                    Stop2 = false;
+                    Speed1 = 0;
+                    Speed2 = 0;
+                }
             }
         }
 
@@ -475,6 +524,8 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
             Side_Item();
             Jump_Item();
             Dart_Wall();
+            Tb_Wall();
+            Tb_Throm();
         }
 
         InvalidateRect(hWnd, NULL, FALSE);
@@ -572,7 +623,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
             }
         }*/
 
-        //사망 판정
+        //사망 판정 dead가 켜지고 코드 한바퀴 돈 후 위쪽 if (dead)
         if (ball.bottom > Dead || ball.left < XPOS(-1)) { //사망 판정
             if (Stage != 99) {
                 dead = true;
@@ -583,6 +634,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
         if (Stage >= 0 && Stage <= 12) {
             CreateThread(NULL, 0, move_T, (LPVOID)lParam, 0, NULL);
             CreateThread(NULL, 0, move_dart, (LPVOID)lParam, 0, NULL);
+            CreateThread(NULL, 0, Flash_th, (LPVOID)lParam, 0, NULL);
         }
     }
     break;
@@ -605,6 +657,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
     break;
     case WM_PAINT:
     {
+        //블럭 색상 만들기
         if (Side_Ball) {
             Tr1 = RGB(5, 5, 5);
             InvalidateRect(hWnd, NULL, FALSE);
@@ -636,6 +689,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
         myBrush = CreateSolidBrush(Tr1);
         osBrush = (HBRUSH)SelectObject(MemDC, myBrush);
 
+        //블럭 바둑판
         if (Stage == 6) {
             for (int x = 0; x < X_COUNT; x += 2) { //사각형의 좌측 변 위치 확인용
                 MoveToEx(MemDC, XPOS(x), YPOS(0), NULL);
@@ -654,6 +708,8 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
                 LineTo(MemDC, RXPOS(X_COUNT - 1), BYPOS(y));
             }
         }
+        
+        //메인화면 그림 그리기
         if (Stage == 99) {
             MoveToEx(MemDC, x, y, NULL);
             RECT Mouse{ x, y, x + 1, y + 1 };
@@ -672,7 +728,8 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
                 y = 0;
             }
         }
-        //look 블럭
+        
+        //look 블럭 위치 확인용 확인할려면 해당 블럭 fillrect 주석처리
         if (Stage >= 0 && Stage <= 12) {
             lookWall(MemDC);
             lookJump(MemDC);
@@ -688,10 +745,10 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
             lookJi(MemDC);
             //lookDt(MemDC);
             lookDt_b(MemDC);
-            Ellipse(MemDC, ball.left, ball.top, ball.right, ball.bottom); //볼
-            if (Elect || dead) {
-                FillRect(MemDC, &ball, (HBRUSH)(COLOR_WINDOW + 1));
-            }
+            lookFlash(MemDC);
+            lookTb(MemDC);
+            lookMove(MemDC);
+            lookMoves(MemDC);
         }
 
         //블럭 이미지 처리
@@ -704,8 +761,25 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
             Img_Ee(MemDC, MemDCw);
             Img_GwL(MemDC, MemDCw);
             Img_GwR(MemDC, MemDCw);
+            Img_Flash(MemDC, MemDCw);
+            Img_Throm(MemDC, MemDCw);
+            Img_Tele(MemDC, MemDCw);
+            Img_Telew(MemDC, MemDCw);
+            Img_Sidei(MemDC, MemDCw);
+            Img_Jumpi(MemDC, MemDCw);
+            Img_Move(MemDC, MemDCw);
+            Img_Moves(MemDC, MemDCw);
         }
-
+        
+        //볼 죽으면 윈도우색상으로
+        if (Stage >= 0 && Stage <= 12) {
+            Ellipse(MemDC, ball.left, ball.top, ball.right, ball.bottom); //볼
+            if (Elect || dead) {
+                FillRect(MemDC, &ball, (HBRUSH)(COLOR_WINDOW +1));
+            }
+        }
+        
+        //메인화면 이미지
         if (Stage == 99) {
             Img_Main(MemDC, MemDCw);
         }

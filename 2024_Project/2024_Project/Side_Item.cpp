@@ -38,7 +38,7 @@ extern int Stage;
 extern int Count;
 extern bool Side_Ball;
 extern bool Jump_Ball;
-extern HBITMAP hBitmapSiar;
+extern HBITMAP hBitmapsidei;
 
 int Stage_Si[] = {
     Num_S1_Si,
@@ -100,17 +100,17 @@ void lookSide(HDC MemDC) {
     for (int i = 0; i < Stage_Si[Stage]; i++) {
         RECT& rect = Stage_si[Stage][i];
         Ellipse(MemDC, rect.left, rect.top, rect.right, rect.bottom);
-        //FillRect(MemDC, &rect, (HBRUSH)(COLOR_WINDOW + 1)); // 벽 선을 윈도우 색상으로 없애기
+        FillRect(MemDC, &rect, (HBRUSH)(COLOR_WINDOW + 1)); // 벽 선을 윈도우 색상으로 없애기
     }
 }
-/*
+
 //스타블럭 비트맵
-void Img_Side(HDC MemDC, HDC MemDCw) {
-    HBITMAP OldBitmap = (HBITMAP)SelectObject(MemDCw, hBitmapSiar);
+void Img_Sidei(HDC MemDC, HDC MemDCw) {
+    HBITMAP OldBitmap = (HBITMAP)SelectObject(MemDCw, hBitmapsidei);
 
         for (int i = 0; i < Stage_Si[Stage]; i++) {
             RECT& rect = Stage_si[Stage][i];
             BitBlt(MemDC, rect.left, rect.top, 123, 160, MemDCw, 0, 0, SRCCOPY);
         }
     SelectObject(MemDCw, OldBitmap);
-}*/
+}

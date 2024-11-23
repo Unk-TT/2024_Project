@@ -29,6 +29,7 @@ RECT S12_jw[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
 RECT S13_jw[] = { 
     {XPOS(-1), YPOS(13), RXPOS(0) + 1, BYPOS(14) + 1},
     {XPOS(22), YPOS(10), RXPOS(23) + 1, BYPOS(11) + 1 },
+    {XPOS(1), YPOS(7), RXPOS(2) + 1, BYPOS(8) + 1 },
 };
 
 int Num_S1_JW = sizeof(S1_jw) / sizeof(S1_jw[0]);

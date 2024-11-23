@@ -106,7 +106,9 @@ RECT S9_gwr[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
 RECT S10_gwr[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
 RECT S11_gwr[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
 RECT S12_gwr[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
-RECT S13_gwr[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
+RECT S13_gwr[] = { 
+    {XPOS(2), YPOS(3), RXPOS(3) + 1, BYPOS(4) + 1 },
+};
 
 int Num_S1_GWr = sizeof(S1_gwr) / sizeof(S1_gwr[0]);
 int Num_S2_GWr = sizeof(S2_gwr) / sizeof(S2_gwr[0]);

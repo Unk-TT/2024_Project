@@ -109,6 +109,9 @@ void Move();
 void Tele();
 void Side_Item();
 void Jump_Item();
+void Dart_Wall();
+void Tb_Wall();
+void Tb_Throm();
 
 void ReSet(HWND hWnd);
 void nb_ReSet(HWND hWnd);
@@ -131,7 +134,10 @@ void lookSide(HDC MemDC);
 void lookJi(HDC MemDC);
 void lookDt_b(HDC MemDC);
 void lookDt(HDC MemDC);
-void Dart_Wall();
+void lookFlash(HDC MemDC);
+void lookTb(HDC MemDC);
+void lookMove(HDC MemDC);
+void lookMoves(HDC MemDC);
 
 void Img_Wall(HDC MemDC, HDC MemDCw);
 void Img_Star(HDC MemDC, HDC MemDCw);
@@ -142,6 +148,15 @@ void Img_GwL(HDC MemDC, HDC MemDCw);
 void Img_GwR(HDC MemDC, HDC MemDCw);
 void Img_Main(HDC MemDC, HDC MemDCw);
 void Img_Dart(HDC MemDC, HDC MemDCw);
+void Img_Flash(HDC MemDC, HDC MemDCw);
+void Img_Tele(HDC MemDC, HDC MemDCw);
+void Img_Telew(HDC MemDC, HDC MemDCw);
+void Img_Sidei(HDC MemDC, HDC MemDCw);
+void Img_Jumpi(HDC MemDC, HDC MemDCw);
+void Img_Throm(HDC MemDC, HDC MemDCw);
+void Img_Move(HDC MemDC, HDC MemDCw);
+void Img_Moves(HDC MemDC, HDC MemDCw);
 
 DWORD WINAPI move_T(LPVOID param);
 DWORD WINAPI move_dart(LPVOID param);
+DWORD WINAPI Flash_th(LPVOID param);

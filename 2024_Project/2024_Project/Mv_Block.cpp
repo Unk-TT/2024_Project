@@ -15,8 +15,8 @@ RECT S10_mv[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
 RECT S11_mv[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
 RECT S12_mv[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
 RECT S13_mv[] = { 
-    {XPOS(3), YPOS(10), RXPOS(4) + 1, BYPOS(11) + 1 },
     {XPOS(4), YPOS(10), RXPOS(5) + 1, BYPOS(11) + 1 },
+    {XPOS(5), YPOS(10), RXPOS(6) + 1, BYPOS(11) + 1 },
 };
     
 int Num_S1_Mv = sizeof(S1_mv) / sizeof(S1_mv[0]);
@@ -81,8 +81,8 @@ RECT S10_mv_St[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
 RECT S11_mv_St[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
 RECT S12_mv_St[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
 RECT S13_mv_St[] = { 
-    {XPOS(3), YPOS(10), RXPOS(4) + 1, BYPOS(11) + 1 },
     {XPOS(4), YPOS(10), RXPOS(5) + 1, BYPOS(11) + 1 },
+    {XPOS(5), YPOS(10), RXPOS(6) + 1, BYPOS(11) + 1 },
 };
 
 int Num_S1_Mv_St = sizeof(S1_mv_St) / sizeof(S1_mv_St[0]);
@@ -104,7 +104,7 @@ extern double Speed1;
 extern double Speed2;
 extern int Stage;
 extern int Count;
-extern HBITMAP hBitmapWall;
+extern HBITMAP hBitmapMv, hBitmapMvs;
 extern bool Stop, Stop2;
 extern HDC MemDC;
 bool turn = true;
@@ -157,8 +157,8 @@ RECT S10_mv_End[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
 RECT S11_mv_End[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
 RECT S12_mv_End[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
 RECT S13_mv_End[] = { 
+    {XPOS(8), YPOS(10), RXPOS(9) + 1, BYPOS(11) + 1 },
     {XPOS(9), YPOS(10), RXPOS(10) + 1, BYPOS(11) + 1 },
-    {XPOS(10), YPOS(10), RXPOS(11) + 1, BYPOS(11) + 1 },
 };
 
 
@@ -221,7 +221,7 @@ DWORD WINAPI move_T(LPVOID param) {
                 Main->left += 2;
                 Main->right += 2;
                 if (Main->left >= EndR.left) {
-                    Sleep(1000);
+                    Sleep(500);
                     Main->left -= 2;
                     Main->right -= 2;
                     turn = false;
@@ -233,7 +233,7 @@ DWORD WINAPI move_T(LPVOID param) {
                 Main->left -= 2;
                 Main->right -= 2;
                 if (Main->left <= StartR.left) {
-                    Sleep(1000);
+                    Sleep(500);
                     turn = true;
                 }
             }
@@ -247,7 +247,7 @@ DWORD WINAPI move_T(LPVOID param) {
             Main->right = StartR.right;
         }
         turn = true;
-        Sleep(1000);
+        Sleep(100);
         Moveth = false;
     }
 
@@ -311,71 +311,97 @@ void lookMove(HDC MemDC) {
     for (int i = 0; i < Stage_Mv[Stage]; i++) { //움직이는 벽
         RECT& rect = Stage_mv[Stage][i];
         Rectangle(MemDC, rect.left, rect.top, rect.right, rect.bottom);
-        //FillRect(MemDC, &rect, (HBRUSH)(COLOR_WINDOW + 1)); // 벽 선을 윈도우 색상으로 없애기
+        FillRect(MemDC, &rect, (HBRUSH)(COLOR_WINDOW + 1)); // 벽 선을 윈도우 색상으로 없애기
     }
 }
 
-//void Img_Wall(HDC MemDC, HDC MemDCw) {
-//    HBITMAP OldBitmap = (HBITMAP)SelectObject(MemDCw, hBitmapWall);
-//
-//    for (int i = 0; i < Stage_Mv[Stage]; i++) {
-//        RECT& rect = Stage_mv[Stage][i];
-//        BitBlt(MemDC, rect.left, rect.top, 123, 160, MemDCw, 0, 0, SRCCOPY);
-//    }
-//    SelectObject(MemDCw, OldBitmap);
-//}
+void Img_Move(HDC MemDC, HDC MemDCw) {
+    HBITMAP OldBitmap = (HBITMAP)SelectObject(MemDCw, hBitmapMv);
 
-/*
-void Move() {
     for (int i = 0; i < Stage_Mv[Stage]; i++) {
-        RECT rect = Stage_mv[Stage][i];
+        RECT& rect = Stage_mv[Stage][i];
+        BitBlt(MemDC, rect.left, rect.top, 123, 160, MemDCw, 0, 0, SRCCOPY);
+    }
+    SelectObject(MemDCw, OldBitmap);
+}
+//무브 스타트의 제일 첫 블럭 -1, 마지막 블럭의 마지막 +1, y는 건들지 말고 x만
+RECT S1_mvs[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
+RECT S2_mvs[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
+RECT S3_mvs[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
+RECT S4_mvs[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
+RECT S5_mvs[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
+RECT S6_mvs[] = { 260, 320, 320 + 1, 380 + 1 };
+RECT S7_mvs[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
+RECT S8_mvs[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
+RECT S9_mvs[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
+RECT S10_mvs[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
+RECT S11_mvs[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
+RECT S12_mvs[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
+RECT S13_mvs[] = {
+    {XPOS(3), YPOS(10), RXPOS(4) + 1, BYPOS(11) + 1 },
+    {XPOS(10), YPOS(10), RXPOS(11) + 1, BYPOS(11) + 1 },
+};
 
-        // 상단 충돌 처리 (공이 사각형의 상단에 맞을 때)
-        if (ball.bottom >= rect.top && ball.top < rect.top &&
-            ball.left + 15 >= rect.left && ball.right - 15 <= rect.right) {
-            ball.bottom = rect.top;
-            ball.top = ball.bottom - 20;
-            PlaySound(TEXT("Bauns.wav"), NULL, SND_FILENAME | SND_ASYNC);
-            Speed1 = -40; // 공이 튀어오르게 -로 설정
-            Speed2 = -40;
-            OutputDebugString(TEXT("Top collision detected\n"));
+int Num_S1_Mvs = sizeof(S1_mvs) / sizeof(S1_mvs[0]);
+int Num_S2_Mvs = sizeof(S2_mvs) / sizeof(S2_mvs[0]);
+int Num_S3_Mvs = sizeof(S3_mvs) / sizeof(S3_mvs[0]);
+int Num_S4_Mvs = sizeof(S4_mvs) / sizeof(S4_mvs[0]);
+int Num_S5_Mvs = sizeof(S5_mvs) / sizeof(S5_mvs[0]);
+int Num_S6_Mvs = sizeof(S6_mvs) / sizeof(S6_mvs[0]);
+int Num_S7_Mvs = sizeof(S7_mvs) / sizeof(S7_mvs[0]);
+int Num_S8_Mvs = sizeof(S8_mvs) / sizeof(S8_mvs[0]);
+int Num_S9_Mvs = sizeof(S9_mvs) / sizeof(S9_mvs[0]);
+int Num_S10_Mvs = sizeof(S10_mvs) / sizeof(S10_mvs[0]);
+int Num_S11_Mvs = sizeof(S11_mvs) / sizeof(S11_mvs[0]);
+int Num_S12_Mvs = sizeof(S12_mvs) / sizeof(S12_mvs[0]);
+int Num_S13_Mvs = sizeof(S13_mvs) / sizeof(S13_mvs[0]);
 
-        }
-        // 사각형의 좌측과 충돌하는 경우
-        if (ball.right >= rect.left && ball.left < rect.left &&
-            ball.bottom > rect.top + 10 && ball.top < rect.bottom - 10) {
-            ball.right = rect.left;
-            ball.left = ball.right - 20;
-            PlaySound(TEXT("Bauns.wav"), NULL, SND_FILENAME | SND_ASYNC);
-            Stop, Stop2 = false;
-            for (int j = 0; j < 15; j++) { // 충돌 시 좌측벽에 떨어지기
-                ball.left -= 1;
-                ball.right -= 1;
-            }
-        }
-        // 하단 충돌 처리 (공이 사각형의 하단에 맞을 때)
-        if (ball.top <= rect.bottom && ball.bottom >= rect.bottom &&
-            ball.left + 15 >= rect.left && ball.right - 15 <= rect.right) {
-            ball.top = rect.bottom;
-            ball.bottom = ball.top + 20;
-            PlaySound(TEXT("Bauns.wav"), NULL, SND_FILENAME | SND_ASYNC);
-            ball.top += 1;
-            ball.bottom += 1;
-            Speed1 = 0; // 공이 바로 떨어지게
-            Speed2 = 0;
-        }
-        // 사각형의 우측과 충돌하는 경우
-        if (ball.left <= rect.right && ball.right >= rect.right &&
-            ball.bottom > rect.top + 10 && ball.top < rect.bottom - 10) {
-            ball.left = rect.right;
-            ball.right = ball.left + 20;
-            PlaySound(TEXT("Bauns.wav"), NULL, SND_FILENAME | SND_ASYNC);
-            Stop, Stop2 = false;
-            for (int j = 0; j < 15; j++) { // 충돌 시 좌측벽에 떨어지기
-                ball.left += 1;
-                ball.right += 1;
-            }
-        }
+int Stage_Mvs[] = {
+    Num_S1_Mvs,
+    Num_S2_Mvs,
+    Num_S3_Mvs,
+    Num_S4_Mvs,
+    Num_S5_Mvs,
+    Num_S6_Mvs,
+    Num_S7_Mvs,
+    Num_S8_Mvs,
+    Num_S9_Mvs,
+    Num_S10_Mvs,
+    Num_S11_Mvs,
+    Num_S12_Mvs,
+    Num_S13_Mvs,
+};
+
+
+RECT* Stage_mvs[] = {
+    S1_mvs,
+    S2_mvs,
+    S3_mvs,
+    S4_mvs,
+    S5_mvs,
+    S6_mvs,
+    S7_mvs,
+    S8_mvs,
+    S9_mvs,
+    S10_mvs,
+    S11_mvs,
+    S12_mvs,
+    S13_mvs,
+};
+
+void lookMoves(HDC MemDC) {
+    for (int i = 0; i < Stage_Mvs[Stage]; i++) { //움직이는 벽
+        RECT& rect = Stage_mvs[Stage][i];
+        Rectangle(MemDC, rect.left, rect.top, rect.right, rect.bottom);
+        FillRect(MemDC, &rect, (HBRUSH)(COLOR_WINDOW + 1)); // 벽 선을 윈도우 색상으로 없애기
     }
 }
-*/
+void Img_Moves(HDC MemDC, HDC MemDCw) {
+    HBITMAP OldBitmap = (HBITMAP)SelectObject(MemDCw, hBitmapMvs);
+
+    for (int i = 0; i < Stage_Mvs[Stage]; i++) {
+        RECT& rect = Stage_mvs[Stage][i];
+        BitBlt(MemDC, rect.left, rect.top, 123, 160, MemDCw, 0, 0, SRCCOPY);
+    }
+    SelectObject(MemDCw, OldBitmap);
+}

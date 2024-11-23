@@ -136,9 +136,11 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="2024_Project.cpp" />
+    <ClCompile Include="thorm_block.cpp" />
     <ClCompile Include="bb_Block.cpp" />
     <ClCompile Include="dart_Block.cpp" />
     <ClCompile Include="ee_Block.cpp" />
+    <ClCompile Include="flash_black.cpp" />
     <ClCompile Include="gw_Block.cpp" />
     <ClCompile Include="Jump_Item.cpp" />
     <ClCompile Include="jw_Block.cpp" />
@@ -156,7 +158,27 @@
   </ItemGroup>
   <ItemGroup>
     <Image Include="2024_Project.ico" />
+    <Image Include="bitmap18.bmp" />
+    <Image Include="bitmap2.bmp" />
+    <Image Include="blackhole.bmp" />
+    <Image Include="BWall.bmp" />
+    <Image Include="Dart.bmp" />
+    <Image Include="Ele.bmp" />
+    <Image Include="flash_off.bmp" />
+    <Image Include="flash_on.bmp" />
+    <Image Include="jump_item.bmp" />
+    <Image Include="Jump_Wall.bmp" />
+    <Image Include="Left_wall.bmp" />
+    <Image Include="Main.bmp" />
+    <Image Include="Move_side.bmp" />
+    <Image Include="Move_th.bmp" />
+    <Image Include="Right_wall.bmp" />
+    <Image Include="side_item.bmp" />
     <Image Include="small.ico" />
+    <Image Include="Star.bmp" />
+    <Image Include="Throm_block.bmp" />
+    <Image Include="Wall.bmp" />
+    <Image Include="whitehole.bmp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

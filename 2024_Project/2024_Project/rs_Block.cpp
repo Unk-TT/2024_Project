@@ -148,12 +148,13 @@ RECT S13_rs[] = {
     {XPOS(14), YPOS(10), RXPOS(15) + 1, BYPOS(11) + 1 }, //
     {XPOS(14), YPOS(9), RXPOS(15) + 1, BYPOS(10) + 1 },
     {XPOS(14), YPOS(8), RXPOS(15) + 1, BYPOS(9) + 1 },
-    {XPOS(14), YPOS(7), RXPOS(15) + 1, BYPOS(8) + 1 },
     {XPOS(15), YPOS(10), RXPOS(16) + 1, BYPOS(11) + 1 },
     {XPOS(16), YPOS(10), RXPOS(17) + 1, BYPOS(11) + 1 },
     {XPOS(17), YPOS(10), RXPOS(18) + 1, BYPOS(11) + 1 },
     {XPOS(21), YPOS(10), RXPOS(22) + 1, BYPOS(11) + 1 },
     {XPOS(21), YPOS(6), RXPOS(22) + 1, BYPOS(7) + 1 },
+    {XPOS(2), YPOS(7), RXPOS(3) + 1, BYPOS(8) + 1 },
+    {XPOS(15), YPOS(4), RXPOS(16) + 1, BYPOS(5) + 1 },
 };
 
 

@@ -1,21 +1,17 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\unktt\\source\\repos\\2024_Project\\",
+  "WorkspaceRootPath": "D:\\git\\2024_Project\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D33A1CCA-D3A0-4BFA-8E0F-CFC82071EC55}|2024_Project\\2024_Project.vcxproj|C:\\Users\\unktt\\source\\repos\\2024_Project\\2024_Project\\2024_Project.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{D33A1CCA-D3A0-4BFA-8E0F-CFC82071EC55}|2024_Project\\2024_Project.vcxproj|D:\\git\\2024_Project\\2024_Project\\2024_Project.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{D33A1CCA-D3A0-4BFA-8E0F-CFC82071EC55}|2024_Project\\2024_Project.vcxproj|solutionrelative:2024_Project\\2024_Project.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D33A1CCA-D3A0-4BFA-8E0F-CFC82071EC55}|2024_Project\\2024_Project.vcxproj|C:\\Users\\unktt\\source\\repos\\2024_Project\\2024_Project\\rs_Block.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{D33A1CCA-D3A0-4BFA-8E0F-CFC82071EC55}|2024_Project\\2024_Project.vcxproj|solutionrelative:2024_Project\\rs_Block.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{D33A1CCA-D3A0-4BFA-8E0F-CFC82071EC55}|2024_Project\\2024_Project.vcxproj|D:\\git\\2024_Project\\2024_Project\\flash_black.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{D33A1CCA-D3A0-4BFA-8E0F-CFC82071EC55}|2024_Project\\2024_Project.vcxproj|solutionrelative:2024_Project\\flash_black.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D33A1CCA-D3A0-4BFA-8E0F-CFC82071EC55}|2024_Project\\2024_Project.vcxproj|C:\\Users\\unktt\\source\\repos\\2024_Project\\2024_Project\\dart_Block.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{D33A1CCA-D3A0-4BFA-8E0F-CFC82071EC55}|2024_Project\\2024_Project.vcxproj|solutionrelative:2024_Project\\dart_Block.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D33A1CCA-D3A0-4BFA-8E0F-CFC82071EC55}|2024_Project\\2024_Project.vcxproj|C:\\Users\\unktt\\source\\repos\\2024_Project\\2024_Project\\gw_Block.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{D33A1CCA-D3A0-4BFA-8E0F-CFC82071EC55}|2024_Project\\2024_Project.vcxproj|D:\\git\\2024_Project\\2024_Project\\gw_Block.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{D33A1CCA-D3A0-4BFA-8E0F-CFC82071EC55}|2024_Project\\2024_Project.vcxproj|solutionrelative:2024_Project\\gw_Block.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
@@ -26,58 +22,46 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "gw_Block.cpp",
-              "DocumentMoniker": "C:\\Users\\unktt\\source\\repos\\2024_Project\\2024_Project\\gw_Block.cpp",
-              "RelativeDocumentMoniker": "2024_Project\\gw_Block.cpp",
-              "ToolTip": "C:\\Users\\unktt\\source\\repos\\2024_Project\\2024_Project\\gw_Block.cpp",
-              "RelativeToolTip": "2024_Project\\gw_Block.cpp",
-              "ViewState": "AgIAABsAAAAAAAAAAAAAACUAAAAaAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "2024_Project.cpp",
+              "DocumentMoniker": "D:\\git\\2024_Project\\2024_Project\\2024_Project.cpp",
+              "RelativeDocumentMoniker": "2024_Project\\2024_Project.cpp",
+              "ToolTip": "D:\\git\\2024_Project\\2024_Project\\2024_Project.cpp",
+              "RelativeToolTip": "2024_Project\\2024_Project.cpp",
+              "ViewState": "AgIAANUAAAAAAAAAAAAAAFMBAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-11-21T03:41:56.612Z",
+              "WhenOpened": "2024-11-21T01:31:34.499Z",
+              "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "rs_Block.cpp",
-              "DocumentMoniker": "C:\\Users\\unktt\\source\\repos\\2024_Project\\2024_Project\\rs_Block.cpp",
-              "RelativeDocumentMoniker": "2024_Project\\rs_Block.cpp",
-              "ToolTip": "C:\\Users\\unktt\\source\\repos\\2024_Project\\2024_Project\\rs_Block.cpp",
-              "RelativeToolTip": "2024_Project\\rs_Block.cpp",
-              "ViewState": "AgIAACQAAAAAAAAAAAAAAK4AAAAAAAAAAAAAAA==",
+              "Title": "flash_black.cpp",
+              "DocumentMoniker": "D:\\git\\2024_Project\\2024_Project\\flash_black.cpp",
+              "RelativeDocumentMoniker": "2024_Project\\flash_black.cpp",
+              "ToolTip": "D:\\git\\2024_Project\\2024_Project\\flash_black.cpp",
+              "RelativeToolTip": "2024_Project\\flash_black.cpp",
+              "ViewState": "AgIAADMAAAAAAAAAAAAAAJYAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-11-21T03:33:55.035Z",
+              "WhenOpened": "2024-11-23T20:12:57.812Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "dart_Block.cpp",
-              "DocumentMoniker": "C:\\Users\\unktt\\source\\repos\\2024_Project\\2024_Project\\dart_Block.cpp",
-              "RelativeDocumentMoniker": "2024_Project\\dart_Block.cpp",
-              "ToolTip": "C:\\Users\\unktt\\source\\repos\\2024_Project\\2024_Project\\dart_Block.cpp",
-              "RelativeToolTip": "2024_Project\\dart_Block.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAvAAAAAAAAAA==",
+              "Title": "gw_Block.cpp",
+              "DocumentMoniker": "D:\\git\\2024_Project\\2024_Project\\gw_Block.cpp",
+              "RelativeDocumentMoniker": "2024_Project\\gw_Block.cpp",
+              "ToolTip": "D:\\git\\2024_Project\\2024_Project\\gw_Block.cpp",
+              "RelativeToolTip": "2024_Project\\gw_Block.cpp",
+              "ViewState": "AgIAAJYAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-11-21T03:33:51.876Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "2024_Project.cpp",
-              "DocumentMoniker": "C:\\Users\\unktt\\source\\repos\\2024_Project\\2024_Project\\2024_Project.cpp",
-              "RelativeDocumentMoniker": "2024_Project\\2024_Project.cpp",
-              "ToolTip": "C:\\Users\\unktt\\source\\repos\\2024_Project\\2024_Project\\2024_Project.cpp",
-              "RelativeToolTip": "2024_Project\\2024_Project.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACgBAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-11-21T01:31:34.499Z",
+              "WhenOpened": "2024-11-23T19:39:45.867Z",
               "EditorCaption": ""
             }
           ]

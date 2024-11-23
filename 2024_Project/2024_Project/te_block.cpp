@@ -38,7 +38,7 @@ extern double Speed1;
 extern double Speed2;
 extern int Stage;
 extern int Count;
-extern HBITMAP hBitmapWall;
+extern HBITMAP hBitmapbh, hBitmapwh;
 extern bool Stop, Stop2;
 
 int Stage_Te[] = {
@@ -153,19 +153,19 @@ void lookTele(HDC MemDC) {
     for (int i = 0; i < Stage_Te[Stage]; i++) { //기본 벽
         RECT& rect = Stage_te[Stage][i];
         Rectangle(MemDC, rect.left, rect.top, rect.right, rect.bottom);
-        //FillRect(MemDC, &rect, (HBRUSH)(COLOR_WINDOW + 1)); // 벽 선을 윈도우 색상으로 없애기
+        FillRect(MemDC, &rect, (HBRUSH)(COLOR_WINDOW + 1)); // 벽 선을 윈도우 색상으로 없애기
     }
 }
 void lookTelew(HDC MemDC) {
     for (int i = 0; i < Stage_Te[Stage]; i++) { //기본 벽
         RECT& rect = Stage_tew[Stage][i];
         Rectangle(MemDC, rect.left, rect.top, rect.right, rect.bottom);
-        //FillRect(MemDC, &rect, (HBRUSH)(COLOR_WINDOW + 1)); // 벽 선을 윈도우 색상으로 없애기
+        FillRect(MemDC, &rect, (HBRUSH)(COLOR_WINDOW + 1)); // 벽 선을 윈도우 색상으로 없애기
     }
 }
-/*
+
 void Img_Tele(HDC MemDC, HDC MemDCw) {
-    HBITMAP OldBitmap = (HBITMAP)SelectObject(MemDCw, hBitmapWall);
+    HBITMAP OldBitmap = (HBITMAP)SelectObject(MemDCw, hBitmapbh);
 
     for (int i = 0; i < Stage_Te[Stage]; i++) {
         RECT& rect = Stage_te[Stage][i];
@@ -174,7 +174,7 @@ void Img_Tele(HDC MemDC, HDC MemDCw) {
     SelectObject(MemDCw, OldBitmap);
 }
 void Img_Telew(HDC MemDC, HDC MemDCw) {
-    HBITMAP OldBitmap = (HBITMAP)SelectObject(MemDCw, hBitmapWall);
+    HBITMAP OldBitmap = (HBITMAP)SelectObject(MemDCw, hBitmapwh);
 
     for (int i = 0; i < Stage_Te[Stage]; i++) {
         RECT& rect = Stage_tew[Stage][i];
@@ -182,4 +182,3 @@ void Img_Telew(HDC MemDC, HDC MemDCw) {
     }
     SelectObject(MemDCw, OldBitmap);
 }
-*/
