@@ -153,8 +153,10 @@ bool R_SuperSide = false;
 bool R_keyd = true;
 double Pspeed = 10.0;
 COLORREF Tr1 = RGB(246, 240, 8);
-DWORD L_k;
-DWORD R_k;
+DWORD L_k; //화살표 블럭 꾹
+DWORD R_k; //화살표 블럭 꾹
+DWORD S_ipt; //아이템 블럭 꾹
+DWORD J_ipt; //아이템 블럭 꾹
 
 int h_Width = 60;  // 한 프레임의 가로 크기
 int h_Height = 60; // 한 프레임의 세로 크기
@@ -233,7 +235,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
             ball.bottom = ball.top + 20;
         }
         else if (Stage == 3) {
-            ball.left = XPOS(9.33);
+            ball.left = XPOS(6.33);
             ball.top = YPOS(0.33);
             ball.right = ball.left + 20;
             ball.bottom = ball.top + 20;
@@ -276,13 +278,15 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
             }
             K_Left = true;
             if (Side_Ball) {
-                if (L_keydt - L_keyut <= 220 && L_Firstkey <= 300) {
+                S_ipt = timeGetTime();
+                if (L_keydt - L_keyut <= 150 && L_Firstkey <= 250 && S_ipt - L_keydt < 1) {
                     L_SuperSide = true;
                     L_keyut = 0; // SuperSide가 작동이 안되게
                 }
             }
             if (Jump_Ball) {
-                if (L_keydt - L_keyut <= 220 && L_Firstkey <= 300) {
+                J_ipt = timeGetTime();
+                if (L_keydt - L_keyut <= 150 && L_Firstkey <= 250 && J_ipt - L_keydt < 1) {
                     SuperJump = true;
                     L_keyut = 0; // SuperSide가 작동이 안되게
                 }
@@ -295,13 +299,15 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
             }
             K_Right = true;
             if (Side_Ball) {
-                if (R_keydt - R_keyut <= 220 && R_Firstkey <= 150) {
+                S_ipt = timeGetTime();
+                if (R_keydt - R_keyut <= 150 && R_Firstkey <= 250 && S_ipt - R_keydt < 1) {
                     R_SuperSide = true;
                     R_keyut = 0; // SuperSide가 작동이 안되게
                 }
             }
             if (Jump_Ball) {
-                if (R_keydt - R_keyut <= 220 && R_Firstkey <= 150) {
+                J_ipt = timeGetTime();
+                if (R_keydt - R_keyut <= 150 && R_Firstkey <= 250 && J_ipt - R_keydt < 1) {
                     SuperJump = true;
                     R_keyut = 0; // SuperSide가 작동이 안되게
                 }
@@ -556,12 +562,12 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
             nb_ReSet(hWnd);
             Stage += 1;
 
-            ball.left = XPOS(9.33);
+            ball.left = XPOS(6.33);
             ball.top = YPOS(0.33);
             ball.right = ball.left + 20;
             ball.bottom = ball.top + 20;
         }
-        else if (Count == 12 && Stage == 3)
+        else if (Count == 1 && Stage == 3)
         {
             nb_ReSet(hWnd);
             Stage += 1;

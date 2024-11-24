@@ -4,18 +4,7 @@
 RECT S1_bb[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
 RECT S2_bb[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
 RECT S3_bb[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
-RECT S4_bb[] = { //브레이크 블럭의 배열
-    { XPOS(13), YPOS(3), RXPOS(14) + 1, BYPOS(4) + 1},
-    { XPOS(16), YPOS(3), RXPOS(17) + 1, BYPOS(4) + 1},
-    { XPOS(18), YPOS(3), RXPOS(19) + 1, BYPOS(4) + 1},
-    { XPOS(21), YPOS(3), RXPOS(22) + 1, BYPOS(4) + 1},
-    { XPOS(11), YPOS(8), RXPOS(12) + 1, BYPOS(9) + 1},
-    { XPOS(11), YPOS(9), RXPOS(12) + 1, BYPOS(10) + 1},
-    { XPOS(25), YPOS(7), RXPOS(26) + 1, BYPOS(8) + 1},
-    { XPOS(23), YPOS(7), RXPOS(24) + 1, BYPOS(8) + 1},
-    { XPOS(21), YPOS(7), RXPOS(22) + 1, BYPOS(8) + 1},
-    { XPOS(19), YPOS(7), RXPOS(20) + 1, BYPOS(8) + 1},
-};
+RECT S4_bb[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
 RECT S5_bb[] = { //브레이크 블럭의 배열
     //상단 브블
     { XPOS(6), YPOS(3), RXPOS(7) + 1, BYPOS(4) + 1},

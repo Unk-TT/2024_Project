@@ -84,10 +84,19 @@ RECT S3_rs[] = { // 사각형 블럭들의 배열
 };
 
 RECT S4_rs[] = { // 사각형 블럭들의 배열
-    { XPOS(9), YPOS(3), RXPOS(10) + 1, BYPOS(4) + 1}, //스타토
-    { XPOS(10), YPOS(3), RXPOS(11) + 1, BYPOS(4) + 1},
-    { XPOS(2), YPOS(13), RXPOS(3) + 1, BYPOS(14) + 1},
-    { XPOS(3), YPOS(13), RXPOS(4) + 1, BYPOS(14) + 1},
+    { XPOS(5), YPOS(2), RXPOS(6) + 1, BYPOS(3) + 1}, //스타토
+    { XPOS(6), YPOS(2), RXPOS(7) + 1, BYPOS(3) + 1},
+    { XPOS(7), YPOS(2), RXPOS(8) + 1, BYPOS(3) + 1},
+    { XPOS(2), YPOS(3), RXPOS(3) + 1, BYPOS(4) + 1},
+    { XPOS(2), YPOS(4), RXPOS(3) + 1, BYPOS(5) + 1},
+    { XPOS(2), YPOS(5), RXPOS(3) + 1, BYPOS(6) + 1},
+    { XPOS(20), YPOS(10), RXPOS(21) + 1, BYPOS(11) + 1},
+    { XPOS(20), YPOS(11), RXPOS(21) + 1, BYPOS(12) + 1},
+
+    { XPOS(23), YPOS(11), RXPOS(24) + 1, BYPOS(12) + 1},
+    { XPOS(24), YPOS(11), RXPOS(25) + 1, BYPOS(12) + 1},
+    { XPOS(25), YPOS(11), RXPOS(26) + 1, BYPOS(12) + 1},
+    
 };
 
 RECT S5_rs[] = { // 사각형 블럭들의 배열

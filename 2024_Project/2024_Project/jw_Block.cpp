@@ -11,9 +11,7 @@ RECT S2_jw[] = { //점프대 블럭의 배열
 RECT S3_jw[] = { //점프대 블럭의 배열
     { XPOS(17), YPOS(7), RXPOS(18) + 1, BYPOS(8) + 1},
 };
-RECT S4_jw[] = { //점프대 블럭의 배열
-    { XPOS(24), YPOS(3), RXPOS(25) + 1, BYPOS(4) + 1},
-};
+RECT S4_jw[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
 RECT S5_jw[] = { //점프대 블럭의 배열
     { XPOS(5), YPOS(13), RXPOS(6) + 1, BYPOS(14) + 1},
     { XPOS(6), YPOS(9), RXPOS(7) + 1, BYPOS(10) + 1},

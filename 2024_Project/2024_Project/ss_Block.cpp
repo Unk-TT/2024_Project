@@ -35,20 +35,7 @@ RECT S3_ss[] = { //스타블럭의 배열
     { XPOS(4), YPOS(12), RXPOS(5) + 1, BYPOS(13) + 1},
     { XPOS(5), YPOS(12), RXPOS(6) + 1, BYPOS(13) + 1},
 };
-RECT S4_ss[] = { //스타블럭의 배열
-    { XPOS(13), YPOS(2), RXPOS(14) + 1, BYPOS(3) + 1},
-    { XPOS(16), YPOS(2), RXPOS(17) + 1, BYPOS(3) + 1},
-    { XPOS(18), YPOS(2), RXPOS(19) + 1, BYPOS(3) + 1},
-    { XPOS(21), YPOS(2), RXPOS(22) + 1, BYPOS(3) + 1},
-    { XPOS(1), YPOS(12), RXPOS(2) + 1, BYPOS(13) + 1},
-    { XPOS(2), YPOS(12), RXPOS(3) + 1, BYPOS(13) + 1},
-    { XPOS(3), YPOS(12), RXPOS(4) + 1, BYPOS(13) + 1},
-    { XPOS(1), YPOS(11), RXPOS(2) + 1, BYPOS(12) + 1},
-    { XPOS(2), YPOS(11), RXPOS(3) + 1, BYPOS(12) + 1},
-    { XPOS(3), YPOS(11), RXPOS(4) + 1, BYPOS(12) + 1},
-    { XPOS(0), YPOS(11), RXPOS(1) + 1, BYPOS(12) + 1},
-    { XPOS(28), YPOS(5), RXPOS(29) + 1, BYPOS(6) + 1},
-};
+RECT S4_ss[] = { XPOS(24), YPOS(10), RXPOS(25) + 1, BYPOS(11) + 1 };
 RECT S5_ss[] = { //스타블럭의 배열
     { XPOS(5), YPOS(9), RXPOS(6) + 1, BYPOS(10) + 1},
     { XPOS(6), YPOS(5), RXPOS(7) + 1, BYPOS(6) + 1},

@@ -16,11 +16,7 @@ RECT S2_gwl[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
 RECT S3_gwl[] = { //화살표 블럭의 배열
     { XPOS(22), YPOS(12), RXPOS(23) + 1, BYPOS(13) + 1},
 };
-RECT S4_gwl[] = { //화살표 블럭의 배열
-    { XPOS(28), YPOS(6), RXPOS(29) + 1, BYPOS(7) + 1},
-    { XPOS(10), YPOS(12), RXPOS(11) + 1, BYPOS(13) + 1},
-    { XPOS(17), YPOS(6), RXPOS(18) + 1, BYPOS(7) + 1},
-};
+RECT S4_gwl[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
 RECT S5_gwl[] = { //화살표 블럭의 배열 왼족
     //스타트 왼쪽
     { XPOS(3), YPOS(5), RXPOS(4) + 1, BYPOS(6) + 1},

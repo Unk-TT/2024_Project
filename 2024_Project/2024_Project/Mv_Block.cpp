@@ -5,9 +5,13 @@
 RECT S1_mv[] = {XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1};
 RECT S2_mv[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
 RECT S3_mv[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
-RECT S4_mv[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
+RECT S4_mv[] = {
+    { XPOS(6), YPOS(4), RXPOS(7) + 1, BYPOS(5) + 1 },
+    { XPOS(7), YPOS(4), RXPOS(8) + 1, BYPOS(5) + 1 },
+    { XPOS(8), YPOS(4), RXPOS(9) + 1, BYPOS(5) + 1 },
+};
 RECT S5_mv[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
-RECT S6_mv[] = { 260, 320, 320 + 1, 380 + 1 };
+RECT S6_mv[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
 RECT S7_mv[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
 RECT S8_mv[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
 RECT S9_mv[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
@@ -66,14 +70,18 @@ RECT* Stage_mv[] = {
     S13_mv,
 };
 
-/*---------------------------------------------------------------------------------------------------*/
+/*------------------------------------------위 mv와 동일하게---------------------------------------------------------*/
 
 RECT S1_mv_St[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
 RECT S2_mv_St[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
 RECT S3_mv_St[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
-RECT S4_mv_St[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
+RECT S4_mv_St[] = { 
+    { XPOS(6), YPOS(4), RXPOS(7) + 1, BYPOS(5) + 1 },
+    { XPOS(7), YPOS(4), RXPOS(8) + 1, BYPOS(5) + 1 },
+    { XPOS(8), YPOS(4), RXPOS(9) + 1, BYPOS(5) + 1 },
+};
 RECT S5_mv_St[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
-RECT S6_mv_St[] = { 260, 320, 320 + 1, 380 + 1 };
+RECT S6_mv_St[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
 RECT S7_mv_St[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
 RECT S8_mv_St[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
 RECT S9_mv_St[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
@@ -143,13 +151,17 @@ RECT* Stage_mv_St[] = {
     S12_mv_St,
     S13_mv_St,
 };
-
+//끝지점 종료지점 좌표 입력
 RECT S1_mv_End[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
 RECT S2_mv_End[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
 RECT S3_mv_End[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
-RECT S4_mv_End[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
+RECT S4_mv_End[] = {
+    { XPOS(21), YPOS(4), RXPOS(22) + 1, BYPOS(5) + 1 },
+    { XPOS(22), YPOS(4), RXPOS(23) + 1, BYPOS(5) + 1 },
+    { XPOS(23), YPOS(4), RXPOS(24) + 1, BYPOS(5) + 1 },
+};
 RECT S5_mv_End[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
-RECT S6_mv_End[] = { 980, 320, 1040 + 1, 400 + 1 };
+RECT S6_mv_End[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
 RECT S7_mv_End[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
 RECT S8_mv_End[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
 RECT S9_mv_End[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
@@ -328,9 +340,12 @@ void Img_Move(HDC MemDC, HDC MemDCw) {
 RECT S1_mvs[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
 RECT S2_mvs[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
 RECT S3_mvs[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
-RECT S4_mvs[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
+RECT S4_mvs[] = { 
+    { XPOS(5), YPOS(4), RXPOS(6) + 1, BYPOS(5) + 1 },
+    { XPOS(24), YPOS(4), RXPOS(25) + 1, BYPOS(5) + 1 },
+};
 RECT S5_mvs[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
-RECT S6_mvs[] = { 260, 320, 320 + 1, 380 + 1 };
+RECT S6_mvs[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
 RECT S7_mvs[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
 RECT S8_mvs[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
 RECT S9_mvs[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };

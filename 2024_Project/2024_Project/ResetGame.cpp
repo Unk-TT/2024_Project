@@ -34,37 +34,8 @@ RECT New_S3_ss[] = { //스타블럭의 배열
     { XPOS(4), YPOS(12), RXPOS(5) + 1, BYPOS(13) + 1},
     { XPOS(5), YPOS(12), RXPOS(6) + 1, BYPOS(13) + 1},
 };
-RECT New_S4_ss[] = { //스타블럭의 배열
-    { XPOS(13), YPOS(2), RXPOS(14) + 1, BYPOS(3) + 1},
-    { XPOS(16), YPOS(2), RXPOS(17) + 1, BYPOS(3) + 1},
-    { XPOS(18), YPOS(2), RXPOS(19) + 1, BYPOS(3) + 1},
-    { XPOS(21), YPOS(2), RXPOS(22) + 1, BYPOS(3) + 1},
-    { XPOS(1), YPOS(12), RXPOS(2) + 1, BYPOS(13) + 1},
-    { XPOS(2), YPOS(12), RXPOS(3) + 1, BYPOS(13) + 1},
-    { XPOS(3), YPOS(12), RXPOS(4) + 1, BYPOS(13) + 1},
-    { XPOS(1), YPOS(11), RXPOS(2) + 1, BYPOS(12) + 1},
-    { XPOS(2), YPOS(11), RXPOS(3) + 1, BYPOS(12) + 1},
-    { XPOS(3), YPOS(11), RXPOS(4) + 1, BYPOS(12) + 1},
-    { XPOS(0), YPOS(11), RXPOS(1) + 1, BYPOS(12) + 1},
-    { XPOS(28), YPOS(5), RXPOS(29) + 1, BYPOS(6) + 1},
-};
-RECT New_S5_ss[] = { //스타블럭의 배열
-    { XPOS(5), YPOS(9), RXPOS(6) + 1, BYPOS(10) + 1},
-    { XPOS(6), YPOS(5), RXPOS(7) + 1, BYPOS(6) + 1},
-    { XPOS(8), YPOS(4), RXPOS(9) + 1, BYPOS(5) + 1},
-    { XPOS(26), YPOS(6), RXPOS(27) + 1, BYPOS(7) + 1},
-    { XPOS(8), YPOS(9), RXPOS(9) + 1, BYPOS(10) + 1},
-    { XPOS(10), YPOS(12), RXPOS(11) + 1, BYPOS(13) + 1},
-    { XPOS(14), YPOS(12), RXPOS(15) + 1, BYPOS(13) + 1},
-    { XPOS(18), YPOS(12), RXPOS(19) + 1, BYPOS(13) + 1},
-    { XPOS(22), YPOS(12), RXPOS(23) + 1, BYPOS(13) + 1},
-    { XPOS(25), YPOS(12), RXPOS(26) + 1, BYPOS(13) + 1},
-    { XPOS(26), YPOS(12), RXPOS(27) + 1, BYPOS(13) + 1},
-    { XPOS(27), YPOS(12), RXPOS(28) + 1, BYPOS(13) + 1},
-    { XPOS(25), YPOS(11), RXPOS(26) + 1, BYPOS(12) + 1},
-    { XPOS(26), YPOS(11), RXPOS(27) + 1, BYPOS(12) + 1},
-    { XPOS(27), YPOS(11), RXPOS(28) + 1, BYPOS(12) + 1},
-};
+RECT New_S4_ss[] = { XPOS(24), YPOS(10), RXPOS(25) + 1, BYPOS(11) + 1 };
+RECT New_S5_ss[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
 RECT New_S6_ss[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
 RECT New_S7_ss[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
 RECT New_S8_ss[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
@@ -140,36 +111,8 @@ void restar() {
 RECT New_S1_bb[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
 RECT New_S2_bb[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
 RECT New_S3_bb[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
-RECT New_S4_bb[] = { //Break블럭의 배열
-    { XPOS(13), YPOS(3), RXPOS(14) + 1, BYPOS(4) + 1},
-    { XPOS(16), YPOS(3), RXPOS(17) + 1, BYPOS(4) + 1},
-    { XPOS(18), YPOS(3), RXPOS(19) + 1, BYPOS(4) + 1},
-    { XPOS(21), YPOS(3), RXPOS(22) + 1, BYPOS(4) + 1},
-    { XPOS(11), YPOS(8), RXPOS(12) + 1, BYPOS(9) + 1},
-    { XPOS(11), YPOS(9), RXPOS(12) + 1, BYPOS(10) + 1},
-    { XPOS(25), YPOS(7), RXPOS(26) + 1, BYPOS(8) + 1},
-    { XPOS(23), YPOS(7), RXPOS(24) + 1, BYPOS(8) + 1},
-    { XPOS(21), YPOS(7), RXPOS(22) + 1, BYPOS(8) + 1},
-    { XPOS(19), YPOS(7), RXPOS(20) + 1, BYPOS(8) + 1},
-};
-RECT New_S5_bb[] = { //Break블럭의 배열
-{ XPOS(6), YPOS(3), RXPOS(7) + 1, BYPOS(4) + 1},
-{ XPOS(9), YPOS(2), RXPOS(10) + 1, BYPOS(3) + 1},
-{ XPOS(12), YPOS(4), RXPOS(13) + 1, BYPOS(5) + 1},
-{ XPOS(13), YPOS(4), RXPOS(14) + 1, BYPOS(5) + 1},
-{ XPOS(16), YPOS(4), RXPOS(17) + 1, BYPOS(5) + 1},
-{ XPOS(17), YPOS(4), RXPOS(18) + 1, BYPOS(5) + 1},
-{ XPOS(18), YPOS(4), RXPOS(19) + 1, BYPOS(5) + 1},
-{ XPOS(20), YPOS(4), RXPOS(21) + 1, BYPOS(5) + 1},
-{ XPOS(22), YPOS(4), RXPOS(23) + 1, BYPOS(5) + 1},
-{ XPOS(24), YPOS(10), RXPOS(25) + 1, BYPOS(11) + 1},
-{ XPOS(22), YPOS(10), RXPOS(23) + 1, BYPOS(11) + 1},
-{ XPOS(20), YPOS(10), RXPOS(21) + 1, BYPOS(11) + 1},
-{ XPOS(16), YPOS(10), RXPOS(17) + 1, BYPOS(11) + 1},
-{ XPOS(14), YPOS(10), RXPOS(15) + 1, BYPOS(11) + 1},
-{ XPOS(12), YPOS(10), RXPOS(13) + 1, BYPOS(11) + 1},
-{ XPOS(10), YPOS(10), RXPOS(11) + 1, BYPOS(11) + 1},
-};
+RECT New_S4_bb[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
+RECT New_S5_bb[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
 RECT New_S6_bb[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
 RECT New_S7_bb[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
 RECT New_S8_bb[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
@@ -386,7 +329,7 @@ void reJump_Item() {
 RECT S1_Start = { XPOS(14.33), YPOS(7.33), XPOS(14.33) + 20 , YPOS(7.33) + 20 };
 RECT S2_Start = { XPOS(11.33), YPOS(11.33), XPOS(11.33) + 20 , YPOS(11.33) + 20 };
 RECT S3_Start = { XPOS(9.33), YPOS(4.33), XPOS(9.33) + 20 , YPOS(4.33) + 20 };
-RECT S4_Start = { XPOS(9.33), YPOS(0.33), XPOS(9.33) + 20 , YPOS(0.33) + 20 };
+RECT S4_Start = { XPOS(6.33), YPOS(0.33), XPOS(6.33) + 20 , YPOS(0.33) + 20 };
 RECT S5_Start = { XPOS(0.33), YPOS(1.33), XPOS(0.33) + 20 , YPOS(1.33) + 20 };
 RECT S6_Start = { XPOS(4.33), YPOS(2.33), XPOS(4.33) + 20 , YPOS(2.33) + 20 };
 RECT S7_Start = { XPOS(0.33), YPOS(1.33), XPOS(0.33) + 20 , YPOS(1.33) + 20 };

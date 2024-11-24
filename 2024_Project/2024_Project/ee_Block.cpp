@@ -4,30 +4,7 @@
 RECT S1_ee[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
 RECT S2_ee[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
 RECT S3_ee[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
-RECT S4_ee[] = { //전기 블러그이 배열
-    { XPOS(11), YPOS(4), RXPOS(12) + 1, BYPOS(5) + 1},
-    { XPOS(12), YPOS(4), RXPOS(13) + 1, BYPOS(5) + 1},
-    { XPOS(14), YPOS(4), RXPOS(15) + 1, BYPOS(5) + 1},
-    { XPOS(15), YPOS(4), RXPOS(16) + 1, BYPOS(5) + 1},
-    { XPOS(17), YPOS(4), RXPOS(18) + 1, BYPOS(5) + 1},
-    { XPOS(19), YPOS(4), RXPOS(20) + 1, BYPOS(5) + 1},
-    { XPOS(20), YPOS(4), RXPOS(21) + 1, BYPOS(5) + 1},
-    { XPOS(22), YPOS(4), RXPOS(23) + 1, BYPOS(5) + 1},
-    { XPOS(23), YPOS(4), RXPOS(24) + 1, BYPOS(5) + 1},
-    { XPOS(25), YPOS(4), RXPOS(26) + 1, BYPOS(5) + 1},
-    { XPOS(26), YPOS(4), RXPOS(27) + 1, BYPOS(5) + 1},
-    { XPOS(27), YPOS(4), RXPOS(28) + 1, BYPOS(5) + 1},
-    { XPOS(8), YPOS(7), RXPOS(9) + 1, BYPOS(8) + 1},
-    { XPOS(8), YPOS(6), RXPOS(9) + 1, BYPOS(7) + 1},
-    { XPOS(9), YPOS(8), RXPOS(10) + 1, BYPOS(9) + 1},
-    { XPOS(10), YPOS(8), RXPOS(11) + 1, BYPOS(9) + 1},
-    { XPOS(12), YPOS(8), RXPOS(13) + 1, BYPOS(9) + 1},
-    { XPOS(13), YPOS(8), RXPOS(14) + 1, BYPOS(9) + 1},
-    { XPOS(24), YPOS(6), RXPOS(25) + 1, BYPOS(7) + 1},
-    { XPOS(22), YPOS(6), RXPOS(23) + 1, BYPOS(7) + 1},
-    { XPOS(20), YPOS(6), RXPOS(21) + 1, BYPOS(7) + 1},
-    { XPOS(18), YPOS(6), RXPOS(19) + 1, BYPOS(7) + 1},
-};
+RECT S4_ee[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
 RECT S5_ee[] = { //전기 블러그 배열
     //스타트 시작
     { XPOS(0), YPOS(5), RXPOS(1) + 1, BYPOS(6) + 1},
