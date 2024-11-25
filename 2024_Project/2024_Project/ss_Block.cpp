@@ -74,7 +74,14 @@ extern double Speed1;
 extern double Speed2;
 extern int Stage;
 extern int Count;
-extern HBITMAP hBitmapStar;
+extern HBITMAP hBitmapStar, hBitmapEatStar;
+
+extern int Star_Width;  // 한 프레임의 가로 크기
+extern int Star_Height; // 한 프레임의 세로 크기
+extern int StarF_frame;   // 현재 프레임
+extern int StarT_frame; // 총 프레임 개수
+RECT EatStar[] = { 0, 0, 0, 0 };
+extern bool Eats;
 
 int Stage_St[] = {
     Num_S1_St,
@@ -120,7 +127,11 @@ void Star() {
                 ball.left + 15 >= rect.left && ball.right - 15 <= rect.right) {
                 PlaySound(TEXT("Star.wav"), NULL, SND_FILENAME | SND_ASYNC);
                 Count++; // 스타와 충돌하면 카운트 증가
-
+                EatStar->left = Stage_ss[Stage][i].left;
+                EatStar->right = Stage_ss[Stage][i].right;
+                EatStar->top = Stage_ss[Stage][i].top;
+                EatStar->bottom = Stage_ss[Stage][i].bottom;
+                Eats = true;
                 for (int j = i; j < Stage_St[Stage] - 1; j++) {
                     Stage_ss[Stage][j] = Stage_ss[Stage][j + 1];
                 }
@@ -149,4 +160,22 @@ void Img_Star(HDC MemDC, HDC MemDCw) {
             BitBlt(MemDC, rect.left, rect.top, 123, 160, MemDCw, 0, 0, SRCCOPY);
         }
     SelectObject(MemDCw, OldBitmap);
+}
+
+void Img_EatStar(HDC MemDC, HDC MemDCw) {
+    if (Eats) {
+        HBITMAP OldBitmap = (HBITMAP)SelectObject(MemDCw, hBitmapEatStar);
+
+        RECT& rect = EatStar[0];
+
+        //스프라이트비트맵 시작 좌표 계산
+        int spriteX = (StarF_frame % StarT_frame) * Star_Width;
+        int spriteY = (StarF_frame / StarT_frame) * Star_Height;
+
+        TransparentBlt(MemDC, rect.left - 60, rect.top - 60, Star_Width, Star_Height, MemDCw, spriteX, spriteY, Star_Width, Star_Height, RGB(255, 255, 255));
+
+        SelectObject(MemDCw, OldBitmap);
+        if (StarF_frame == StarT_frame - 1) { Eats = false; StarF_frame = 0; }
+    }
+    
 }

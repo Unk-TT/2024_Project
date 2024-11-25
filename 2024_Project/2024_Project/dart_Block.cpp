@@ -89,7 +89,7 @@ extern int h_Width;  // 한 프레임의 가로 크기
 extern int h_Height; // 한 프레임의 세로 크기
 
 extern int F_frame;   // 현재 프레임 인덱스
-
+extern int T_frame;
 extern HBITMAP hBitmapDart;
 
 int Stage_Dt[] = {
@@ -253,9 +253,9 @@ void Img_Dart(HDC MemDC, HDC MemDCw) {
     for (int i = 0; i < Stage_Dt[Stage]; i++) {
         RECT& rect = Stage_dt[Stage][i];
 
-        //스프레드시트비트맵 시작 좌표 계산
-        int spriteX = (F_frame % 4) * h_Width;
-        int spriteY = (F_frame / 4) * h_Height;
+        //스프라이트비트맵 시작 좌표 계산
+        int spriteX = (F_frame % T_frame) * h_Width;
+        int spriteY = (F_frame / T_frame) * h_Height;
 
         TransparentBlt(MemDC, rect.left, rect.top, h_Width, h_Height, MemDCw, spriteX, spriteY, h_Width, h_Height, RGB(255, 255, 255));
 

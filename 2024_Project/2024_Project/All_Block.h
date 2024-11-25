@@ -164,3 +164,6 @@ DWORD WINAPI Flash_th(LPVOID param);
 
 void MainCheck(HDC MemDC);
 void MainSelect(HDC MemDC);
+
+void Img_EatStar(HDC MemDC, HDC MemDCw);
+void Img_B_Break(HDC MemDC, HDC MemDCw);

@@ -130,7 +130,7 @@ bool Stop, Stop2 = false; // 자유낙하 멈춰!
 bool Elect = false;
 int Count; //게임 끝내는 걸 확인하는 함수 (별 획득 확인)
 HBITMAP MyBitmap, OldBitmap;
-HBITMAP hBitmapWall, hBitmapStar, hBitmapJw, hBitmapGwl, hBitmapBb, hBitmapEe, hBitmapMain, hBitmapGwr, hBitmapDart, hBitmapfs_on, hBitmapfs_off, Selecth, hBitmapthrom, hBitmapbh, hBitmapwh, hBitmapsidei, hBitmapjumpi, hBitmapMv, hBitmapMvs, hBitmapMains;
+HBITMAP hBitmapWall, hBitmapStar, hBitmapJw, hBitmapGwl, hBitmapBb, hBitmapEe, hBitmapMain, hBitmapGwr, hBitmapDart, hBitmapfs_on, hBitmapfs_off, Selecth, hBitmapthrom, hBitmapbh, hBitmapwh, hBitmapsidei, hBitmapjumpi, hBitmapMv, hBitmapMvs, hBitmapMains, hBitmapEatStar, hBitmapB_Br;
 int MBR;
 int x, y;
 bool Moveth = false; //스레드 무브블럭 초기화
@@ -160,11 +160,25 @@ DWORD R_k; //화살표 블럭 꾹
 DWORD S_ipt; //아이템 블럭 꾹
 DWORD J_ipt; //아이템 블럭 꾹
 
-int h_Width = 60;  // 한 프레임의 가로 크기
-int h_Height = 60; // 한 프레임의 세로 크기
+///// 스프라이트 비트맵용 변수 /////
+int h_Width = 60;  // 다트블럭 가로 크기
+int h_Height = 60; // 다트블럭 세로 크기
+int F_frame = 0;   // 다트블럭 현재 프레임
+int T_frame = 4; // 다트블럭 총 프레임 개수
 
-int F_frame = 0;   // 현재 프레임
-int T_frame = 4; // 총 프레임 개수
+int Star_Width = 240;  // 스타블럭 가로 크기
+int Star_Height = 240; // 스타블럭 세로 크기
+int StarF_frame = 0;   // 스타블럭 현재 프레임
+int StarT_frame = 23; // 스타블럭 총 프레임 개수
+bool Eats = false; // 스타블럭 스프라이트 시작 조건
+
+int B_Width = 240;  // B블럭 가로 크기
+int B_Height = 240; // B블럭 세로 크기
+int BF_frame = 0;   // B블럭 현재 프레임
+int BT_frame = 25; // B블럭 총 프레임 개수
+bool B_Br = false; // B블럭 스프라이트 시작 조건
+
+
 
 void LoadBit() {
     hBitmapWall = LoadBitmap(hInst, MAKEINTRESOURCE(IDB_BITMAP1));
@@ -186,6 +200,8 @@ void LoadBit() {
     hBitmapMv = LoadBitmap(hInst, MAKEINTRESOURCE(IDB_BITMAP18));
     hBitmapMvs = LoadBitmap(hInst, MAKEINTRESOURCE(IDB_BITMAP2));
     hBitmapMains = LoadBitmap(hInst, MAKEINTRESOURCE(IDB_BITMAP19));
+    hBitmapEatStar = LoadBitmap(hInst, MAKEINTRESOURCE(IDB_BITMAP20));
+    hBitmapB_Br = LoadBitmap(hInst, MAKEINTRESOURCE(IDB_BITMAP21));
 }
 void DelBit() {
     DeleteObject(hBitmapWall);
@@ -206,6 +222,8 @@ void DelBit() {
     DeleteObject(hBitmapsidei);
     DeleteObject(hBitmapjumpi);
     DeleteObject(hBitmapMains);
+    DeleteObject(hBitmapEatStar);
+    DeleteObject(hBitmapB_Br);
 }
 
 /*ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ이미지 생성ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ*/
@@ -372,6 +390,13 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
         if (wParam == 2) {
             F_frame = (F_frame + 1) % T_frame;
         }
+        if (Eats) {
+            StarF_frame = (StarF_frame + 1) % StarT_frame;
+        }
+        if (B_Br) {
+            BF_frame = (BF_frame + 1) % BT_frame;
+        }
+        
         //깜빡이블럭 on off 속도 조절 낮으면 빠르게, 높으면 느리게
         if (idkh < 1000 ) {
             idkh += 1;
@@ -760,14 +785,6 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
         if (Stage == 98) {
             MainSelect(MemDC);
         }
-
-
-        //좌표찾기
-        if (Stage == 98) {
-            wchar_t buf[128] = { 0, };
-            wsprintf(buf, L"x : %d // y: %d", x, y);
-            TextOut(hdc, x, y, buf, lstrlenW(buf));
-        }
         
         //look 블럭 위치 확인용 확인할려면 해당 블럭 fillrect 주석처리
         if (Stage >= 0 && Stage <= 12) {
@@ -809,6 +826,8 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
             Img_Jumpi(MemDC, MemDCw);
             Img_Move(MemDC, MemDCw);
             Img_Moves(MemDC, MemDCw);
+            Img_EatStar(MemDC, MemDCw);
+            Img_B_Break(MemDC, MemDCw);
         }
         
         //볼 죽으면 윈도우색상으로
@@ -827,7 +846,12 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
             Img_Select(MemDC, MemDCw);
         }
 
-
+        //좌표찾기
+        /*if (Stage == 98) {
+            wchar_t buf[128] = { 0, };
+            wsprintf(buf, L"x : %d // y: %d", x, y);
+            TextOut(MemDC, x, y, buf, lstrlenW(buf));
+        }*/
 
         BitBlt(hdc, 0, 0, bufferRT.right, bufferRT.bottom, MemDC, 0, 0, SRCCOPY); //메모리 DC에 그려진 그림을 실제 화면의 DC로 복사
 

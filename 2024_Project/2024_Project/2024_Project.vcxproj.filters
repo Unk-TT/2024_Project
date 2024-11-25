@@ -162,5 +162,11 @@
     <Image Include="MainSelect.bmp">
       <Filter>리소스 파일</Filter>
     </Image>
+    <Image Include="Eat_Star.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="B_Break.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
   </ItemGroup>
 </Project>

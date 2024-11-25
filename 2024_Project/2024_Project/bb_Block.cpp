@@ -66,8 +66,15 @@ extern double Speed1;
 extern double Speed2;
 extern int Stage;
 extern int Count;
-extern HBITMAP hBitmapBb;
+extern HBITMAP hBitmapBb, hBitmapB_Br;
 extern bool Stop, Stop2;
+
+extern int B_Width;  // B블럭 가로 크기
+extern int B_Height; // B블럭 세로 크기
+extern int BF_frame;   // B블럭 현재 프레임
+extern int BT_frame; // B블럭 총 프레임 개수
+RECT B_Break[] = { 0, 0, 0, 0 };
+extern bool B_Br; // B블럭 스프라이트 시작 조건
 
 int Stage_Bb[] = {
     Num_S1_Bb,
@@ -109,7 +116,11 @@ void Break_Wall() {
         if (ball.bottom >= rect.top && ball.top < rect.top &&
             ball.left + 15 >= rect.left && ball.right - 15 <= rect.right) {
             PlaySound(TEXT("Bauns.wav"), NULL, SND_FILENAME | SND_ASYNC);
-
+            B_Break->left = Stage_bb[Stage][i].left;
+            B_Break->right = Stage_bb[Stage][i].right;
+            B_Break->top = Stage_bb[Stage][i].top;
+            B_Break->bottom = Stage_bb[Stage][i].bottom;
+            B_Br = true;
             for (int j = i; j < Stage_Bb[Stage] - 1; j++) {
                 Stage_bb[Stage][j] = Stage_bb[Stage][j + 1];
             }
@@ -171,4 +182,21 @@ void Img_Bb(HDC MemDC, HDC MemDCw) {
         BitBlt(MemDC, rect.left, rect.top, 123, 160, MemDCw, 0, 0, SRCCOPY);
     }
     SelectObject(MemDCw, OldBitmap);
+}
+
+void Img_B_Break(HDC MemDC, HDC MemDCw) {
+    if (B_Br) {
+        HBITMAP OldBitmap = (HBITMAP)SelectObject(MemDCw, hBitmapB_Br);
+
+        RECT& rect = B_Break[0];
+
+        //스프라이트비트맵 시작 좌표 계산
+        int spriteX = (BF_frame % BT_frame) * B_Width;
+        int spriteY = (BF_frame / BT_frame) * B_Height;
+
+        TransparentBlt(MemDC, rect.left - 80, rect.top - 60, B_Width, B_Height, MemDCw, spriteX, spriteY, B_Width, B_Height, RGB(255, 255, 255));
+
+        SelectObject(MemDCw, OldBitmap);
+        if (BF_frame == BT_frame - 1) { B_Br = false; BF_frame = 0; }
+    }
 }

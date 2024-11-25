@@ -162,7 +162,9 @@
     <Image Include="bitmap2.bmp" />
     <Image Include="blackhole.bmp" />
     <Image Include="BWall.bmp" />
+    <Image Include="B_Break.bmp" />
     <Image Include="Dart.bmp" />
+    <Image Include="Eat_Star.bmp" />
     <Image Include="Ele.bmp" />
     <Image Include="flash_off.bmp" />
     <Image Include="flash_on.bmp" />
