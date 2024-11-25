@@ -147,6 +147,7 @@ void Img_Ee(HDC MemDC, HDC MemDCw);
 void Img_GwL(HDC MemDC, HDC MemDCw);
 void Img_GwR(HDC MemDC, HDC MemDCw);
 void Img_Main(HDC MemDC, HDC MemDCw);
+void Img_Select(HDC MemDC, HDC MemDCw);
 void Img_Dart(HDC MemDC, HDC MemDCw);
 void Img_Flash(HDC MemDC, HDC MemDCw);
 void Img_Tele(HDC MemDC, HDC MemDCw);
@@ -160,3 +161,6 @@ void Img_Moves(HDC MemDC, HDC MemDCw);
 DWORD WINAPI move_T(LPVOID param);
 DWORD WINAPI move_dart(LPVOID param);
 DWORD WINAPI Flash_th(LPVOID param);
+
+void MainCheck(HDC MemDC);
+void MainSelect(HDC MemDC);

@@ -7,20 +7,32 @@
       "RelativeMoniker": "D:0:0:{D33A1CCA-D3A0-4BFA-8E0F-CFC82071EC55}|2024_Project\\2024_Project.vcxproj|solutionrelative:2024_Project\\2024_Project.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D33A1CCA-D3A0-4BFA-8E0F-CFC82071EC55}|2024_Project\\2024_Project.vcxproj|D:\\git\\2024_Project\\2024_Project\\Side_Item.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{D33A1CCA-D3A0-4BFA-8E0F-CFC82071EC55}|2024_Project\\2024_Project.vcxproj|solutionrelative:2024_Project\\Side_Item.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D33A1CCA-D3A0-4BFA-8E0F-CFC82071EC55}|2024_Project\\2024_Project.vcxproj|D:\\git\\2024_Project\\2024_Project\\Mv_Block.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{D33A1CCA-D3A0-4BFA-8E0F-CFC82071EC55}|2024_Project\\2024_Project.vcxproj|solutionrelative:2024_Project\\Mv_Block.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{D33A1CCA-D3A0-4BFA-8E0F-CFC82071EC55}|2024_Project\\2024_Project.vcxproj|D:\\git\\2024_Project\\2024_Project\\ResetGame.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{D33A1CCA-D3A0-4BFA-8E0F-CFC82071EC55}|2024_Project\\2024_Project.vcxproj|solutionrelative:2024_Project\\ResetGame.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{D33A1CCA-D3A0-4BFA-8E0F-CFC82071EC55}|2024_Project\\2024_Project.vcxproj|D:\\git\\2024_Project\\2024_Project\\rs_Block.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{D33A1CCA-D3A0-4BFA-8E0F-CFC82071EC55}|2024_Project\\2024_Project.vcxproj|solutionrelative:2024_Project\\rs_Block.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D33A1CCA-D3A0-4BFA-8E0F-CFC82071EC55}|2024_Project\\2024_Project.vcxproj|D:\\git\\2024_Project\\2024_Project\\bb_Block.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{D33A1CCA-D3A0-4BFA-8E0F-CFC82071EC55}|2024_Project\\2024_Project.vcxproj|solutionrelative:2024_Project\\bb_Block.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D33A1CCA-D3A0-4BFA-8E0F-CFC82071EC55}|2024_Project\\2024_Project.vcxproj|D:\\git\\2024_Project\\2024_Project\\Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{D33A1CCA-D3A0-4BFA-8E0F-CFC82071EC55}|2024_Project\\2024_Project.vcxproj|solutionrelative:2024_Project\\Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D33A1CCA-D3A0-4BFA-8E0F-CFC82071EC55}|2024_Project\\2024_Project.vcxproj|D:\\git\\2024_Project\\2024_Project\\All_Block.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{D33A1CCA-D3A0-4BFA-8E0F-CFC82071EC55}|2024_Project\\2024_Project.vcxproj|solutionrelative:2024_Project\\All_Block.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{D33A1CCA-D3A0-4BFA-8E0F-CFC82071EC55}|2024_Project\\2024_Project.vcxproj|D:\\git\\2024_Project\\2024_Project\\ss_Block.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{D33A1CCA-D3A0-4BFA-8E0F-CFC82071EC55}|2024_Project\\2024_Project.vcxproj|solutionrelative:2024_Project\\ss_Block.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D33A1CCA-D3A0-4BFA-8E0F-CFC82071EC55}|2024_Project\\2024_Project.vcxproj|D:\\git\\2024_Project\\2024_Project\\jw_Block.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{D33A1CCA-D3A0-4BFA-8E0F-CFC82071EC55}|2024_Project\\2024_Project.vcxproj|solutionrelative:2024_Project\\jw_Block.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -40,7 +52,7 @@
               "RelativeDocumentMoniker": "2024_Project\\2024_Project.cpp",
               "ToolTip": "D:\\git\\2024_Project\\2024_Project\\2024_Project.cpp",
               "RelativeToolTip": "2024_Project\\2024_Project.cpp",
-              "ViewState": "AgIAANUAAAAAAAAAAAAAABUBAAANAAAAAAAAAA==",
+              "ViewState": "AgIAANsAAAAAAAAAAAAAAG8BAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-11-21T01:31:34.499Z",
               "IsPinned": true,
@@ -49,54 +61,87 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Side_Item.cpp",
-              "DocumentMoniker": "D:\\git\\2024_Project\\2024_Project\\Side_Item.cpp",
-              "RelativeDocumentMoniker": "2024_Project\\Side_Item.cpp",
-              "ToolTip": "D:\\git\\2024_Project\\2024_Project\\Side_Item.cpp",
-              "RelativeToolTip": "2024_Project\\Side_Item.cpp",
-              "ViewState": "AgIAACgAAAAAAAAAAAAAACgAAAAcAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-11-24T11:59:15.527Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ss_Block.cpp",
-              "DocumentMoniker": "D:\\git\\2024_Project\\2024_Project\\ss_Block.cpp",
-              "RelativeDocumentMoniker": "2024_Project\\ss_Block.cpp",
-              "ToolTip": "D:\\git\\2024_Project\\2024_Project\\ss_Block.cpp",
-              "RelativeToolTip": "2024_Project\\ss_Block.cpp",
-              "ViewState": "AgIAAAYAAAAAAAAAAADwvy8AAAAyAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-11-24T11:35:59.03Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Mv_Block.cpp",
-              "DocumentMoniker": "D:\\git\\2024_Project\\2024_Project\\Mv_Block.cpp",
-              "RelativeDocumentMoniker": "2024_Project\\Mv_Block.cpp",
-              "ToolTip": "D:\\git\\2024_Project\\2024_Project\\Mv_Block.cpp",
-              "RelativeToolTip": "2024_Project\\Mv_Block.cpp",
-              "ViewState": "AgIAAMYAAAAAAAAAAAAAAPEAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-11-24T11:30:36.793Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
               "Title": "ResetGame.cpp",
               "DocumentMoniker": "D:\\git\\2024_Project\\2024_Project\\ResetGame.cpp",
               "RelativeDocumentMoniker": "2024_Project\\ResetGame.cpp",
               "ToolTip": "D:\\git\\2024_Project\\2024_Project\\ResetGame.cpp",
               "RelativeToolTip": "2024_Project\\ResetGame.cpp",
-              "ViewState": "AgIAADQBAAAAAAAAAAAAAEsBAAAwAAAAAAAAAA==",
+              "ViewState": "AgIAAIcBAAAAAAAAAAAjwG4BAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-11-24T11:16:29.953Z",
+              "WhenOpened": "2024-11-25T09:02:00.657Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "All_Block.h",
+              "DocumentMoniker": "D:\\git\\2024_Project\\2024_Project\\All_Block.h",
+              "RelativeDocumentMoniker": "2024_Project\\All_Block.h",
+              "ToolTip": "D:\\git\\2024_Project\\2024_Project\\All_Block.h",
+              "RelativeToolTip": "2024_Project\\All_Block.h",
+              "ViewState": "AgIAAHgAAAAAAAAAAADwv6UAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-11-25T08:53:51.031Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Main.cpp",
+              "DocumentMoniker": "D:\\git\\2024_Project\\2024_Project\\Main.cpp",
+              "RelativeDocumentMoniker": "2024_Project\\Main.cpp",
+              "ToolTip": "D:\\git\\2024_Project\\2024_Project\\Main.cpp",
+              "RelativeToolTip": "2024_Project\\Main.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-11-25T07:44:13.287Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "bb_Block.cpp",
+              "DocumentMoniker": "D:\\git\\2024_Project\\2024_Project\\bb_Block.cpp",
+              "RelativeDocumentMoniker": "2024_Project\\bb_Block.cpp",
+              "ToolTip": "D:\\git\\2024_Project\\2024_Project\\bb_Block.cpp",
+              "RelativeToolTip": "2024_Project\\bb_Block.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-11-25T06:04:57.011Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "rs_Block.cpp",
+              "DocumentMoniker": "D:\\git\\2024_Project\\2024_Project\\rs_Block.cpp",
+              "RelativeDocumentMoniker": "2024_Project\\rs_Block.cpp",
+              "ToolTip": "D:\\git\\2024_Project\\2024_Project\\rs_Block.cpp",
+              "RelativeToolTip": "2024_Project\\rs_Block.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGUAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-11-25T05:58:32.491Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "jw_Block.cpp",
+              "DocumentMoniker": "D:\\git\\2024_Project\\2024_Project\\jw_Block.cpp",
+              "RelativeDocumentMoniker": "2024_Project\\jw_Block.cpp",
+              "ToolTip": "D:\\git\\2024_Project\\2024_Project\\jw_Block.cpp",
+              "RelativeToolTip": "2024_Project\\jw_Block.cpp",
+              "ViewState": "AgIAAE8AAAAAAAAAAAAjwFsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-11-25T05:51:11.26Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ss_Block.cpp",
+              "DocumentMoniker": "D:\\git\\2024_Project\\2024_Project\\ss_Block.cpp",
+              "RelativeDocumentMoniker": "2024_Project\\ss_Block.cpp",
+              "ToolTip": "D:\\git\\2024_Project\\2024_Project\\ss_Block.cpp",
+              "RelativeToolTip": "2024_Project\\ss_Block.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-11-25T04:49:46.479Z"
             }
           ]
         }

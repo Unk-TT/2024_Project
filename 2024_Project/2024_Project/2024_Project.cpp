@@ -117,7 +117,9 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
     return TRUE;
 }
 
-int Stage = 0; //스테이지 확인용
+// Stage 6 까지 완성 (S7), 7스테이지 만들어야 됨 (s8)
+
+int Stage = 99; //스테이지 확인용
 const int Dead = YPOS(20);
 RECT ball; // 내가 움직일 공의 구조체
 double Speed1 = 0.0; //자유낙하 공식의 초기 속도 (top)
@@ -128,7 +130,7 @@ bool Stop, Stop2 = false; // 자유낙하 멈춰!
 bool Elect = false;
 int Count; //게임 끝내는 걸 확인하는 함수 (별 획득 확인)
 HBITMAP MyBitmap, OldBitmap;
-HBITMAP hBitmapWall, hBitmapStar, hBitmapJw, hBitmapGwl, hBitmapBb, hBitmapEe, hBitmapMain, hBitmapGwr, hBitmapDart, hBitmapfs_on, hBitmapfs_off, Selecth, hBitmapthrom, hBitmapbh, hBitmapwh, hBitmapsidei, hBitmapjumpi, hBitmapMv, hBitmapMvs;
+HBITMAP hBitmapWall, hBitmapStar, hBitmapJw, hBitmapGwl, hBitmapBb, hBitmapEe, hBitmapMain, hBitmapGwr, hBitmapDart, hBitmapfs_on, hBitmapfs_off, Selecth, hBitmapthrom, hBitmapbh, hBitmapwh, hBitmapsidei, hBitmapjumpi, hBitmapMv, hBitmapMvs, hBitmapMains;
 int MBR;
 int x, y;
 bool Moveth = false; //스레드 무브블럭 초기화
@@ -183,6 +185,7 @@ void LoadBit() {
     hBitmapjumpi = LoadBitmap(hInst, MAKEINTRESOURCE(IDB_BITMAP17));
     hBitmapMv = LoadBitmap(hInst, MAKEINTRESOURCE(IDB_BITMAP18));
     hBitmapMvs = LoadBitmap(hInst, MAKEINTRESOURCE(IDB_BITMAP2));
+    hBitmapMains = LoadBitmap(hInst, MAKEINTRESOURCE(IDB_BITMAP19));
 }
 void DelBit() {
     DeleteObject(hBitmapWall);
@@ -202,6 +205,7 @@ void DelBit() {
     DeleteObject(hBitmapwh);
     DeleteObject(hBitmapsidei);
     DeleteObject(hBitmapjumpi);
+    DeleteObject(hBitmapMains);
 }
 
 /*ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ이미지 생성ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ*/
@@ -331,7 +335,18 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
             Jump_Ball = true;
         }
         break;
+        case VK_ESCAPE: {
+            if (Stage >= 0 && Stage <= 12) {
+                nb_ReSet(hWnd);
+                Stage = 98;
+            }
+            else if (Stage == 98) {
+                Stage = 99;
+            }
         }
+        break;
+        }
+        break;
     }
     break;
     case WM_KEYUP:
@@ -502,7 +517,6 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
                     Speed1 = 0;
                     Speed2 = 0;
                 }
-                
             }
         }
         else if (Stop2) {
@@ -522,8 +536,8 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
             }
         }
 
-        //스테이지 99가 아니면 블럭 로직 추가
-        if (Stage != 99) {
+        //스테이지 99이나 98이 아니면 블럭 로직 추가
+        if (Stage != 99 && Stage != 98) {
             Wall();
             Star();
             Jump_Wall();
@@ -655,7 +669,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 
         //사망 판정 dead가 켜지고 코드 한바퀴 돈 후 위쪽 if (dead)
         if (ball.bottom > Dead || ball.left < XPOS(-1)) { //사망 판정
-            if (Stage != 99) {
+            if (Stage != 99 && Stage != 98) {
                 dead = true;
             }
         }
@@ -739,24 +753,20 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
             }
         }
         
-        //메인화면 그림 그리기
+        //메인화면 선택
         if (Stage == 99) {
-            MoveToEx(MemDC, x, y, NULL);
-            RECT Mouse{ x, y, x + 1, y + 1 };
-            RECT Mainb = { XPOS(0), YPOS(10.6), RXPOS(8.4), BYPOS(13) };
-            RECT rect;
-            if (IntersectRect(&rect, &Mainb, &Mouse)) {
-                PlaySound(TEXT("B_Bauns.wav"), NULL, SND_FILENAME | SND_ASYNC);
-                ball.left = XPOS(14.33);
-                ball.top = YPOS(8.33);
-                ball.right = ball.left + 20;
-                ball.bottom = ball.top + 20;
-                Speed1 = 0;
-                Speed2 = 0;
-                Stage = 0;
-                x = 0;
-                y = 0;
-            }
+            MainCheck(MemDC);
+        }
+        if (Stage == 98) {
+            MainSelect(MemDC);
+        }
+
+
+        //좌표찾기
+        if (Stage == 98) {
+            wchar_t buf[128] = { 0, };
+            wsprintf(buf, L"x : %d // y: %d", x, y);
+            TextOut(hdc, x, y, buf, lstrlenW(buf));
         }
         
         //look 블럭 위치 확인용 확인할려면 해당 블럭 fillrect 주석처리
@@ -813,6 +823,9 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
         if (Stage == 99) {
             Img_Main(MemDC, MemDCw);
         }
+        if (Stage == 98) {
+            Img_Select(MemDC, MemDCw);
+        }
 
 
 
@@ -859,12 +872,3 @@ INT_PTR CALLBACK About(HWND hDlg, UINT message, WPARAM wParam, LPARAM lParam)
     }
     return (INT_PTR)FALSE;
 }
-
-
-/*
-MyBitmap = LoadBitmap(hInst, MAKEINTRESOURCE(IDB_BITMAP1));
-        OldBitmap = (HBITMAP)SelectObject(MemDC, MyBitmap);
-        BitBlt(hdc, 0, 0, 123, 160, MemDC, 0, 0, SRCCOPY);
-        SelectObject(MemDC, OldBitmap); // 메모리 DC에서 원래 비트맵으로 되돌리기
-        DeleteObject(MyBitmap);
-*/

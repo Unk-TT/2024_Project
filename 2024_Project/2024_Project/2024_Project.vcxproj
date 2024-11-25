@@ -170,6 +170,7 @@
     <Image Include="Jump_Wall.bmp" />
     <Image Include="Left_wall.bmp" />
     <Image Include="Main.bmp" />
+    <Image Include="MainSelect.bmp" />
     <Image Include="Move_side.bmp" />
     <Image Include="Move_th.bmp" />
     <Image Include="Right_wall.bmp" />
