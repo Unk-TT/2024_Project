@@ -2,31 +2,38 @@
 #include "Resource.h"
 
 RECT S1_bb[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
-RECT S2_bb[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
+RECT S2_bb[] = { XPOS(7), YPOS(13), RXPOS(8) + 1, BYPOS(14) + 1 };
 RECT S3_bb[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
 RECT S4_bb[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
 RECT S5_bb[] = { //브레이크 블럭의 배열
     //상단 브블
-    { XPOS(6), YPOS(3), RXPOS(7) + 1, BYPOS(4) + 1},
-    { XPOS(9), YPOS(2), RXPOS(10) + 1, BYPOS(3) + 1},
-    { XPOS(12), YPOS(4), RXPOS(13) + 1, BYPOS(5) + 1},
-    { XPOS(13), YPOS(4), RXPOS(14) + 1, BYPOS(5) + 1},
-    { XPOS(16), YPOS(4), RXPOS(17) + 1, BYPOS(5) + 1},
-    { XPOS(17), YPOS(4), RXPOS(18) + 1, BYPOS(5) + 1},
-    { XPOS(18), YPOS(4), RXPOS(19) + 1, BYPOS(5) + 1},
-    { XPOS(20), YPOS(4), RXPOS(21) + 1, BYPOS(5) + 1},
-    { XPOS(22), YPOS(4), RXPOS(23) + 1, BYPOS(5) + 1},
-    //하하하단
-    { XPOS(24), YPOS(10), RXPOS(25) + 1, BYPOS(11) + 1},
-    { XPOS(22), YPOS(10), RXPOS(23) + 1, BYPOS(11) + 1},
-    { XPOS(20), YPOS(10), RXPOS(21) + 1, BYPOS(11) + 1},
-    { XPOS(16), YPOS(10), RXPOS(17) + 1, BYPOS(11) + 1},
-    { XPOS(14), YPOS(10), RXPOS(15) + 1, BYPOS(11) + 1},
-    { XPOS(12), YPOS(10), RXPOS(13) + 1, BYPOS(11) + 1},
     { XPOS(10), YPOS(10), RXPOS(11) + 1, BYPOS(11) + 1},
+    { XPOS(11), YPOS(10), RXPOS(12) + 1, BYPOS(11) + 1},
+    { XPOS(12), YPOS(10), RXPOS(13) + 1, BYPOS(11) + 1},
+    { XPOS(13), YPOS(10), RXPOS(14) + 1, BYPOS(11) + 1},
+    { XPOS(14), YPOS(10), RXPOS(15) + 1, BYPOS(11) + 1},
+    { XPOS(15), YPOS(10), RXPOS(16) + 1, BYPOS(11) + 1},
+    { XPOS(16), YPOS(10), RXPOS(17) + 1, BYPOS(11) + 1},
+    { XPOS(17), YPOS(10), RXPOS(18) + 1, BYPOS(11) + 1},
+    { XPOS(21), YPOS(8), RXPOS(22) + 1, BYPOS(9) + 1},
+    { XPOS(21), YPOS(9), RXPOS(22) + 1, BYPOS(10) + 1},
+    { XPOS(21), YPOS(10), RXPOS(22) + 1, BYPOS(11) + 1},
 };
-RECT S6_bb[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
-RECT S7_bb[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
+RECT S6_bb[] = { 
+    { XPOS(7), YPOS(2), RXPOS(8) + 1, BYPOS(3) + 1},//맨위
+    { XPOS(10), YPOS(2), RXPOS(11) + 1, BYPOS(3) + 1},
+    { XPOS(13), YPOS(2), RXPOS(14) + 1, BYPOS(3) + 1},
+    { XPOS(16), YPOS(2), RXPOS(17) + 1, BYPOS(3) + 1},
+    { XPOS(7), YPOS(10), RXPOS(8) + 1, BYPOS(11) + 1},//맨아래
+    { XPOS(10), YPOS(10), RXPOS(11) + 1, BYPOS(11) + 1},
+    { XPOS(13), YPOS(10), RXPOS(14) + 1, BYPOS(11) + 1},
+    { XPOS(16), YPOS(10), RXPOS(17) + 1, BYPOS(11) + 1},
+    { XPOS(10), YPOS(6), RXPOS(11) + 1, BYPOS(7) + 1},//중간
+    { XPOS(13), YPOS(6), RXPOS(14) + 1, BYPOS(7) + 1},
+    { XPOS(16), YPOS(6), RXPOS(17) + 1, BYPOS(7) + 1},
+    { XPOS(19), YPOS(6), RXPOS(20) + 1, BYPOS(7) + 1},
+};
+RECT S7_bb[] = { XPOS(6), YPOS(2), RXPOS(7) + 1, BYPOS(3) + 1 };
 RECT S8_bb[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
 RECT S9_bb[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
 RECT S10_bb[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };

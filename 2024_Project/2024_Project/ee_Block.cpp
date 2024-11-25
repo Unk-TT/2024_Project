@@ -6,63 +6,7 @@ RECT S2_ee[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
 RECT S3_ee[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
 RECT S4_ee[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
 RECT S5_ee[] = { //전기 블러그 배열
-    //스타트 시작
-    { XPOS(0), YPOS(5), RXPOS(1) + 1, BYPOS(6) + 1},
-    { XPOS(0), YPOS(6), RXPOS(1) + 1, BYPOS(7) + 1},
-    { XPOS(0), YPOS(9), RXPOS(1) + 1, BYPOS(10) + 1},
-    { XPOS(0), YPOS(10), RXPOS(1) + 1, BYPOS(11) + 1},
-    //스타트 중간
-    { XPOS(2), YPOS(4), RXPOS(3) + 1, BYPOS(5) + 1},
-    { XPOS(2), YPOS(6), RXPOS(3) + 1, BYPOS(7) + 1},
-    { XPOS(2), YPOS(8), RXPOS(3) + 1, BYPOS(9) + 1},
-    { XPOS(2), YPOS(10), RXPOS(3) + 1, BYPOS(11) + 1},
-    { XPOS(2), YPOS(12), RXPOS(3) + 1, BYPOS(13) + 1},
-    //스타트 마지막
-    { XPOS(4), YPOS(3), RXPOS(5) + 1, BYPOS(4) + 1},
-    { XPOS(4), YPOS(4), RXPOS(5) + 1, BYPOS(5) + 1},
-    { XPOS(4), YPOS(7), RXPOS(5) + 1, BYPOS(8) + 1},
-    { XPOS(4), YPOS(8), RXPOS(5) + 1, BYPOS(9) + 1},
-    { XPOS(4), YPOS(11), RXPOS(5) + 1, BYPOS(12) + 1},
-    // 가운데 방벽
-    { XPOS(8), YPOS(3), RXPOS(9) + 1, BYPOS(4) + 1},
-    { XPOS(7), YPOS(4), RXPOS(8) + 1, BYPOS(5) + 1},
-    { XPOS(7), YPOS(5), RXPOS(8) + 1, BYPOS(6) + 1},
-    { XPOS(7), YPOS(6), RXPOS(8) + 1, BYPOS(7) + 1},
-    { XPOS(7), YPOS(7), RXPOS(8) + 1, BYPOS(8) + 1},
-    { XPOS(7), YPOS(8), RXPOS(8) + 1, BYPOS(9) + 1},
-    { XPOS(7), YPOS(9), RXPOS(8) + 1, BYPOS(10) + 1},
-    { XPOS(7), YPOS(10), RXPOS(8) + 1, BYPOS(11) + 1},
-    { XPOS(7), YPOS(11), RXPOS(8) + 1, BYPOS(12) + 1},
-    { XPOS(6), YPOS(12), RXPOS(7) + 1, BYPOS(13) + 1},
-    //
-    { XPOS(9), YPOS(5), RXPOS(10) + 1, BYPOS(6) + 1},
-    { XPOS(10), YPOS(5), RXPOS(11) + 1, BYPOS(6) + 1},
-    { XPOS(11), YPOS(5), RXPOS(12) + 1, BYPOS(6) + 1},
-    { XPOS(27), YPOS(6), RXPOS(28) + 1, BYPOS(7) + 1},
-    { XPOS(27), YPOS(7), RXPOS(28) + 1, BYPOS(8) + 1},
-    { XPOS(27), YPOS(8), RXPOS(28) + 1, BYPOS(9) + 1},
-    { XPOS(27), YPOS(9), RXPOS(28) + 1, BYPOS(10) + 1},
-    //점프상단
-    { XPOS(9), YPOS(7), RXPOS(10) + 1, BYPOS(8) + 1},
-    { XPOS(11), YPOS(7), RXPOS(12) + 1, BYPOS(8) + 1},
-    { XPOS(13), YPOS(7), RXPOS(14) + 1, BYPOS(8) + 1},
-    { XPOS(15), YPOS(7), RXPOS(16) + 1, BYPOS(8) + 1},
-    { XPOS(17), YPOS(7), RXPOS(18) + 1, BYPOS(8) + 1},
-    { XPOS(19), YPOS(7), RXPOS(20) + 1, BYPOS(8) + 1},
-    { XPOS(21), YPOS(7), RXPOS(22) + 1, BYPOS(8) + 1},
-    { XPOS(23), YPOS(7), RXPOS(24) + 1, BYPOS(8) + 1},
-    { XPOS(25), YPOS(7), RXPOS(26) + 1, BYPOS(8) + 1},
-    //점프하단
-    { XPOS(9), YPOS(9), RXPOS(10) + 1, BYPOS(10) + 1},
-    { XPOS(11), YPOS(9), RXPOS(12) + 1, BYPOS(10) + 1},
-    { XPOS(13), YPOS(9), RXPOS(14) + 1, BYPOS(10) + 1},
-    { XPOS(15), YPOS(9), RXPOS(16) + 1, BYPOS(10) + 1},
-    { XPOS(17), YPOS(9), RXPOS(18) + 1, BYPOS(10) + 1},
-    { XPOS(19), YPOS(9), RXPOS(20) + 1, BYPOS(10) + 1},
-    { XPOS(21), YPOS(9), RXPOS(22) + 1, BYPOS(10) + 1},
-    { XPOS(23), YPOS(9), RXPOS(24) + 1, BYPOS(10) + 1},
-    { XPOS(25), YPOS(9), RXPOS(26) + 1, BYPOS(10) + 1},
-
+     { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 },
 };
 RECT S6_ee[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
 RECT S7_ee[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };

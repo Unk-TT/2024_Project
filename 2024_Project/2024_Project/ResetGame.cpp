@@ -13,9 +13,9 @@ RECT New_S1_ss[] = { //스타블럭의 배열
     { XPOS(23), YPOS(5), RXPOS(24) + 1, BYPOS(6) + 1},
 };
 RECT New_S2_ss[] = { //스타블럭의 배열
-    { XPOS(10), YPOS(6), RXPOS(11) + 1, BYPOS(7) + 1},
-    { XPOS(11), YPOS(5), RXPOS(12) + 1, BYPOS(6) + 1},
-    { XPOS(12), YPOS(4), RXPOS(13) + 1, BYPOS(5) + 1},
+    { XPOS(10), YPOS(7), RXPOS(11) + 1, BYPOS(8) + 1},
+    { XPOS(11), YPOS(6), RXPOS(12) + 1, BYPOS(7) + 1},
+    { XPOS(12), YPOS(5), RXPOS(13) + 1, BYPOS(6) + 1},
     { XPOS(14), YPOS(0), RXPOS(15) + 1, BYPOS(1) + 1},
     { XPOS(17), YPOS(0), RXPOS(18) + 1, BYPOS(1) + 1},
     { XPOS(19), YPOS(12), RXPOS(20) + 1, BYPOS(13) + 1},
@@ -35,9 +35,16 @@ RECT New_S3_ss[] = { //스타블럭의 배열
     { XPOS(5), YPOS(12), RXPOS(6) + 1, BYPOS(13) + 1},
 };
 RECT New_S4_ss[] = { XPOS(24), YPOS(10), RXPOS(25) + 1, BYPOS(11) + 1 };
-RECT New_S5_ss[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
-RECT New_S6_ss[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
-RECT New_S7_ss[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
+RECT New_S5_ss[] = { XPOS(24), YPOS(10), RXPOS(25) + 1, BYPOS(11) + 1 };
+RECT New_S6_ss[] = {
+    { XPOS(24), YPOS(1), RXPOS(25) + 1, BYPOS(2) + 1},
+    { XPOS(4), YPOS(5), RXPOS(5) + 1, BYPOS(6) + 1},
+    { XPOS(24), YPOS(9), RXPOS(25) + 1, BYPOS(10) + 1},
+};
+RECT New_S7_ss[] = {
+    { XPOS(8), YPOS(12), RXPOS(9) + 1, BYPOS(13) + 1},
+    { XPOS(22), YPOS(12), RXPOS(23) + 1, BYPOS(13) + 1},
+};
 RECT New_S8_ss[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
 RECT New_S9_ss[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
 RECT New_S10_ss[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
@@ -109,12 +116,37 @@ void restar() {
 
 //브레이크블럭용 리셋부분
 RECT New_S1_bb[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
-RECT New_S2_bb[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
+RECT New_S2_bb[] = { XPOS(7), YPOS(13), RXPOS(8) + 1, BYPOS(14) + 1 };
 RECT New_S3_bb[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
 RECT New_S4_bb[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
-RECT New_S5_bb[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
-RECT New_S6_bb[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
-RECT New_S7_bb[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
+RECT New_S5_bb[] = { 
+    { XPOS(10), YPOS(10), RXPOS(11) + 1, BYPOS(11) + 1},
+    { XPOS(11), YPOS(10), RXPOS(12) + 1, BYPOS(11) + 1},
+    { XPOS(12), YPOS(10), RXPOS(13) + 1, BYPOS(11) + 1},
+    { XPOS(13), YPOS(10), RXPOS(14) + 1, BYPOS(11) + 1},
+    { XPOS(14), YPOS(10), RXPOS(15) + 1, BYPOS(11) + 1},
+    { XPOS(15), YPOS(10), RXPOS(16) + 1, BYPOS(11) + 1},
+    { XPOS(16), YPOS(10), RXPOS(17) + 1, BYPOS(11) + 1},
+    { XPOS(17), YPOS(10), RXPOS(18) + 1, BYPOS(11) + 1},
+    { XPOS(21), YPOS(8), RXPOS(22) + 1, BYPOS(9) + 1},
+    { XPOS(21), YPOS(9), RXPOS(22) + 1, BYPOS(10) + 1},
+    { XPOS(21), YPOS(10), RXPOS(22) + 1, BYPOS(11) + 1},
+};
+RECT New_S6_bb[] = {
+    { XPOS(7), YPOS(2), RXPOS(8) + 1, BYPOS(3) + 1},//맨위
+    { XPOS(10), YPOS(2), RXPOS(11) + 1, BYPOS(3) + 1},
+    { XPOS(13), YPOS(2), RXPOS(14) + 1, BYPOS(3) + 1},
+    { XPOS(16), YPOS(2), RXPOS(17) + 1, BYPOS(3) + 1},
+    { XPOS(7), YPOS(10), RXPOS(8) + 1, BYPOS(11) + 1},//맨아래
+    { XPOS(10), YPOS(10), RXPOS(11) + 1, BYPOS(11) + 1},
+    { XPOS(13), YPOS(10), RXPOS(14) + 1, BYPOS(11) + 1},
+    { XPOS(16), YPOS(10), RXPOS(17) + 1, BYPOS(11) + 1},
+    { XPOS(10), YPOS(6), RXPOS(11) + 1, BYPOS(7) + 1},//중간
+    { XPOS(13), YPOS(6), RXPOS(14) + 1, BYPOS(7) + 1},
+    { XPOS(16), YPOS(6), RXPOS(17) + 1, BYPOS(7) + 1},
+    { XPOS(19), YPOS(6), RXPOS(20) + 1, BYPOS(7) + 1},
+};
+RECT New_S7_bb[] = { XPOS(6), YPOS(2), RXPOS(7) + 1, BYPOS(3) + 1 };
 RECT New_S8_bb[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
 RECT New_S9_bb[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
 RECT New_S10_bb[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
@@ -187,8 +219,12 @@ RECT S2_sin[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
 RECT S3_sin[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
 RECT S4_sin[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
 RECT S5_sin[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
-RECT S6_sin[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
-RECT S7_sin[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
+RECT S6_sin[] = {
+    { XPOS(13), YPOS(1), RXPOS(14) + 1, BYPOS(2) + 1},
+    { XPOS(13), YPOS(5), RXPOS(14) + 1, BYPOS(6) + 1},
+    { XPOS(13), YPOS(9), RXPOS(14) + 1, BYPOS(10) + 1},
+};
+RECT S7_sin[] = { XPOS(15), YPOS(12), RXPOS(16) + 1, BYPOS(13) + 1 };
 RECT S8_sin[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
 RECT S9_sin[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
 RECT S10_sin[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
@@ -261,7 +297,11 @@ RECT S3_jin[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
 RECT S4_jin[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
 RECT S5_jin[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
 RECT S6_jin[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
-RECT S7_jin[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
+RECT S7_jin[] = {
+    { XPOS(6), YPOS(10), RXPOS(7) + 1, BYPOS(11) + 1},
+    { XPOS(6), YPOS(7), RXPOS(7) + 1, BYPOS(8) + 1},
+    { XPOS(4), YPOS(4), RXPOS(5) + 1, BYPOS(5) + 1},
+};
 RECT S8_jin[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
 RECT S9_jin[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
 RECT S10_jin[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
@@ -330,9 +370,9 @@ RECT S1_Start = { XPOS(14.33), YPOS(7.33), XPOS(14.33) + 20 , YPOS(7.33) + 20 };
 RECT S2_Start = { XPOS(11.33), YPOS(11.33), XPOS(11.33) + 20 , YPOS(11.33) + 20 };
 RECT S3_Start = { XPOS(9.33), YPOS(4.33), XPOS(9.33) + 20 , YPOS(4.33) + 20 };
 RECT S4_Start = { XPOS(6.33), YPOS(0.33), XPOS(6.33) + 20 , YPOS(0.33) + 20 };
-RECT S5_Start = { XPOS(0.33), YPOS(1.33), XPOS(0.33) + 20 , YPOS(1.33) + 20 };
-RECT S6_Start = { XPOS(4.33), YPOS(2.33), XPOS(4.33) + 20 , YPOS(2.33) + 20 };
-RECT S7_Start = { XPOS(0.33), YPOS(1.33), XPOS(0.33) + 20 , YPOS(1.33) + 20 };
+RECT S5_Start = { XPOS(4.33), YPOS(7.33), XPOS(4.33) + 20 , YPOS(7.33) + 20 };
+RECT S6_Start = { XPOS(4.33), YPOS(1.33), XPOS(4.33) + 20 , YPOS(1.33) + 20 };
+RECT S7_Start = { XPOS(4.33), YPOS(9.33), XPOS(4.33) + 20 , YPOS(9.33) + 20 };
 RECT S8_Start = { XPOS(0.33), YPOS(1.33), XPOS(0.33) + 20 , YPOS(1.33) + 20 };
 RECT S9_Start = { XPOS(0.33), YPOS(1.33), XPOS(0.33) + 20 , YPOS(1.33) + 20 };
 RECT S10_Start = { XPOS(0.33), YPOS(1.33), XPOS(0.33) + 20 , YPOS(1.33) + 20 };

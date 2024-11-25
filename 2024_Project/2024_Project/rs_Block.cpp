@@ -35,13 +35,13 @@ RECT S2_rs[] = { // 사각형 블럭들의 배열
     { XPOS(6), YPOS(13), RXPOS(7) + 1, BYPOS(14) + 1},
     { XPOS(4), YPOS(11), RXPOS(5) + 1, BYPOS(12) + 1},
     { XPOS(4), YPOS(10), RXPOS(5) + 1, BYPOS(11) + 1},
-    { XPOS(7), YPOS(8), RXPOS(8) + 1, BYPOS(9) + 1},
-    { XPOS(8), YPOS(8), RXPOS(9) + 1, BYPOS(9) + 1},
+    { XPOS(7), YPOS(9), RXPOS(8) + 1, BYPOS(10) + 1},
+    { XPOS(8), YPOS(9), RXPOS(9) + 1, BYPOS(10) + 1},
     //
-    { XPOS(10), YPOS(7), RXPOS(11) + 1, BYPOS(8) + 1},
-    { XPOS(11), YPOS(6), RXPOS(12) + 1, BYPOS(7) + 1},
-    { XPOS(12), YPOS(5), RXPOS(13) + 1, BYPOS(6) + 1},
-    { XPOS(13), YPOS(4), RXPOS(14) + 1, BYPOS(5) + 1},
+    { XPOS(10), YPOS(8), RXPOS(11) + 1, BYPOS(9) + 1},
+    { XPOS(11), YPOS(7), RXPOS(12) + 1, BYPOS(8) + 1},
+    { XPOS(12), YPOS(6), RXPOS(13) + 1, BYPOS(7) + 1},
+    { XPOS(13), YPOS(5), RXPOS(14) + 1, BYPOS(6) + 1},
     //
     { XPOS(19), YPOS(13), RXPOS(20) + 1, BYPOS(14) + 1},
     { XPOS(20), YPOS(13), RXPOS(21) + 1, BYPOS(14) + 1},
@@ -100,22 +100,100 @@ RECT S4_rs[] = { // 사각형 블럭들의 배열
 };
 
 RECT S5_rs[] = { // 사각형 블럭들의 배열
-    { XPOS(-1), YPOS(1), RXPOS(0) + 1, BYPOS(2) + 1},
-    { XPOS(-1), YPOS(2), RXPOS(0) + 1, BYPOS(3) + 1}, //시작지점 벽
-    { XPOS(0), YPOS(3), RXPOS(1) + 1, BYPOS(4) + 1}, //스타토
-    { XPOS(26), YPOS(10), RXPOS(27) + 1, BYPOS(11) + 1}, //2차스타토
-    { XPOS(18), YPOS(10), RXPOS(19) + 1, BYPOS(11) + 1},
-    { XPOS(25), YPOS(13), RXPOS(26) + 1, BYPOS(14) + 1},//끝지점
-    { XPOS(26), YPOS(13), RXPOS(27) + 1, BYPOS(14) + 1},
-    { XPOS(27), YPOS(13), RXPOS(28) + 1, BYPOS(14) + 1},
-    { XPOS(28), YPOS(12), RXPOS(29) + 1, BYPOS(13) + 1},
-    { XPOS(28), YPOS(11), RXPOS(29) + 1, BYPOS(12) + 1},
-    { XPOS(28), YPOS(10), RXPOS(29) + 1, BYPOS(11) + 1},
-
+    { XPOS(2), YPOS(3), RXPOS(3) + 1, BYPOS(4) + 1},
+    { XPOS(2), YPOS(4), RXPOS(3) + 1, BYPOS(5) + 1},
+    { XPOS(2), YPOS(5), RXPOS(3) + 1, BYPOS(6) + 1},
+    { XPOS(2), YPOS(6), RXPOS(3) + 1, BYPOS(7) + 1},
+    { XPOS(2), YPOS(7), RXPOS(3) + 1, BYPOS(8) + 1},
+    { XPOS(2), YPOS(8), RXPOS(3) + 1, BYPOS(9) + 1},
+    { XPOS(2), YPOS(9), RXPOS(3) + 1, BYPOS(10) + 1},
+    { XPOS(3), YPOS(9), RXPOS(4) + 1, BYPOS(10) + 1},
+    { XPOS(4), YPOS(9), RXPOS(5) + 1, BYPOS(10) + 1},
+    { XPOS(6), YPOS(10), RXPOS(7) + 1, BYPOS(11) + 1},
+    { XPOS(7), YPOS(10), RXPOS(8) + 1, BYPOS(11) + 1},
+    { XPOS(7), YPOS(10), RXPOS(8) + 1, BYPOS(11) + 1},
+    { XPOS(9), YPOS(6), RXPOS(10) + 1, BYPOS(7) + 1},
+    { XPOS(12), YPOS(6), RXPOS(13) + 1, BYPOS(7) + 1},
+    { XPOS(15), YPOS(6), RXPOS(16) + 1, BYPOS(7) + 1},
+    { XPOS(18), YPOS(6), RXPOS(19) + 1, BYPOS(7) + 1},
+    { XPOS(19), YPOS(7), RXPOS(20) + 1, BYPOS(8) + 1},
+    { XPOS(19), YPOS(8), RXPOS(20) + 1, BYPOS(9) + 1},
+    { XPOS(20), YPOS(8), RXPOS(21) + 1, BYPOS(9) + 1},
+    { XPOS(20), YPOS(9), RXPOS(21) + 1, BYPOS(10) + 1},
+    { XPOS(23), YPOS(9), RXPOS(24) + 1, BYPOS(10) + 1},
+    { XPOS(24), YPOS(9), RXPOS(25) + 1, BYPOS(10) + 1},
+    { XPOS(25), YPOS(9), RXPOS(26) + 1, BYPOS(10) + 1},
+    { XPOS(23), YPOS(11), RXPOS(24) + 1, BYPOS(12) + 1},
+    { XPOS(24), YPOS(11), RXPOS(25) + 1, BYPOS(12) + 1},
+    { XPOS(25), YPOS(11), RXPOS(26) + 1, BYPOS(12) + 1},
+    { XPOS(25), YPOS(10), RXPOS(26) + 1, BYPOS(11) + 1},
 };
 
-RECT S6_rs[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
-RECT S7_rs[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
+RECT S6_rs[] = { 
+    { XPOS(2), YPOS(2), RXPOS(3) + 1, BYPOS(3) + 1}, //상단
+    { XPOS(2), YPOS(3), RXPOS(3) + 1, BYPOS(4) + 1},
+    { XPOS(2), YPOS(4), RXPOS(3) + 1, BYPOS(5) + 1},
+    { XPOS(2), YPOS(5), RXPOS(3) + 1, BYPOS(6) + 1},
+    { XPOS(2), YPOS(6), RXPOS(3) + 1, BYPOS(7) + 1},
+    { XPOS(3), YPOS(2), RXPOS(4) + 1, BYPOS(3) + 1},
+    { XPOS(4), YPOS(2), RXPOS(5) + 1, BYPOS(3) + 1},
+    { XPOS(5), YPOS(2), RXPOS(6) + 1, BYPOS(3) + 1},
+    { XPOS(3), YPOS(6), RXPOS(4) + 1, BYPOS(7) + 1},
+    { XPOS(4), YPOS(6), RXPOS(5) + 1, BYPOS(7) + 1},
+    { XPOS(5), YPOS(6), RXPOS(6) + 1, BYPOS(7) + 1}, //왼쪽 끝
+    { XPOS(21), YPOS(2), RXPOS(22) + 1, BYPOS(3) + 1},
+    { XPOS(22), YPOS(2), RXPOS(23) + 1, BYPOS(3) + 1},
+    { XPOS(23), YPOS(2), RXPOS(24) + 1, BYPOS(3) + 1},
+    { XPOS(24), YPOS(2), RXPOS(25) + 1, BYPOS(3) + 1},
+    { XPOS(25), YPOS(2), RXPOS(26) + 1, BYPOS(3) + 1},
+    { XPOS(25), YPOS(3), RXPOS(26) + 1, BYPOS(4) + 1},
+    { XPOS(25), YPOS(4), RXPOS(26) + 1, BYPOS(5) + 1},
+    { XPOS(25), YPOS(5), RXPOS(26) + 1, BYPOS(6) + 1},
+    { XPOS(25), YPOS(6), RXPOS(26) + 1, BYPOS(7) + 1},
+    { XPOS(25), YPOS(7), RXPOS(26) + 1, BYPOS(8) + 1},
+    { XPOS(25), YPOS(8), RXPOS(26) + 1, BYPOS(9) + 1},
+    { XPOS(25), YPOS(9), RXPOS(26) + 1, BYPOS(10) + 1},
+    { XPOS(21), YPOS(10), RXPOS(22) + 1, BYPOS(11) + 1},
+    { XPOS(22), YPOS(10), RXPOS(23) + 1, BYPOS(11) + 1},
+    { XPOS(23), YPOS(10), RXPOS(24) + 1, BYPOS(11) + 1},
+    { XPOS(24), YPOS(10), RXPOS(25) + 1, BYPOS(11) + 1},
+    { XPOS(25), YPOS(10), RXPOS(26) + 1, BYPOS(11) + 1},
+};
+RECT S7_rs[] = { 
+    { XPOS(4), YPOS(11), RXPOS(5) + 1, BYPOS(12) + 1},//가장왼쪽
+    { XPOS(5), YPOS(11), RXPOS(6) + 1, BYPOS(12) + 1},
+    { XPOS(6), YPOS(11), RXPOS(7) + 1, BYPOS(12) + 1},
+    { XPOS(7), YPOS(11), RXPOS(8) + 1, BYPOS(12) + 1},
+    { XPOS(7), YPOS(10), RXPOS(8) + 1, BYPOS(11) + 1},
+    { XPOS(7), YPOS(9), RXPOS(8) + 1, BYPOS(10) + 1},
+    { XPOS(7), YPOS(8), RXPOS(8) + 1, BYPOS(9) + 1},
+    { XPOS(7), YPOS(7), RXPOS(8) + 1, BYPOS(8) + 1},
+    { XPOS(7), YPOS(6), RXPOS(8) + 1, BYPOS(7) + 1},
+    { XPOS(7), YPOS(5), RXPOS(8) + 1, BYPOS(6) + 1},
+    { XPOS(7), YPOS(4), RXPOS(8) + 1, BYPOS(5) + 1},
+    { XPOS(7), YPOS(3), RXPOS(8) + 1, BYPOS(4) + 1},
+    { XPOS(7), YPOS(2), RXPOS(8) + 1, BYPOS(3) + 1},
+    { XPOS(6), YPOS(8), RXPOS(7) + 1, BYPOS(9) + 1},//왼쪽 짜가리
+    { XPOS(4), YPOS(5), RXPOS(5) + 1, BYPOS(6) + 1},
+    { XPOS(11), YPOS(2), RXPOS(12) + 1, BYPOS(3) + 1},//중간 세로 일자
+    { XPOS(11), YPOS(4), RXPOS(12) + 1, BYPOS(5) + 1},
+    { XPOS(11), YPOS(5), RXPOS(12) + 1, BYPOS(6) + 1},
+    { XPOS(11), YPOS(7), RXPOS(12) + 1, BYPOS(8) + 1},
+    { XPOS(11), YPOS(8), RXPOS(12) + 1, BYPOS(9) + 1},
+    { XPOS(8), YPOS(13), RXPOS(9) + 1, BYPOS(14) + 1},//중간 가로 일자
+    { XPOS(9), YPOS(13), RXPOS(10) + 1, BYPOS(14) + 1},
+    { XPOS(10), YPOS(13), RXPOS(11) + 1, BYPOS(14) + 1},
+    { XPOS(11), YPOS(13), RXPOS(12) + 1, BYPOS(14) + 1},
+    { XPOS(12), YPOS(13), RXPOS(13) + 1, BYPOS(14) + 1},
+    { XPOS(13), YPOS(13), RXPOS(14) + 1, BYPOS(14) + 1},
+    { XPOS(14), YPOS(13), RXPOS(15) + 1, BYPOS(14) + 1},
+    { XPOS(15), YPOS(13), RXPOS(16) + 1, BYPOS(14) + 1},
+    { XPOS(20), YPOS(13), RXPOS(21) + 1, BYPOS(14) + 1},//오른쪽
+    { XPOS(21), YPOS(13), RXPOS(22) + 1, BYPOS(14) + 1},
+    { XPOS(22), YPOS(13), RXPOS(23) + 1, BYPOS(14) + 1},
+    { XPOS(23), YPOS(13), RXPOS(24) + 1, BYPOS(14) + 1},
+    { XPOS(24), YPOS(13), RXPOS(25) + 1, BYPOS(14) + 1},
+};
 RECT S8_rs[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
 RECT S9_rs[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
 RECT S10_rs[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };

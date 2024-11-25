@@ -14,9 +14,9 @@ RECT S1_ss[] = { //스타블럭의 배열
     { XPOS(23), YPOS(5), RXPOS(24) + 1, BYPOS(6) + 1},
 };
 RECT S2_ss[] = { //스타블럭의 배열
-    { XPOS(10), YPOS(6), RXPOS(11) + 1, BYPOS(7) + 1},
-    { XPOS(11), YPOS(5), RXPOS(12) + 1, BYPOS(6) + 1},
-    { XPOS(12), YPOS(4), RXPOS(13) + 1, BYPOS(5) + 1},
+    { XPOS(10), YPOS(7), RXPOS(11) + 1, BYPOS(8) + 1},
+    { XPOS(11), YPOS(6), RXPOS(12) + 1, BYPOS(7) + 1},
+    { XPOS(12), YPOS(5), RXPOS(13) + 1, BYPOS(6) + 1},
     { XPOS(14), YPOS(0), RXPOS(15) + 1, BYPOS(1) + 1},
     { XPOS(17), YPOS(0), RXPOS(18) + 1, BYPOS(1) + 1},
     { XPOS(19), YPOS(12), RXPOS(20) + 1, BYPOS(13) + 1},
@@ -37,24 +37,17 @@ RECT S3_ss[] = { //스타블럭의 배열
 };
 RECT S4_ss[] = { XPOS(24), YPOS(10), RXPOS(25) + 1, BYPOS(11) + 1 };
 RECT S5_ss[] = { //스타블럭의 배열
-    { XPOS(5), YPOS(9), RXPOS(6) + 1, BYPOS(10) + 1},
-    { XPOS(6), YPOS(5), RXPOS(7) + 1, BYPOS(6) + 1},
-    { XPOS(8), YPOS(4), RXPOS(9) + 1, BYPOS(5) + 1},
-    { XPOS(26), YPOS(6), RXPOS(27) + 1, BYPOS(7) + 1},
-    { XPOS(8), YPOS(9), RXPOS(9) + 1, BYPOS(10) + 1},
-    { XPOS(10), YPOS(12), RXPOS(11) + 1, BYPOS(13) + 1},
-    { XPOS(14), YPOS(12), RXPOS(15) + 1, BYPOS(13) + 1},
-    { XPOS(18), YPOS(12), RXPOS(19) + 1, BYPOS(13) + 1},
-    { XPOS(22), YPOS(12), RXPOS(23) + 1, BYPOS(13) + 1},
-    { XPOS(25), YPOS(12), RXPOS(26) + 1, BYPOS(13) + 1},
-    { XPOS(26), YPOS(12), RXPOS(27) + 1, BYPOS(13) + 1},
-    { XPOS(27), YPOS(12), RXPOS(28) + 1, BYPOS(13) + 1},
-    { XPOS(25), YPOS(11), RXPOS(26) + 1, BYPOS(12) + 1},
-    { XPOS(26), YPOS(11), RXPOS(27) + 1, BYPOS(12) + 1},
-    { XPOS(27), YPOS(11), RXPOS(28) + 1, BYPOS(12) + 1},
+    { XPOS(24), YPOS(10), RXPOS(25) + 1, BYPOS(11) + 1},
 };
-RECT S6_ss[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
-RECT S7_ss[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
+RECT S6_ss[] = {
+    { XPOS(24), YPOS(1), RXPOS(25) + 1, BYPOS(2) + 1},
+    { XPOS(4), YPOS(5), RXPOS(5) + 1, BYPOS(6) + 1},
+    { XPOS(24), YPOS(9), RXPOS(25) + 1, BYPOS(10) + 1},
+};
+RECT S7_ss[] = {
+    { XPOS(8), YPOS(12), RXPOS(9) + 1, BYPOS(13) + 1},
+    { XPOS(22), YPOS(12), RXPOS(23) + 1, BYPOS(13) + 1},
+};
 RECT S8_ss[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
 RECT S9_ss[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
 RECT S10_ss[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };

@@ -4,8 +4,8 @@
 RECT S1_jw[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
 RECT S2_jw[] = { //점프대 블럭의 배열
     { XPOS(5), YPOS(12), RXPOS(6) + 1, BYPOS(13) + 1},
-    { XPOS(14), YPOS(5), RXPOS(15) + 1, BYPOS(6) + 1},
-    { XPOS(17), YPOS(5), RXPOS(18) + 1, BYPOS(6) + 1},
+    { XPOS(14), YPOS(4), RXPOS(15) + 1, BYPOS(5) + 1},
+    { XPOS(17), YPOS(4), RXPOS(18) + 1, BYPOS(5) + 1},
 
 };
 RECT S3_jw[] = { //점프대 블럭의 배열
@@ -13,9 +13,9 @@ RECT S3_jw[] = { //점프대 블럭의 배열
 };
 RECT S4_jw[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
 RECT S5_jw[] = { //점프대 블럭의 배열
-    { XPOS(5), YPOS(13), RXPOS(6) + 1, BYPOS(14) + 1},
-    { XPOS(6), YPOS(9), RXPOS(7) + 1, BYPOS(10) + 1},
-    { XPOS(5), YPOS(5), RXPOS(6) + 1, BYPOS(6) + 1},
+    { XPOS(5), YPOS(9), RXPOS(6) + 1, BYPOS(10) + 1},
+    { XPOS(7), YPOS(7), RXPOS(8) + 1, BYPOS(8) + 1},
+    { XPOS(22), YPOS(9), RXPOS(23) + 1, BYPOS(10) + 1},
 };
 RECT S6_jw[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
 RECT S7_jw[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
@@ -97,8 +97,8 @@ void Jump_Wall() {
             ball.bottom = rect.top;
             ball.top = ball.bottom - 20;
             PlaySound(TEXT("B_Bauns.wav"), NULL, SND_FILENAME | SND_ASYNC);
-            Speed1 = -66; // 공이 튀어오르게 -로 설정
-            Speed2 = -66;
+            Speed1 = -60; // 공이 튀어오르게 -로 설정
+            Speed2 = -60;
         }
         // 사각형의 좌측과 충돌하는 경우
         if (ball.right >= rect.left && ball.left < rect.left &&

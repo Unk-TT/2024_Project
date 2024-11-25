@@ -117,7 +117,7 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
     return TRUE;
 }
 
-int Stage = 12; //스테이지 확인용
+int Stage = 0; //스테이지 확인용
 const int Dead = YPOS(20);
 RECT ball; // 내가 움직일 공의 구조체
 double Speed1 = 0.0; //자유낙하 공식의 초기 속도 (top)
@@ -241,14 +241,20 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
             ball.bottom = ball.top + 20;
         }
         else if (Stage == 4) {
-            ball.left = XPOS(0.33);
-            ball.top = YPOS(1.33);
+            ball.left = XPOS(4.33);
+            ball.top = YPOS(7.33);
             ball.right = ball.left + 20;
             ball.bottom = ball.top + 20;
         }
         else if (Stage == 5) {
             ball.left = XPOS(4.33);
             ball.top = YPOS(1.33);
+            ball.right = ball.left + 20;
+            ball.bottom = ball.top + 20;
+        }
+        else if (Stage == 6) {
+            ball.left = XPOS(4.33);
+            ball.top = YPOS(9.33);
             ball.right = ball.left + 20;
             ball.bottom = ball.top + 20;
         }
@@ -373,8 +379,8 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
             else if (SuperJump) {
                 Jump_Ball = false;
                 SuperJump = false;
-                Speed1 = -60;
-                Speed2 = -60;
+                Speed1 = -40;
+                Speed2 = -40;
             }
             else { //천천히 속도 증가
                 ball.left -= LeftSpeed;
@@ -409,8 +415,8 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
             else if (SuperJump) {
                 Jump_Ball = false;
                 SuperJump = false;
-                Speed1 = -60;
-                Speed2 = -60;
+                Speed1 = -40;
+                Speed2 = -40;
             }
             else { //천천히 속도 증가
                 ball.left += RightSpeed;
@@ -572,17 +578,35 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
             nb_ReSet(hWnd);
             Stage += 1;
 
-            ball.left = XPOS(0.33);
+            ball.left = XPOS(4.33);
+            ball.top = YPOS(7.33);
+            ball.right = ball.left + 20;
+            ball.bottom = ball.top + 20;
+        }
+        else if (Count == 1 && Stage == 4) {
+            nb_ReSet(hWnd);
+            Stage += 1;
+
+            ball.left = XPOS(4.33);
             ball.top = YPOS(1.33);
             ball.right = ball.left + 20;
             ball.bottom = ball.top + 20;
         }
-        else if (Count == 15 && Stage == 4) {
+        else if (Count == 3 && Stage == 5) {
             nb_ReSet(hWnd);
             Stage += 1;
 
-            ball.left = XPOS(0.33);
-            ball.top = YPOS(1.33);
+            ball.left = XPOS(4.33);
+            ball.top = YPOS(9.33);
+            ball.right = ball.left + 20;
+            ball.bottom = ball.top + 20;
+        }
+        else if (Count == 2 && Stage == 6) {
+            nb_ReSet(hWnd);
+            Stage += 1;
+
+            ball.left = XPOS(4.33);
+            ball.top = YPOS(9.33);
             ball.right = ball.left + 20;
             ball.bottom = ball.top + 20;
         }
@@ -696,7 +720,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
         osBrush = (HBRUSH)SelectObject(MemDC, myBrush);
 
         //블럭 바둑판
-        if (Stage == 6) {
+        if (Stage == 11) {
             for (int x = 0; x < X_COUNT; x += 2) { //사각형의 좌측 변 위치 확인용
                 MoveToEx(MemDC, XPOS(x), YPOS(0), NULL);
                 LineTo(MemDC, XPOS(x), YPOS(Y_COUNT - 1));

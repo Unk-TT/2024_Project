@@ -47,7 +47,7 @@ RECT S11_dt[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
 RECT S12_dt[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
 RECT S13_dt[] = { XPOS(5) + 30, YPOS(13) + 30, RXPOS(6) + 31, BYPOS(14) + 31 };
 
-//표창블럭 기준점
+//표창블럭 기준점 위 표창과 동일
 RECT S1_dt_s[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
 RECT S2_dt_s[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
 RECT S3_dt_s[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };

@@ -17,13 +17,7 @@ RECT S3_gwl[] = { //화살표 블럭의 배열
     { XPOS(22), YPOS(12), RXPOS(23) + 1, BYPOS(13) + 1},
 };
 RECT S4_gwl[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
-RECT S5_gwl[] = { //화살표 블럭의 배열 왼족
-    //스타트 왼쪽
-    { XPOS(3), YPOS(5), RXPOS(4) + 1, BYPOS(6) + 1},
-    { XPOS(3), YPOS(9), RXPOS(4) + 1, BYPOS(10) + 1},
-    { XPOS(24), YPOS(4), RXPOS(25) + 1, BYPOS(5) + 1},
-
-};
+RECT S5_gwl[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
 RECT S6_gwl[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
 RECT S7_gwl[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
 RECT S8_gwl[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
@@ -86,14 +80,8 @@ RECT S1_gwr[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
 RECT S2_gwr[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
 RECT S3_gwr[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
 RECT S4_gwr[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
-RECT S5_gwr[] = { //  화살표 왼쪽 방향
-    //스타트 오른쪽
-    { XPOS(1), YPOS(3), RXPOS(2) + 1, BYPOS(4) + 1},
-    { XPOS(1), YPOS(7), RXPOS(2) + 1, BYPOS(8) + 1},
-    { XPOS(1), YPOS(11), RXPOS(2) + 1, BYPOS(12) + 1},
-    { XPOS(3), YPOS(12), RXPOS(4) + 1, BYPOS(13) + 1},
-    { XPOS(8), YPOS(6), RXPOS(9) + 1, BYPOS(7) + 1},
-    { XPOS(8), YPOS(12), RXPOS(9) + 1, BYPOS(13) + 1},
+RECT S5_gwr[] = {
+    { XPOS(8), YPOS(10), RXPOS(9) + 1, BYPOS(11) + 1},
 };
 RECT S6_gwr[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
 RECT S7_gwr[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };

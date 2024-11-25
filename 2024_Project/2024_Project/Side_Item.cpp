@@ -8,8 +8,12 @@ RECT S2_si[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
 RECT S3_si[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
 RECT S4_si[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
 RECT S5_si[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
-RECT S6_si[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
-RECT S7_si[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
+RECT S6_si[] = {
+    { XPOS(13), YPOS(1), RXPOS(14) + 1, BYPOS(2) + 1},
+    { XPOS(13), YPOS(5), RXPOS(14) + 1, BYPOS(6) + 1},
+    { XPOS(13), YPOS(9), RXPOS(14) + 1, BYPOS(10) + 1},    
+};
+RECT S7_si[] = { XPOS(15), YPOS(12), RXPOS(16) + 1, BYPOS(13) + 1 };
 RECT S8_si[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
 RECT S9_si[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
 RECT S10_si[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
