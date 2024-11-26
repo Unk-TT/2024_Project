@@ -1,0 +1,105 @@
+
+
+
+rs_Block.cpp 일반블럭 - 가장 기본이 되는 블럭
+ss_Block.cpp 스타블럭 - 스테이지 클리어를 위한 블럭, 맵에 있는 모든 스타를 먹어야 클리어가 됨
+bb_Block.cpp 부셔지는 블럭 - 일반블럭과 로직이 같지만 한번 밟으면 사라짐 
+ee_Block.cpp 전기블럭 - 닿으면 죽음
+gw_Block.cpp 화살표블럭 - 블럭에 닿으면 해당 방향으로 일직선으로 움직임(방향키로 움직이면 멈춤)
+jw_Block.cpp 점프블럭 - 블럭을 밟으면 높게 점프함
+Mv_Block.cpp 무브블럭 - 블럭이 움직임(스레드 활용)
+te_Block.cpp 블랙홀, 화이트홀 블럭 - 블랙홀에 닿으면 화이트홀로 나온다. 화이트홀에서 블랙홀로 가는 건 불가능
+Side_Item.cpp 점프아이템블럭 - 방향키를 빠르게 두번 누르면 해당 방향으로 빠르게 점프한다
+ResetGame.cpp 사망판정이거나 다음 스테이지로 넘어갈때 필요
+
+
+
+
+스테이지 초기값
+resetGame.cpp
+RECT S1_Start = { XPOS(14.33), YPOS(7.33), XPOS(14.33) + 20 , YPOS(7.33) + 20 };
+TeskSkir.cpp
+case WM_CREATE
+(디버그로 해당 스테이지로 바로 들어갈때)
+case WM_TIMER
+(스테이지 클리어 후 다음 스테이지로 들어갈때)
+
+스타랑 부셔지는 블럭
+bb_Block.cpp
+st_Block.cpp
+ResetGame.cpp
+에서 배열 추가
+
+배열 추가
+RECT S8_ss[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
+    RECT S9_ss[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
+    RECT S10_ss[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
+    RECT S11_ss[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
+    RECT S12_ss[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
+    RECT S13_ss[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
+
+int Num_S8_St = sizeof(S8_ss)  sizeof(S8_ss[0]);
+    int Num_S9_St = sizeof(S9_ss)  sizeof(S9_ss[0]);
+    int Num_S10_St = sizeof(S10_ss)  sizeof(S10_ss[0]);
+    int Num_S11_St = sizeof(S11_ss)  sizeof(S11_ss[0]);
+    int Num_S12_St = sizeof(S12_ss)  sizeof(S12_ss[0]);
+    int Num_S13_St = sizeof(S13_ss)  sizeof(S13_ss[0]);
+
+Num_S8_St,
+    Num_S9_St,
+    Num_S10_St,
+    Num_S11_St,
+    Num_S12_St,
+    Num_S13_St,
+
+S8_ss,
+    S9_ss,
+    S10_ss,
+    S11_ss,
+    S12_ss,
+    S13_ss,
+
+
+뉴버전
+RECT New_S8_bb[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
+    RECT New_S9_bb[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
+    RECT New_S10_bb[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
+    RECT New_S11_bb[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
+    RECT New_S12_bb[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
+    RECT New_S13_bb[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
+
+int New_S8_Bb = sizeof(New_S8_bb)  sizeof(New_S8_bb[0]);
+    int New_S9_Bb = sizeof(New_S9_bb)  sizeof(New_S9_bb[0]);
+    int New_S10_Bb = sizeof(New_S10_bb)  sizeof(New_S10_bb[0]);
+    int New_S11_Bb = sizeof(New_S11_bb)  sizeof(New_S11_bb[0]);
+    int New_S12_Bb = sizeof(New_S12_bb)  sizeof(New_S12_bb[0]);
+    int New_S13_Bb = sizeof(New_S13_bb)  sizeof(New_S13_bb[0]);
+
+New_S8_bb,
+    New_S9_bb,
+    New_S10_bb,
+    New_S11_bb,
+    New_S12_bb,
+    New_S13_bb,
+
+New_S8_Bb,
+    New_S9_Bb,
+    New_S10_Bb,
+    New_S11_Bb,
+    New_S12_Bb,
+    New_S13_Bb,
+
+뒤로가기 80 80 145 145
+
+	270
+
+125(+245)         310(+185)    370
+       
+       455
+
+
+       489
+
+125(+245)         310(+185)    370
+
+       674
