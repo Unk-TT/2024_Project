@@ -1,0 +1,175 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="소스 파일">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="헤더 파일">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="리소스 파일">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="framework.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="2024_Project.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="All_Block.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="resource1.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="2024_Project.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="bb_Block.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="dart_Block.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="ee_Block.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="gw_Block.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Jump_Item.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="jw_Block.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Main.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Mv_Block.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="ResetGame.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="rs_Block.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Side_Item.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="ss_Block.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="te_block.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="flash_black.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="thorm_block.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="2024_Project.rc">
+      <Filter>리소스 파일</Filter>
+    </ResourceCompile>
+    <ResourceCompile Include="Bitmap.rc">
+      <Filter>리소스 파일</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="small.ico">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="2024_Project.ico">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="Wall.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="bitmap2.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="Star.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="Jump_Wall.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="Left_wall.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="Ele.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="BWall.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="Main.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="Right_wall.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="Dart.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="flash_on.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="flash_off.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="Throm_block.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="blackhole.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="whitehole.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="side_item.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="jump_item.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="bitmap18.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="Move_th.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="Move_side.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="MainSelect.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="Eat_Star.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="B_Break.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="Deadball.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+  </ItemGroup>
+</Project>
