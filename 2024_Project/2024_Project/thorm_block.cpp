@@ -3,7 +3,7 @@
 #include <wchar.h>
 //이미지 용 블럭
 RECT S1_tb[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
-RECT S2_tb[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
+RECT S2_tb[] = { XPOS(9), YPOS(9), RXPOS(10) + 1, BYPOS(10) + 1 };
 RECT S3_tb[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
 RECT S4_tb[] = {
     { XPOS(3), YPOS(6), RXPOS(4) + 1, BYPOS(7) + 1 },
@@ -51,7 +51,7 @@ RECT S13_tb[] = {
 
 //가시 하단 블럭(기본블럭) 이미지용 블럭에서 ypos만 + 0.5
 RECT S1_tbw[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
-RECT S2_tbw[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
+RECT S2_tbw[] = { XPOS(9), YPOS(9.5), RXPOS(10) + 1, BYPOS(10) + 1 };
 RECT S3_tbw[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
 RECT S4_tbw[] = { 
     { XPOS(3), YPOS(6.5), RXPOS(4) + 1, BYPOS(7) + 1 },
@@ -96,28 +96,30 @@ RECT S13_tbw[] = {
     {XPOS(20), YPOS(13.5), RXPOS(21) + 1, BYPOS(14) + 1 },
     {XPOS(23), YPOS(12.5), RXPOS(24) + 1, BYPOS(13) + 1 },
 };
+
+
 //가시 블럭(가시부분)이미지용 블럭에서 ypos + 0.2, bypos - 0.5. 경우에 따라 xpos + 0.n, rxpos - 0.n
 RECT S1_tbt[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
-RECT S2_tbt[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
+RECT S2_tbt[] = { XPOS(9), YPOS(9.2), RXPOS(10) + 1, BYPOS(9.5) + 1 };
 RECT S3_tbt[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
 RECT S4_tbt[] = { 
     { XPOS(3), YPOS(6), RXPOS(4) + 1, BYPOS(6.5) + 1 },
-{ XPOS(4), YPOS(7.2), RXPOS(5) + 1, BYPOS(7.5) + 1 },
-{ XPOS(5), YPOS(7.2), RXPOS(6) + 1, BYPOS(7.5) + 1 },
-{ XPOS(6), YPOS(7.2), RXPOS(7) + 1, BYPOS(7.5) + 1 },
-{ XPOS(7), YPOS(8.2), RXPOS(8) + 1, BYPOS(8.5) + 1 },
-{ XPOS(8), YPOS(8.2), RXPOS(9) + 1, BYPOS(8.5) + 1 },
-{ XPOS(9), YPOS(9.2), RXPOS(10) + 1, BYPOS(9.5) + 1 },
-{ XPOS(10), YPOS(9.2), RXPOS(11) + 1, BYPOS(9.5) + 1 },
-{ XPOS(11), YPOS(10.2), RXPOS(12) + 1, BYPOS(10.5) + 1 },
-{ XPOS(12), YPOS(10.2), RXPOS(13) + 1, BYPOS(10.5) + 1 },
-{ XPOS(13), YPOS(11.2), RXPOS(14) + 1, BYPOS(11.5) + 1 },
-{ XPOS(14), YPOS(11.2), RXPOS(15) + 1, BYPOS(11.5) + 1 },
-{ XPOS(15), YPOS(11.2), RXPOS(16) + 1, BYPOS(11.5) + 1 },
-{ XPOS(16), YPOS(11.2), RXPOS(17) + 1, BYPOS(11.5) + 1 },
-{ XPOS(17), YPOS(11.2), RXPOS(18) + 1, BYPOS(11.5) + 1 },
-{ XPOS(18), YPOS(11.2), RXPOS(19) + 1, BYPOS(11.5) + 1 },
-{ XPOS(19), YPOS(11.2), RXPOS(20) + 1, BYPOS(11.5) + 1 },
+    { XPOS(4), YPOS(7.2), RXPOS(5) + 1, BYPOS(7.5) + 1 },
+    { XPOS(5), YPOS(7.2), RXPOS(6) + 1, BYPOS(7.5) + 1 },
+    { XPOS(6), YPOS(7.2), RXPOS(7) + 1, BYPOS(7.5) + 1 },
+    { XPOS(7), YPOS(8.2), RXPOS(8) + 1, BYPOS(8.5) + 1 },
+    { XPOS(8), YPOS(8.2), RXPOS(9) + 1, BYPOS(8.5) + 1 },
+    { XPOS(9), YPOS(9.2), RXPOS(10) + 1, BYPOS(9.5) + 1 },
+    { XPOS(10), YPOS(9.2), RXPOS(11) + 1, BYPOS(9.5) + 1 },
+    { XPOS(11), YPOS(10.2), RXPOS(12) + 1, BYPOS(10.5) + 1 },
+    { XPOS(12), YPOS(10.2), RXPOS(13) + 1, BYPOS(10.5) + 1 },
+    { XPOS(13), YPOS(11.2), RXPOS(14) + 1, BYPOS(11.5) + 1 },
+    { XPOS(14), YPOS(11.2), RXPOS(15) + 1, BYPOS(11.5) + 1 },
+    { XPOS(15), YPOS(11.2), RXPOS(16) + 1, BYPOS(11.5) + 1 },
+    { XPOS(16), YPOS(11.2), RXPOS(17) + 1, BYPOS(11.5) + 1 },
+    { XPOS(17), YPOS(11.2), RXPOS(18) + 1, BYPOS(11.5) + 1 },
+    { XPOS(18), YPOS(11.2), RXPOS(19) + 1, BYPOS(11.5) + 1 },
+    { XPOS(19), YPOS(11.2), RXPOS(20) + 1, BYPOS(11.5) + 1 },
 };
 RECT S5_tbt[] = {
     { XPOS(8), YPOS(7.2), RXPOS(9) + 1, BYPOS(7.5) + 1 },

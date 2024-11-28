@@ -529,6 +529,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
                 if (ClearCount > 50) {
                     Speed1 = 0;
                     Speed2 = 0;
+                    idkh = 0;
                     ReSet(hWnd);
                     Elect = false;
                     ballcheck = true;
@@ -541,6 +542,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
             PlaySound(TEXT("DeadS.wav"), NULL, SND_FILENAME | SND_ASYNC);
             Speed1 = 0;
             Speed2 = 0;
+            idkh = 0;
             Sleep(400);
             ReSet(hWnd);
             dead = false;

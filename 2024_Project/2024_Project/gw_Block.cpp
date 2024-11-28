@@ -142,6 +142,7 @@ RECT* Stage_gwr[] = {
     S13_gwr,
 };
 
+
 void Go_Wall_L() {
     for (int i = 0; i < Stage_GWl[Stage]; i++) {
         RECT& rect = Stage_gwl[Stage][i];
@@ -151,7 +152,7 @@ void Go_Wall_L() {
             ball.left + 15 >= rect.left && ball.right - 15 <= rect.right) {
             Stop = true;
             PlaySound(TEXT("B_Bauns.wav"), NULL, SND_FILENAME | SND_ASYNC);
-            ball.right = rect.left;
+            ball.right = rect.left - 10;
             ball.left = ball.right - 20;
             ball.bottom = rect.bottom - 25;
             ball.top = ball.bottom - 20;
@@ -159,32 +160,37 @@ void Go_Wall_L() {
         // 사각형의 좌측과 충돌하는 경우
         if (ball.right >= rect.left && ball.left < rect.left &&
             ball.bottom > rect.top + 10 && ball.top < rect.bottom - 10) {
-            Stop = true;
-            PlaySound(TEXT("B_Bauns.wav"), NULL, SND_FILENAME | SND_ASYNC);
             ball.right = rect.left;
             ball.left = ball.right - 20;
-            ball.bottom = rect.bottom - 25;
-            ball.top = ball.bottom - 20;
+            PlaySound(TEXT("Bauns.wav"), NULL, SND_FILENAME | SND_ASYNC);
+            Stop, Stop2 = false;
+            for (int j = 0; j < 15; j++) { // 충돌 시 좌측벽에 떨어지기
+                ball.left -= 1;
+                ball.right -= 1;
+            }
         }
         // 하단 충돌 처리 (공이 사각형의 하단에 맞을 때)
         if (ball.top <= rect.bottom && ball.bottom >= rect.bottom &&
             ball.left + 15 >= rect.left && ball.right - 15 <= rect.right) {
-            Stop = true;
-            PlaySound(TEXT("B_Bauns.wav"), NULL, SND_FILENAME | SND_ASYNC);
-            ball.right = rect.left;
-            ball.left = ball.right - 20;
-            ball.bottom = rect.bottom - 25;
-            ball.top = ball.bottom - 20;
+            ball.top = rect.bottom;
+            ball.bottom = ball.top + 20;
+            PlaySound(TEXT("Bauns.wav"), NULL, SND_FILENAME | SND_ASYNC);
+            ball.top += 1;
+            ball.bottom += 1;
+            Speed1 = 0; // 공이 바로 떨어지게
+            Speed2 = 0;
         }
         // 사각형의 우측과 충돌하는 경우
         if (ball.left <= rect.right && ball.right >= rect.right &&
             ball.bottom > rect.top + 10 && ball.top < rect.bottom - 10) {
-            Stop = true;
-            PlaySound(TEXT("B_Bauns.wav"), NULL, SND_FILENAME | SND_ASYNC);
-            ball.right = rect.left;
-            ball.left = ball.right - 20;
-            ball.bottom = rect.bottom - 25;
-            ball.top = ball.bottom - 20;
+            ball.left = rect.right;
+            ball.right = ball.left + 20;
+            PlaySound(TEXT("Bauns.wav"), NULL, SND_FILENAME | SND_ASYNC);
+            Stop, Stop2 = false;
+            for (int j = 0; j < 15; j++) { // 충돌 시 좌측벽에 떨어지기
+                ball.left += 1;
+                ball.right += 1;
+            }
         }
     }
 }
@@ -216,7 +222,7 @@ void Go_Wall_R() {
             ball.left + 15 >= rect.left && ball.right - 15 <= rect.right) {
             Stop2 = true;
             PlaySound(TEXT("B_Bauns.wav"), NULL, SND_FILENAME | SND_ASYNC);
-            ball.left = rect.right;
+            ball.left = rect.right + 10;
             ball.right = ball.left + 20;
             ball.bottom = rect.bottom - 25;
             ball.top = ball.bottom - 20;
@@ -224,32 +230,37 @@ void Go_Wall_R() {
         // 사각형의 좌측과 충돌하는 경우
         if (ball.right >= rect.left && ball.left < rect.left &&
             ball.bottom > rect.top + 10 && ball.top < rect.bottom - 10) {
-            Stop2 = true;
-            PlaySound(TEXT("B_Bauns.wav"), NULL, SND_FILENAME | SND_ASYNC);
-            ball.left = rect.right;
-            ball.right = ball.left + 20;
-            ball.bottom = rect.bottom - 25;
-            ball.top = ball.bottom - 20;
+            ball.right = rect.left;
+            ball.left = ball.right - 20;
+            PlaySound(TEXT("Bauns.wav"), NULL, SND_FILENAME | SND_ASYNC);
+            Stop, Stop2 = false;
+            for (int j = 0; j < 15; j++) { // 충돌 시 좌측벽에 떨어지기
+                ball.left -= 1;
+                ball.right -= 1;
+            }
         }
         // 하단 충돌 처리 (공이 사각형의 하단에 맞을 때)
         if (ball.top <= rect.bottom && ball.bottom >= rect.bottom &&
             ball.left + 15 >= rect.left && ball.right - 15 <= rect.right) {
-            Stop2 = true;
-            PlaySound(TEXT("B_Bauns.wav"), NULL, SND_FILENAME | SND_ASYNC);
-            ball.left = rect.right;
-            ball.right = ball.left + 20;
-            ball.bottom = rect.bottom - 25;
-            ball.top = ball.bottom - 20;
+            ball.top = rect.bottom;
+            ball.bottom = ball.top + 20;
+            PlaySound(TEXT("Bauns.wav"), NULL, SND_FILENAME | SND_ASYNC);
+            ball.top += 1;
+            ball.bottom += 1;
+            Speed1 = 0; // 공이 바로 떨어지게
+            Speed2 = 0;
         }
         // 사각형의 우측과 충돌하는 경우
         if (ball.left <= rect.right && ball.right >= rect.right &&
             ball.bottom > rect.top + 10 && ball.top < rect.bottom - 10) {
-            Stop2 = true;
-            PlaySound(TEXT("B_Bauns.wav"), NULL, SND_FILENAME | SND_ASYNC);
             ball.left = rect.right;
             ball.right = ball.left + 20;
-            ball.bottom = rect.bottom - 25;
-            ball.top = ball.bottom - 20;
+            PlaySound(TEXT("Bauns.wav"), NULL, SND_FILENAME | SND_ASYNC);
+            Stop, Stop2 = false;
+            for (int j = 0; j < 15; j++) { // 충돌 시 좌측벽에 떨어지기
+                ball.left += 1;
+                ball.right += 1;
+            }
         }
     }
 }
