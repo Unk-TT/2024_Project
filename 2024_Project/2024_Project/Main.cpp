@@ -31,6 +31,7 @@ RECT S_Start_B[] = {
     { XPOS(1.33), YPOS(1.33), XPOS(1.33) + 20 , YPOS(1.33) + 20 }, //10
     { XPOS(13.33), YPOS(13.33), XPOS(13.33) + 20 , YPOS(13.33) + 20 }, //12
 };
+RECT stage_11[] = { XPOS(13.33), YPOS(10.33), XPOS(13.33) + 20 , YPOS(10.33) + 20 };
 
 RECT Select_Re[] = {
     {80, 80, 145, 145},
@@ -108,7 +109,7 @@ void MainSelect(HDC MemDC) {
             PlaySound(TEXT("Select.wav"), NULL, SND_FILENAME | SND_ASYNC);
             Stage = 11;
             nb_ReSet(hWnd);
-            ball = S_Start_B[12];
+            ball = stage_11[0];
             Speed1 = 0;
             Speed2 = 0;
             Stop = false;

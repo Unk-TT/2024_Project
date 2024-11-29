@@ -1,64 +1,106 @@
-﻿  2024_Project.cpp
-D:\git\2024_Project\2024_Project\2024_Project.cpp(254,25): warning C4244: '=': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-D:\git\2024_Project\2024_Project\2024_Project.cpp(255,24): warning C4244: '=': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-D:\git\2024_Project\2024_Project\2024_Project.cpp(260,25): warning C4244: '=': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-D:\git\2024_Project\2024_Project\2024_Project.cpp(261,24): warning C4244: '=': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-D:\git\2024_Project\2024_Project\2024_Project.cpp(266,25): warning C4244: '=': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-D:\git\2024_Project\2024_Project\2024_Project.cpp(267,24): warning C4244: '=': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-D:\git\2024_Project\2024_Project\2024_Project.cpp(272,25): warning C4244: '=': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-D:\git\2024_Project\2024_Project\2024_Project.cpp(273,24): warning C4244: '=': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-D:\git\2024_Project\2024_Project\2024_Project.cpp(278,25): warning C4244: '=': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-D:\git\2024_Project\2024_Project\2024_Project.cpp(279,24): warning C4244: '=': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-D:\git\2024_Project\2024_Project\2024_Project.cpp(284,25): warning C4244: '=': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-D:\git\2024_Project\2024_Project\2024_Project.cpp(285,24): warning C4244: '=': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-D:\git\2024_Project\2024_Project\2024_Project.cpp(290,25): warning C4244: '=': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-D:\git\2024_Project\2024_Project\2024_Project.cpp(291,24): warning C4244: '=': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-D:\git\2024_Project\2024_Project\2024_Project.cpp(296,25): warning C4244: '=': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-D:\git\2024_Project\2024_Project\2024_Project.cpp(297,24): warning C4244: '=': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-D:\git\2024_Project\2024_Project\2024_Project.cpp(302,25): warning C4244: '=': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-D:\git\2024_Project\2024_Project\2024_Project.cpp(303,24): warning C4244: '=': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-D:\git\2024_Project\2024_Project\2024_Project.cpp(308,25): warning C4244: '=': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-D:\git\2024_Project\2024_Project\2024_Project.cpp(309,24): warning C4244: '=': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-D:\git\2024_Project\2024_Project\2024_Project.cpp(314,25): warning C4244: '=': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-D:\git\2024_Project\2024_Project\2024_Project.cpp(315,24): warning C4244: '=': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-D:\git\2024_Project\2024_Project\2024_Project.cpp(320,25): warning C4244: '=': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-D:\git\2024_Project\2024_Project\2024_Project.cpp(321,24): warning C4244: '=': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-D:\git\2024_Project\2024_Project\2024_Project.cpp(326,25): warning C4244: '=': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-D:\git\2024_Project\2024_Project\2024_Project.cpp(327,24): warning C4244: '=': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-D:\git\2024_Project\2024_Project\2024_Project.cpp(470,40): warning C4244: '-=': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-D:\git\2024_Project\2024_Project\2024_Project.cpp(471,41): warning C4244: '-=': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-D:\git\2024_Project\2024_Project\2024_Project.cpp(480,30): warning C4244: '-=': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-D:\git\2024_Project\2024_Project\2024_Project.cpp(481,31): warning C4244: '-=': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-D:\git\2024_Project\2024_Project\2024_Project.cpp(492,26): warning C4244: '-=': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-D:\git\2024_Project\2024_Project\2024_Project.cpp(493,27): warning C4244: '-=': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-D:\git\2024_Project\2024_Project\2024_Project.cpp(506,41): warning C4244: '+=': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-D:\git\2024_Project\2024_Project\2024_Project.cpp(507,42): warning C4244: '+=': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-D:\git\2024_Project\2024_Project\2024_Project.cpp(516,30): warning C4244: '+=': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-D:\git\2024_Project\2024_Project\2024_Project.cpp(517,31): warning C4244: '+=': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-D:\git\2024_Project\2024_Project\2024_Project.cpp(528,26): warning C4244: '+=': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-D:\git\2024_Project\2024_Project\2024_Project.cpp(529,27): warning C4244: '+=': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-D:\git\2024_Project\2024_Project\2024_Project.cpp(597,39): warning C4244: '+=': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-D:\git\2024_Project\2024_Project\2024_Project.cpp(600,42): warning C4244: '+=': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-D:\git\2024_Project\2024_Project\2024_Project.cpp(666,33): warning C4244: '=': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-D:\git\2024_Project\2024_Project\2024_Project.cpp(667,32): warning C4244: '=': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-D:\git\2024_Project\2024_Project\2024_Project.cpp(685,33): warning C4244: '=': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-D:\git\2024_Project\2024_Project\2024_Project.cpp(686,32): warning C4244: '=': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-D:\git\2024_Project\2024_Project\2024_Project.cpp(704,33): warning C4244: '=': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-D:\git\2024_Project\2024_Project\2024_Project.cpp(705,32): warning C4244: '=': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-D:\git\2024_Project\2024_Project\2024_Project.cpp(723,33): warning C4244: '=': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-D:\git\2024_Project\2024_Project\2024_Project.cpp(724,32): warning C4244: '=': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-D:\git\2024_Project\2024_Project\2024_Project.cpp(741,33): warning C4244: '=': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-D:\git\2024_Project\2024_Project\2024_Project.cpp(742,32): warning C4244: '=': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-D:\git\2024_Project\2024_Project\2024_Project.cpp(759,33): warning C4244: '=': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-D:\git\2024_Project\2024_Project\2024_Project.cpp(760,32): warning C4244: '=': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-D:\git\2024_Project\2024_Project\2024_Project.cpp(777,33): warning C4244: '=': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-D:\git\2024_Project\2024_Project\2024_Project.cpp(778,32): warning C4244: '=': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-D:\git\2024_Project\2024_Project\2024_Project.cpp(795,33): warning C4244: '=': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-D:\git\2024_Project\2024_Project\2024_Project.cpp(796,32): warning C4244: '=': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-D:\git\2024_Project\2024_Project\2024_Project.cpp(813,33): warning C4244: '=': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-D:\git\2024_Project\2024_Project\2024_Project.cpp(814,32): warning C4244: '=': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-D:\git\2024_Project\2024_Project\2024_Project.cpp(831,33): warning C4244: '=': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-D:\git\2024_Project\2024_Project\2024_Project.cpp(832,32): warning C4244: '=': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-D:\git\2024_Project\2024_Project\2024_Project.cpp(863,37): warning C4244: '=': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-D:\git\2024_Project\2024_Project\2024_Project.cpp(864,36): warning C4244: '=': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+﻿  Main.cpp
+D:\git\2024_Project\2024_Project\Main.cpp(21,6): warning C4838: 'double'에서 'LONG'(으)로의 변환에는 축소 변환이 필요합니다.
+D:\git\2024_Project\2024_Project\Main.cpp(21,6): warning C4244: '초기화 중': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024_Project\2024_Project\Main.cpp(21,19): warning C4838: 'double'에서 'LONG'(으)로의 변환에는 축소 변환이 필요합니다.
+D:\git\2024_Project\2024_Project\Main.cpp(21,19): warning C4244: '초기화 중': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024_Project\2024_Project\Main.cpp(21,43): warning C4838: 'double'에서 'LONG'(으)로의 변환에는 축소 변환이 필요합니다.
+D:\git\2024_Project\2024_Project\Main.cpp(21,43): warning C4244: '초기화 중': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024_Project\2024_Project\Main.cpp(21,61): warning C4838: 'double'에서 'LONG'(으)로의 변환에는 축소 변환이 필요합니다.
+D:\git\2024_Project\2024_Project\Main.cpp(21,61): warning C4244: '초기화 중': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024_Project\2024_Project\Main.cpp(22,7): warning C4838: 'double'에서 'LONG'(으)로의 변환에는 축소 변환이 필요합니다.
+D:\git\2024_Project\2024_Project\Main.cpp(22,7): warning C4244: '초기화 중': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024_Project\2024_Project\Main.cpp(22,20): warning C4838: 'double'에서 'LONG'(으)로의 변환에는 축소 변환이 필요합니다.
+D:\git\2024_Project\2024_Project\Main.cpp(22,20): warning C4244: '초기화 중': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024_Project\2024_Project\Main.cpp(22,45): warning C4838: 'double'에서 'LONG'(으)로의 변환에는 축소 변환이 필요합니다.
+D:\git\2024_Project\2024_Project\Main.cpp(22,45): warning C4244: '초기화 중': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024_Project\2024_Project\Main.cpp(22,64): warning C4838: 'double'에서 'LONG'(으)로의 변환에는 축소 변환이 필요합니다.
+D:\git\2024_Project\2024_Project\Main.cpp(22,64): warning C4244: '초기화 중': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024_Project\2024_Project\Main.cpp(23,7): warning C4838: 'double'에서 'LONG'(으)로의 변환에는 축소 변환이 필요합니다.
+D:\git\2024_Project\2024_Project\Main.cpp(23,7): warning C4244: '초기화 중': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024_Project\2024_Project\Main.cpp(23,19): warning C4838: 'double'에서 'LONG'(으)로의 변환에는 축소 변환이 필요합니다.
+D:\git\2024_Project\2024_Project\Main.cpp(23,19): warning C4244: '초기화 중': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024_Project\2024_Project\Main.cpp(23,42): warning C4838: 'double'에서 'LONG'(으)로의 변환에는 축소 변환이 필요합니다.
+D:\git\2024_Project\2024_Project\Main.cpp(23,42): warning C4244: '초기화 중': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024_Project\2024_Project\Main.cpp(23,60): warning C4838: 'double'에서 'LONG'(으)로의 변환에는 축소 변환이 필요합니다.
+D:\git\2024_Project\2024_Project\Main.cpp(23,60): warning C4244: '초기화 중': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024_Project\2024_Project\Main.cpp(24,7): warning C4838: 'double'에서 'LONG'(으)로의 변환에는 축소 변환이 필요합니다.
+D:\git\2024_Project\2024_Project\Main.cpp(24,7): warning C4244: '초기화 중': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024_Project\2024_Project\Main.cpp(24,19): warning C4838: 'double'에서 'LONG'(으)로의 변환에는 축소 변환이 필요합니다.
+D:\git\2024_Project\2024_Project\Main.cpp(24,19): warning C4244: '초기화 중': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024_Project\2024_Project\Main.cpp(24,42): warning C4838: 'double'에서 'LONG'(으)로의 변환에는 축소 변환이 필요합니다.
+D:\git\2024_Project\2024_Project\Main.cpp(24,42): warning C4244: '초기화 중': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024_Project\2024_Project\Main.cpp(24,60): warning C4838: 'double'에서 'LONG'(으)로의 변환에는 축소 변환이 필요합니다.
+D:\git\2024_Project\2024_Project\Main.cpp(24,60): warning C4244: '초기화 중': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024_Project\2024_Project\Main.cpp(25,7): warning C4838: 'double'에서 'LONG'(으)로의 변환에는 축소 변환이 필요합니다.
+D:\git\2024_Project\2024_Project\Main.cpp(25,7): warning C4244: '초기화 중': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024_Project\2024_Project\Main.cpp(25,19): warning C4838: 'double'에서 'LONG'(으)로의 변환에는 축소 변환이 필요합니다.
+D:\git\2024_Project\2024_Project\Main.cpp(25,19): warning C4244: '초기화 중': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024_Project\2024_Project\Main.cpp(25,42): warning C4838: 'double'에서 'LONG'(으)로의 변환에는 축소 변환이 필요합니다.
+D:\git\2024_Project\2024_Project\Main.cpp(25,42): warning C4244: '초기화 중': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024_Project\2024_Project\Main.cpp(25,60): warning C4838: 'double'에서 'LONG'(으)로의 변환에는 축소 변환이 필요합니다.
+D:\git\2024_Project\2024_Project\Main.cpp(25,60): warning C4244: '초기화 중': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024_Project\2024_Project\Main.cpp(26,7): warning C4838: 'double'에서 'LONG'(으)로의 변환에는 축소 변환이 필요합니다.
+D:\git\2024_Project\2024_Project\Main.cpp(26,7): warning C4244: '초기화 중': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024_Project\2024_Project\Main.cpp(26,19): warning C4838: 'double'에서 'LONG'(으)로의 변환에는 축소 변환이 필요합니다.
+D:\git\2024_Project\2024_Project\Main.cpp(26,19): warning C4244: '초기화 중': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024_Project\2024_Project\Main.cpp(26,42): warning C4838: 'double'에서 'LONG'(으)로의 변환에는 축소 변환이 필요합니다.
+D:\git\2024_Project\2024_Project\Main.cpp(26,42): warning C4244: '초기화 중': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024_Project\2024_Project\Main.cpp(26,60): warning C4838: 'double'에서 'LONG'(으)로의 변환에는 축소 변환이 필요합니다.
+D:\git\2024_Project\2024_Project\Main.cpp(26,60): warning C4244: '초기화 중': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024_Project\2024_Project\Main.cpp(27,7): warning C4838: 'double'에서 'LONG'(으)로의 변환에는 축소 변환이 필요합니다.
+D:\git\2024_Project\2024_Project\Main.cpp(27,7): warning C4244: '초기화 중': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024_Project\2024_Project\Main.cpp(27,19): warning C4838: 'double'에서 'LONG'(으)로의 변환에는 축소 변환이 필요합니다.
+D:\git\2024_Project\2024_Project\Main.cpp(27,19): warning C4244: '초기화 중': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024_Project\2024_Project\Main.cpp(27,42): warning C4838: 'double'에서 'LONG'(으)로의 변환에는 축소 변환이 필요합니다.
+D:\git\2024_Project\2024_Project\Main.cpp(27,42): warning C4244: '초기화 중': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024_Project\2024_Project\Main.cpp(27,60): warning C4838: 'double'에서 'LONG'(으)로의 변환에는 축소 변환이 필요합니다.
+D:\git\2024_Project\2024_Project\Main.cpp(27,60): warning C4244: '초기화 중': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024_Project\2024_Project\Main.cpp(28,7): warning C4838: 'double'에서 'LONG'(으)로의 변환에는 축소 변환이 필요합니다.
+D:\git\2024_Project\2024_Project\Main.cpp(28,7): warning C4244: '초기화 중': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024_Project\2024_Project\Main.cpp(28,20): warning C4838: 'double'에서 'LONG'(으)로의 변환에는 축소 변환이 필요합니다.
+D:\git\2024_Project\2024_Project\Main.cpp(28,20): warning C4244: '초기화 중': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024_Project\2024_Project\Main.cpp(28,44): warning C4838: 'double'에서 'LONG'(으)로의 변환에는 축소 변환이 필요합니다.
+D:\git\2024_Project\2024_Project\Main.cpp(28,44): warning C4244: '초기화 중': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024_Project\2024_Project\Main.cpp(28,62): warning C4838: 'double'에서 'LONG'(으)로의 변환에는 축소 변환이 필요합니다.
+D:\git\2024_Project\2024_Project\Main.cpp(28,62): warning C4244: '초기화 중': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024_Project\2024_Project\Main.cpp(29,7): warning C4838: 'double'에서 'LONG'(으)로의 변환에는 축소 변환이 필요합니다.
+D:\git\2024_Project\2024_Project\Main.cpp(29,7): warning C4244: '초기화 중': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024_Project\2024_Project\Main.cpp(29,19): warning C4838: 'double'에서 'LONG'(으)로의 변환에는 축소 변환이 필요합니다.
+D:\git\2024_Project\2024_Project\Main.cpp(29,19): warning C4244: '초기화 중': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024_Project\2024_Project\Main.cpp(29,42): warning C4838: 'double'에서 'LONG'(으)로의 변환에는 축소 변환이 필요합니다.
+D:\git\2024_Project\2024_Project\Main.cpp(29,42): warning C4244: '초기화 중': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024_Project\2024_Project\Main.cpp(29,60): warning C4838: 'double'에서 'LONG'(으)로의 변환에는 축소 변환이 필요합니다.
+D:\git\2024_Project\2024_Project\Main.cpp(29,60): warning C4244: '초기화 중': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024_Project\2024_Project\Main.cpp(30,7): warning C4838: 'double'에서 'LONG'(으)로의 변환에는 축소 변환이 필요합니다.
+D:\git\2024_Project\2024_Project\Main.cpp(30,7): warning C4244: '초기화 중': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024_Project\2024_Project\Main.cpp(30,20): warning C4838: 'double'에서 'LONG'(으)로의 변환에는 축소 변환이 필요합니다.
+D:\git\2024_Project\2024_Project\Main.cpp(30,20): warning C4244: '초기화 중': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024_Project\2024_Project\Main.cpp(30,44): warning C4838: 'double'에서 'LONG'(으)로의 변환에는 축소 변환이 필요합니다.
+D:\git\2024_Project\2024_Project\Main.cpp(30,44): warning C4244: '초기화 중': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024_Project\2024_Project\Main.cpp(30,62): warning C4838: 'double'에서 'LONG'(으)로의 변환에는 축소 변환이 필요합니다.
+D:\git\2024_Project\2024_Project\Main.cpp(30,62): warning C4244: '초기화 중': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024_Project\2024_Project\Main.cpp(31,7): warning C4838: 'double'에서 'LONG'(으)로의 변환에는 축소 변환이 필요합니다.
+D:\git\2024_Project\2024_Project\Main.cpp(31,7): warning C4244: '초기화 중': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024_Project\2024_Project\Main.cpp(31,19): warning C4838: 'double'에서 'LONG'(으)로의 변환에는 축소 변환이 필요합니다.
+D:\git\2024_Project\2024_Project\Main.cpp(31,19): warning C4244: '초기화 중': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024_Project\2024_Project\Main.cpp(31,42): warning C4838: 'double'에서 'LONG'(으)로의 변환에는 축소 변환이 필요합니다.
+D:\git\2024_Project\2024_Project\Main.cpp(31,42): warning C4244: '초기화 중': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024_Project\2024_Project\Main.cpp(31,60): warning C4838: 'double'에서 'LONG'(으)로의 변환에는 축소 변환이 필요합니다.
+D:\git\2024_Project\2024_Project\Main.cpp(31,60): warning C4244: '초기화 중': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024_Project\2024_Project\Main.cpp(32,7): warning C4838: 'double'에서 'LONG'(으)로의 변환에는 축소 변환이 필요합니다.
+D:\git\2024_Project\2024_Project\Main.cpp(32,7): warning C4244: '초기화 중': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024_Project\2024_Project\Main.cpp(32,20): warning C4838: 'double'에서 'LONG'(으)로의 변환에는 축소 변환이 필요합니다.
+D:\git\2024_Project\2024_Project\Main.cpp(32,20): warning C4244: '초기화 중': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024_Project\2024_Project\Main.cpp(32,45): warning C4838: 'double'에서 'LONG'(으)로의 변환에는 축소 변환이 필요합니다.
+D:\git\2024_Project\2024_Project\Main.cpp(32,45): warning C4244: '초기화 중': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024_Project\2024_Project\Main.cpp(32,64): warning C4838: 'double'에서 'LONG'(으)로의 변환에는 축소 변환이 필요합니다.
+D:\git\2024_Project\2024_Project\Main.cpp(32,64): warning C4244: '초기화 중': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024_Project\2024_Project\Main.cpp(34,21): warning C4838: 'double'에서 'LONG'(으)로의 변환에는 축소 변환이 필요합니다.
+D:\git\2024_Project\2024_Project\Main.cpp(34,21): warning C4244: '초기화 중': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024_Project\2024_Project\Main.cpp(34,34): warning C4838: 'double'에서 'LONG'(으)로의 변환에는 축소 변환이 필요합니다.
+D:\git\2024_Project\2024_Project\Main.cpp(34,34): warning C4244: '초기화 중': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024_Project\2024_Project\Main.cpp(34,59): warning C4838: 'double'에서 'LONG'(으)로의 변환에는 축소 변환이 필요합니다.
+D:\git\2024_Project\2024_Project\Main.cpp(34,59): warning C4244: '초기화 중': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024_Project\2024_Project\Main.cpp(34,78): warning C4838: 'double'에서 'LONG'(으)로의 변환에는 축소 변환이 필요합니다.
+D:\git\2024_Project\2024_Project\Main.cpp(34,78): warning C4244: '초기화 중': 'double'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
   2024_Project.vcxproj -> D:\git\2024_Project\x64\Debug\2024_Project.exe
