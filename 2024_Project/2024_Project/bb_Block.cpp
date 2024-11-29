@@ -44,7 +44,19 @@ RECT S10_bb[] = {
     { XPOS(4), YPOS(7), RXPOS(5) + 1, BYPOS(8) + 1},
     { XPOS(5), YPOS(7), RXPOS(6) + 1, BYPOS(8) + 1},
 };
-RECT S11_bb[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
+RECT S11_bb[] = {
+    { XPOS(5), YPOS(1), RXPOS(6) + 1, BYPOS(2) + 1}, // 상단
+    { XPOS(7), YPOS(2), RXPOS(8) + 1, BYPOS(3) + 1},
+    { XPOS(15), YPOS(13), RXPOS(16) + 1, BYPOS(14) + 1}, //오른쪽 하단
+    { XPOS(17), YPOS(13), RXPOS(18) + 1, BYPOS(14) + 1},
+    { XPOS(19), YPOS(13), RXPOS(20) + 1, BYPOS(14) + 1},
+    { XPOS(23), YPOS(13), RXPOS(24) + 1, BYPOS(14) + 1},
+    { XPOS(25), YPOS(13), RXPOS(26) + 1, BYPOS(14) + 1},
+    { XPOS(16), YPOS(10), RXPOS(17) + 1, BYPOS(11) + 1}, //오른쪽 중단
+    { XPOS(18), YPOS(10), RXPOS(19) + 1, BYPOS(11) + 1},
+    { XPOS(23), YPOS(8), RXPOS(24) + 1, BYPOS(9) + 1},
+    { XPOS(28), YPOS(4), RXPOS(29) + 1, BYPOS(5) + 1},
+};
 RECT S12_bb[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
 RECT S13_bb[] = {
     {XPOS(18), YPOS(10), RXPOS(19) + 1, BYPOS(11) + 1 },

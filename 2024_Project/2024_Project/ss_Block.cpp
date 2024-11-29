@@ -70,7 +70,18 @@ RECT S10_ss[] = {
     { XPOS(28), YPOS(12), RXPOS(29) + 1, BYPOS(13) + 1},
     { XPOS(4), YPOS(12), RXPOS(5) + 1, BYPOS(13) + 1},
 };
-RECT S11_ss[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
+RECT S11_ss[] = {
+    { XPOS(2), YPOS(0), RXPOS(3) + 1, BYPOS(1) + 1}, // 좌측
+    { XPOS(3), YPOS(5), RXPOS(4) + 1, BYPOS(6) + 1},
+    { XPOS(13), YPOS(12), RXPOS(14) + 1, BYPOS(13) + 1},
+    { XPOS(9), YPOS(2), RXPOS(10) + 1, BYPOS(3) + 1},
+    { XPOS(22), YPOS(7), RXPOS(23) + 1, BYPOS(8) + 1}, // 중단
+    { XPOS(28), YPOS(6), RXPOS(29) + 1, BYPOS(7) + 1}, // 우측
+    { XPOS(28), YPOS(7), RXPOS(29) + 1, BYPOS(8) + 1},
+    { XPOS(28), YPOS(8), RXPOS(29) + 1, BYPOS(9) + 1},
+    { XPOS(28), YPOS(9), RXPOS(29) + 1, BYPOS(10) + 1},
+    { XPOS(28), YPOS(10), RXPOS(29) + 1, BYPOS(11) + 1},
+};
 RECT S12_ss[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
 RECT S13_ss[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
 

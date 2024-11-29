@@ -11,11 +11,14 @@ RECT S7_te[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
 RECT S8_te[] = { XPOS(5), YPOS(10), RXPOS(6) + 1, BYPOS(11) + 1 };
 RECT S9_te[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
 RECT S10_te[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
-RECT S11_te[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
+RECT S11_te[] = {
+    {XPOS(0), YPOS(5), RXPOS(1) + 1, BYPOS(6) + 1 },
+    {XPOS(3), YPOS(13), RXPOS(4) + 1, BYPOS(14) + 1 },
+    {XPOS(11), YPOS(6), RXPOS(12) + 1, BYPOS(7) + 1 },
+};
 RECT S12_te[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
 RECT S13_te[] = {
     {XPOS(13), YPOS(9), RXPOS(14) + 1, BYPOS(10) + 1 },
- 
 };
 
 
@@ -86,11 +89,14 @@ RECT S7_tew[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
 RECT S8_tew[] = { XPOS(16), YPOS(4), RXPOS(17) + 1, BYPOS(5) + 1 };
 RECT S9_tew[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
 RECT S10_tew[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
-RECT S11_tew[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
+RECT S11_tew[] = {
+    {XPOS(28), YPOS(0), RXPOS(29) + 1, BYPOS(1) + 1 },
+    {XPOS(28), YPOS(0), RXPOS(29) + 1, BYPOS(1) + 1 },
+    {XPOS(28), YPOS(0), RXPOS(29) + 1, BYPOS(1) + 1 },
+};
 RECT S12_tew[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
 RECT S13_tew[] = {
     {XPOS(15), YPOS(9), RXPOS(16) + 1, BYPOS(10) + 1 },
-
 };
 
 RECT* Stage_tew[] = {

@@ -32,7 +32,12 @@ RECT S10_gwl[] = {
     { XPOS(28), YPOS(3), RXPOS(29) + 1, BYPOS(4) + 1 },
     { XPOS(27), YPOS(7), RXPOS(28) + 1, BYPOS(8) + 1 },
 };
-RECT S11_gwl[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
+RECT S11_gwl[] = {
+    { XPOS(7), YPOS(5), RXPOS(8) + 1, BYPOS(6) + 1 },
+    { XPOS(9), YPOS(6), RXPOS(10) + 1, BYPOS(7) + 1 },
+    { XPOS(10), YPOS(11), RXPOS(11) + 1, BYPOS(12) + 1 },
+    { XPOS(24), YPOS(5), RXPOS(25) + 1, BYPOS(6) + 1 },
+};
 RECT S12_gwl[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
 RECT S13_gwl[] = { XPOS(20), YPOS(6), RXPOS(21) + 1, BYPOS(7) + 1 };
 
@@ -101,7 +106,10 @@ RECT S10_gwr[] = {
     { XPOS(23), YPOS(5), RXPOS(24) + 1, BYPOS(6) + 1 },
     { XPOS(2), YPOS(7), RXPOS(3) + 1, BYPOS(8) + 1 },
 };
-RECT S11_gwr[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
+RECT S11_gwr[] = {
+    { XPOS(3), YPOS(3), RXPOS(4) + 1, BYPOS(4) + 1 },
+    { XPOS(15), YPOS(7), RXPOS(16) + 1, BYPOS(8) + 1 },
+};
 RECT S12_gwr[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
 RECT S13_gwr[] = { 
     {XPOS(2), YPOS(3), RXPOS(3) + 1, BYPOS(4) + 1 },

@@ -16,7 +16,11 @@ RECT S9_fs_on[] = {
     { XPOS(22), YPOS(13), RXPOS(23) + 1, BYPOS(14) + 1 },
 };
 RECT S10_fs_on[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
-RECT S11_fs_on[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
+RECT S11_fs_on[] = {
+    { XPOS(4), YPOS(9), RXPOS(5) + 1, BYPOS(10) + 1 },
+    { XPOS(7), YPOS(9), RXPOS(8) + 1, BYPOS(10) + 1 },
+    { XPOS(10), YPOS(9), RXPOS(11) + 1, BYPOS(10) + 1 },
+};
 RECT S12_fs_on[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
 RECT S13_fs_on[] = {
     {XPOS(18), YPOS(13), RXPOS(19) + 1, BYPOS(14) + 1 },

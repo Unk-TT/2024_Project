@@ -16,8 +16,14 @@ RECT S10_dt_b[] = {
     { XPOS(20), YPOS(11), RXPOS(21) + 1, BYPOS(12) + 1},
     { XPOS(25), YPOS(13), RXPOS(26) + 1, BYPOS(14) + 1},
 };
-RECT S11_dt_b[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
-RECT S12_dt_b[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
+RECT S11_dt_b[] = {
+    { XPOS(5), YPOS(12), RXPOS(8) + 1, BYPOS(13) + 1},
+    { XPOS(18), YPOS(6), RXPOS(21) + 1, BYPOS(7) + 1},
+};
+RECT S12_dt_b[] = {
+    { XPOS(1), YPOS(1), RXPOS(28) + 1, BYPOS(13) + 1},
+    { XPOS(1), YPOS(1), RXPOS(28) + 1, BYPOS(13) + 1},
+};
 RECT S13_dt_b[] = { XPOS(6), YPOS(14), RXPOS(11) + 1, BYPOS(15) + 1 };
 
 RECT* Stage_dt_b[] = {
@@ -51,8 +57,14 @@ RECT S10_dt[] = {
     { XPOS(19) + 30, YPOS(10) + 30, RXPOS(20) + 31, BYPOS(11) + 31 },
     { XPOS(24) + 30, YPOS(12) + 30, RXPOS(25) + 31, BYPOS(13) + 31 },
 };
-RECT S11_dt[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
-RECT S12_dt[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
+RECT S11_dt[] = {
+    { XPOS(4) + 30, YPOS(11) + 30, RXPOS(5) + 31, BYPOS(12) + 31 },
+    { XPOS(17) + 30, YPOS(5) + 30, RXPOS(18) + 31, BYPOS(6) + 31 },
+};
+RECT S12_dt[] = {
+    { XPOS(0) + 30, YPOS(0) + 30, RXPOS(1) + 31, BYPOS(1) + 31 },
+    { XPOS(27) + 30, YPOS(12) + 30, RXPOS(28) + 31, BYPOS(13) + 31 },
+};
 RECT S13_dt[] = { XPOS(5) + 30, YPOS(13) + 30, RXPOS(6) + 31, BYPOS(14) + 31 };
 
 //표창블럭 기준점 위 표창과 동일
@@ -70,8 +82,14 @@ RECT S10_dt_s[] = {
     { XPOS(19) + 30, YPOS(10) + 30, RXPOS(20) + 31, BYPOS(11) + 31 },
     { XPOS(24) + 30, YPOS(12) + 30, RXPOS(25) + 31, BYPOS(13) + 31 },
 };
-RECT S11_dt_s[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
-RECT S12_dt_s[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
+RECT S11_dt_s[] = {
+    { XPOS(4) + 30, YPOS(11) + 30, RXPOS(5) + 31, BYPOS(12) + 31 },
+    { XPOS(17) + 30, YPOS(5) + 30, RXPOS(18) + 31, BYPOS(6) + 31 },
+};
+RECT S12_dt_s[] = {
+    { XPOS(0) + 30, YPOS(0) + 30, RXPOS(1) + 31, BYPOS(1) + 31 },
+    { XPOS(27) + 30, YPOS(12) + 30, RXPOS(28) + 31, BYPOS(13) + 31 },
+};
 RECT S13_dt_s[] = { XPOS(5) + 30, YPOS(13) + 30, RXPOS(6) + 31, BYPOS(14) + 31 };
 
 int Num_S1_Dt = sizeof(S1_dt) / sizeof(S1_dt[0]);

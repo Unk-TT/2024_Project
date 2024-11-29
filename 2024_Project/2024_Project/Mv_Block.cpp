@@ -20,7 +20,10 @@ RECT S9_mv[] = {
     { XPOS(11), YPOS(8), RXPOS(12) + 1, BYPOS(9) + 1 },
 };
 RECT S10_mv[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
-RECT S11_mv[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
+RECT S11_mv[] = {
+    {XPOS(12), YPOS(2), RXPOS(13) + 1, BYPOS(3) + 1 },
+    {XPOS(13), YPOS(2), RXPOS(14) + 1, BYPOS(3) + 1 },
+};
 RECT S12_mv[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
 RECT S13_mv[] = { 
     {XPOS(4), YPOS(10), RXPOS(5) + 1, BYPOS(11) + 1 },
@@ -94,7 +97,10 @@ RECT S9_mv_St[] = {
     { XPOS(11), YPOS(8), RXPOS(12) + 1, BYPOS(9) + 1 },
 };
 RECT S10_mv_St[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
-RECT S11_mv_St[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
+RECT S11_mv_St[] = {
+    {XPOS(12), YPOS(2), RXPOS(13) + 1, BYPOS(3) + 1 },
+    {XPOS(13), YPOS(2), RXPOS(14) + 1, BYPOS(3) + 1 },
+};
 RECT S12_mv_St[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
 RECT S13_mv_St[] = { 
     {XPOS(4), YPOS(10), RXPOS(5) + 1, BYPOS(11) + 1 },
@@ -125,6 +131,7 @@ extern bool Stop, Stop2;
 extern HDC MemDC;
 bool turn = true;
 extern bool Moveth;
+extern bool esc_on;
 
 
 int Stage_Mv_St[] = {
@@ -178,7 +185,10 @@ RECT S9_mv_End[] = {
     { XPOS(19), YPOS(8), RXPOS(20) + 1, BYPOS(9) + 1 },
 };
 RECT S10_mv_End[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
-RECT S11_mv_End[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
+RECT S11_mv_End[] = {
+    {XPOS(24), YPOS(2), RXPOS(25) + 1, BYPOS(3) + 1 },
+    {XPOS(25), YPOS(2), RXPOS(26) + 1, BYPOS(3) + 1 },
+};
 RECT S12_mv_End[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
 RECT S13_mv_End[] = { 
     {XPOS(8), YPOS(10), RXPOS(9) + 1, BYPOS(11) + 1 },
@@ -264,6 +274,7 @@ DWORD WINAPI move_T(LPVOID param) {
         }
     }
     if (Moveth) {
+        esc_on = false;
         for (int j = 0; j < Stage_Mv[Stage]; j++) {
             RECT* Main = &Stage_mv[Stage][j]; // 현재 위치
             RECT StartR = Stage_mv_St[Stage][j];
@@ -272,6 +283,7 @@ DWORD WINAPI move_T(LPVOID param) {
         }
         turn = true;
         Sleep(100);
+        esc_on = true;
         Moveth = false;
     }
 
@@ -367,7 +379,10 @@ RECT S9_mvs[] = {
     { XPOS(20), YPOS(8), RXPOS(21) + 1, BYPOS(9) + 1 },
 };
 RECT S10_mvs[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
-RECT S11_mvs[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
+RECT S11_mvs[] = {
+    {XPOS(11), YPOS(2), RXPOS(12) + 1, BYPOS(3) + 1 },
+    {XPOS(26), YPOS(2), RXPOS(27) + 1, BYPOS(3) + 1 },
+};
 RECT S12_mvs[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
 RECT S13_mvs[] = {
     {XPOS(3), YPOS(10), RXPOS(4) + 1, BYPOS(11) + 1 },

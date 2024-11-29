@@ -143,6 +143,7 @@ int ClearCount; //클리어 타이머
 RECT balls; //죽을때 ball의 좌표를 저장
 bool ballcheck = true; //true일때 balls에 ball의 좌표를 저장하고 소리 출력
 bool no_dead = false;
+bool esc_on = true; // 죽고나서 바로 esc 누르면 예외처리 발생 방지용
 
 bool Side_Ball = false; // 블랙 on
 bool Jump_Ball = false;
@@ -310,14 +311,14 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
             ball.bottom = ball.top + 20;
         }
         else if (Stage == 10) {
-            ball.left = XPOS(14.33);
-            ball.top = YPOS(6.33);
+            ball.left = XPOS(1.33);
+            ball.top = YPOS(1.33);
             ball.right = ball.left + 20;
             ball.bottom = ball.top + 20;
         }
         else if (Stage == 11) {
-            ball.left = XPOS(14.33);
-            ball.top = YPOS(6.33);
+            ball.left = XPOS(13.33);
+            ball.top = YPOS(10.33);
             ball.right = ball.left + 20;
             ball.bottom = ball.top + 20;
         }
@@ -391,18 +392,20 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
         break;
         case VK_UP:
         {
-            Side_Ball = true; // 테스트용
-            //Stage = 99;
+            if (Stage == 12) {
+                Side_Ball = true; // 테스트용
+            }
         }
         break;
         case VK_DOWN:
         {
-            Jump_Ball = true;
+            if (Stage == 12) {
+                Jump_Ball = true; // 테스트용
+            }
         }
         break;
         case VK_ESCAPE: {
-            if (Stage >= 0 && Stage <= 12) {
-                nb_ReSet(hWnd);
+            if (Stage >= 0 && Stage <= 12 && esc_on) {
                 Stage = 98;
             }
             else if (Stage == 98) {
@@ -558,6 +561,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
                 balls = ball;
                 PlaySound(TEXT("DeadS.wav"), NULL, SND_FILENAME | SND_ASYNC);
                 ballcheck = false;
+                esc_on = false;
             }
             
             ball = { XPOS(99), YPOS(-99), RXPOS(99) + 1, BYPOS(-99) + 1 };
@@ -570,6 +574,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
                     ReSet(hWnd);
                     Elect = false;
                     ballcheck = true;
+                    esc_on = true;
                     ClearCount = 0;
                 }
             }
@@ -577,12 +582,14 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
         // 떨어졌으면?
         if (dead) { //죽음 on
             PlaySound(TEXT("DeadS.wav"), NULL, SND_FILENAME | SND_ASYNC);
+            esc_on = false;
             Speed1 = 0;
             Speed2 = 0;
             idkh = 0;
             Sleep(400);
             ReSet(hWnd);
             dead = false;
+            esc_on = true;
         }
 
         //화살표 블럭 설정
@@ -649,6 +656,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
         //스테이지 클리어 조건
         if (Count == 8 && Stage == 0)
         {
+            esc_on = false;
             no_dead = true;
             if (ClearCount < 100) {
                 ClearCount += 1;
@@ -661,11 +669,13 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
                     ball.bottom = ball.top + 20;
                     ClearCount = 0;
                     no_dead = false;
+                    esc_on = true;
                 }
             }
         }
         else if (Count == 12 && Stage == 1)
         {
+            esc_on = false;
             no_dead = true;
             if (ClearCount < 100) {
                 ClearCount += 1;
@@ -678,11 +688,13 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
                     ball.bottom = ball.top + 20;
                     ClearCount = 0;
                     no_dead = false;
+                    esc_on = true;
                 }
             }
         }
         else if (Count == 6 && Stage == 2)
         {
+            esc_on = false;
             no_dead = true;
             if (ClearCount < 100) {
                 ClearCount += 1;
@@ -695,11 +707,13 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
                     ball.bottom = ball.top + 20;
                     ClearCount = 0;
                     no_dead = false;
+                    esc_on = true;
                 }
             }
         }
         else if (Count == 1 && Stage == 3)
         {
+            esc_on = false;
             no_dead = true;
             if (ClearCount < 100) {
                 ClearCount += 1;
@@ -712,10 +726,12 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
                     ball.bottom = ball.top + 20;
                     ClearCount = 0;
                     no_dead = false;
+                    esc_on = true;
                 }
             }
         }
         else if (Count == 1 && Stage == 4) {
+            esc_on = false;
             no_dead = true;
             if (ClearCount < 100) {
                 ClearCount += 1;
@@ -728,10 +744,12 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
                     ball.bottom = ball.top + 20;
                     ClearCount = 0;
                     no_dead = false;
+                    esc_on = true;
                 }
             }
         }
         else if (Count == 3 && Stage == 5) {
+            esc_on = false;
             no_dead = true;
             if (ClearCount < 100) {
                 ClearCount += 1;
@@ -744,10 +762,12 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
                     ball.bottom = ball.top + 20;
                     ClearCount = 0;
                     no_dead = false;
+                    esc_on = true;
                 }
             }
         }
         else if (Count == 2 && Stage == 6) {
+            esc_on = false;
             no_dead = true;
             if (ClearCount < 100) {
                 ClearCount += 1;
@@ -760,10 +780,30 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
                     ball.bottom = ball.top + 20;
                     ClearCount = 0;
                     no_dead = false;
+                    esc_on = true;
                 }
             }
         }
         else if (Count == 5 && Stage == 7) {
+            esc_on = false;
+            no_dead = true;
+            if (ClearCount < 100) {
+                ClearCount += 1;
+                if (ClearCount > 50) {
+                    nb_ReSet(hWnd);
+                    Stage += 1;
+                    ball.left = XPOS(8.33);
+                    ball.top = YPOS(2.33);
+                    ball.right = ball.left + 20;
+                    ball.bottom = ball.top + 20;
+                    ClearCount = 0;
+                    no_dead = false;
+                    esc_on = true;
+                }
+            }
+        }
+        else if (Count == 3 && Stage == 8) {
+            esc_on = false;
             no_dead = true;
             if (ClearCount < 100) {
                 ClearCount += 1;
@@ -776,82 +816,82 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
                     ball.bottom = ball.top + 20;
                     ClearCount = 0;
                     no_dead = false;
-                }
-            }
-        }
-        else if (Count == 3 && Stage == 8) {
-            no_dead = true;
-            if (ClearCount < 100) {
-                ClearCount += 1;
-                if (ClearCount > 50) {
-                    nb_ReSet(hWnd);
-                    Stage += 1;
-                    ball.left = XPOS(8.33);
-                    ball.top = YPOS(2.33);
-                    ball.right = ball.left + 20;
-                    ball.bottom = ball.top + 20;
-                    ClearCount = 0;
-                    no_dead = false;
+                    esc_on = true;
                 }
             }
             }
         else if (Count == 8 && Stage == 9) {
+            esc_on = false;
             no_dead = true;
             if (ClearCount < 100) {
                 ClearCount += 1;
                 if (ClearCount > 50) {
                     nb_ReSet(hWnd);
                     Stage += 1;
-                    ball.left = XPOS(8.33);
-                    ball.top = YPOS(2.33);
+                    ball.left = XPOS(1.33);
+                    ball.top = YPOS(1.33);
                     ball.right = ball.left + 20;
                     ball.bottom = ball.top + 20;
                     ClearCount = 0;
                     no_dead = false;
+                    esc_on = true;
                 }
             }
-            }
-        //스테이지 클리어! 나중에 쓰자
-       /* else if (Count == 15 && Stage == 4)
-        {
-            nb_ReSet(hWnd);
-            KillTimer(hWnd, 1);
-            MBR = MessageBox(hWnd, L"스테이지 클리어! 처음부터 다시 하시겠습니까?", L"축하합니다!", MB_YESNO);
-            if (MBR == IDYES) {
-                Stage = 0;
-                Stop = false;
-                Stop2 = false;
-                Speed1 = 0;
-                Speed2 = 0;
-                K_Left = false;
-                K_Right = false;
+        }
+        else if (Count == 10 && Stage == 10) {
+            esc_on = false;
+            no_dead = true;
+            if (ClearCount < 100) {
+                ClearCount += 1;
+                if (ClearCount > 50) {
+                    no_dead = false;
+                    KillTimer(hWnd, 1);
+                    KillTimer(hWnd, 2);
+                    MBR = MessageBox(hWnd, L"스테이지 클리어! 처음부터 다시 하시겠습니까?", L"축하합니다!", MB_YESNO);
+                    if (MBR == IDYES) {
+                        nb_ReSet(hWnd);
+                        Stage = 0;
+                        Stop = false;
+                        Stop2 = false;
+                        Speed1 = 0;
+                        Speed2 = 0;
+                        K_Left = false;
+                        K_Right = false;
 
-                SetTimer(hWnd, 1, 1, NULL);
-                ball.left = XPOS(14.33);
-                ball.top = YPOS(9.33);
-                ball.right = ball.left + 20;
-                ball.bottom = ball.top + 20;
-                break;
-            }
-            else {
-                MBR = MessageBox(hWnd, L"메인화면으로 다시 가시겠습니까?", L"축하합니다!", MB_YESNO);
-                if (MBR == IDYES) {
-                    Stop = false;
-                    Stop2 = false;
-                    Speed1 = 0;
-                    Speed2 = 0;
-                    K_Left = false;
-                    K_Right = false;
-                    x = 0;
-                    y = 0;
-                    ReSet(hWnd);
-                    SetTimer(hWnd, 1, 1, NULL);
-                    Stage = 99;
-                    break;
+                        SetTimer(hWnd, 1, 1, NULL);
+                        SetTimer(hWnd, 2, 100, NULL);
+                        ball.left = XPOS(14.33);
+                        ball.top = YPOS(9.33);
+                        ball.right = ball.left + 20;
+                        ball.bottom = ball.top + 20;
+                        ClearCount = 0;
+                        esc_on = true;
+                        break;
+                    }
+                    else {
+                        MBR = MessageBox(hWnd, L"메인화면으로 다시 가시겠습니까?", L"축하합니다!", MB_YESNO);
+                        if (MBR == IDYES) {
+                            Stop = false;
+                            Stop2 = false;
+                            Speed1 = 0;
+                            Speed2 = 0;
+                            K_Left = false;
+                            K_Right = false;
+                            x = 0;
+                            y = 0;
+                            ReSet(hWnd);
+                            SetTimer(hWnd, 1, 1, NULL);
+                            SetTimer(hWnd, 2, 100, NULL);
+                            Stage = 99;
+                            ClearCount = 0;
+                            esc_on = true;
+                            break;
+                        }
+                        else { PostQuitMessage(0); break; }
+                    }
                 }
-                else { PostQuitMessage(0); break; }
             }
-        }*/
+            }
 
         //사망 판정 dead가 켜지고 코드 한바퀴 돈 후 위쪽 if (dead)
         if (ball.bottom > Dead || ball.left < XPOS(-1)) { //사망 판정
@@ -972,6 +1012,8 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
         //블럭 이미지 처리
         if (Stage >= 0 && Stage <= 12) {
             Img_Star(MemDC, MemDCw);
+            Img_Sidei(MemDC, MemDCw);
+            Img_Jumpi(MemDC, MemDCw);
             Img_Dart(MemDC, MemDCw);
             Img_Wall(MemDC, MemDCw);
             Img_Jw(MemDC, MemDCw);
@@ -983,8 +1025,6 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
             Img_Throm(MemDC, MemDCw);
             Img_Tele(MemDC, MemDCw);
             Img_Telew(MemDC, MemDCw);
-            Img_Sidei(MemDC, MemDCw);
-            Img_Jumpi(MemDC, MemDCw);
             Img_Move(MemDC, MemDCw);
             Img_Moves(MemDC, MemDCw);
             Img_EatStar(MemDC, MemDCw);

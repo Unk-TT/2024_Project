@@ -70,16 +70,64 @@ RECT S10_ee[] = {
      { XPOS(26), YPOS(8), RXPOS(27) + 1, BYPOS(9) + 1 },
      { XPOS(27), YPOS(8), RXPOS(28) + 1, BYPOS(9) + 1 },
      { XPOS(28), YPOS(8), RXPOS(29) + 1, BYPOS(9) + 1 },
-     { XPOS(29), YPOS(1), RXPOS(30) + 1, BYPOS(2) + 1 }, //
-     { XPOS(29), YPOS(2), RXPOS(30) + 1, BYPOS(3) + 1 },
-     { XPOS(29), YPOS(3), RXPOS(30) + 1, BYPOS(4) + 1 },
+     { XPOS(29), YPOS(3), RXPOS(30) + 1, BYPOS(4) + 1 }, //
      { XPOS(29), YPOS(4), RXPOS(30) + 1, BYPOS(5) + 1 },
      { XPOS(29), YPOS(5), RXPOS(30) + 1, BYPOS(6) + 1 },
      { XPOS(29), YPOS(6), RXPOS(30) + 1, BYPOS(7) + 1 },
      { XPOS(29), YPOS(7), RXPOS(30) + 1, BYPOS(8) + 1 },
      { XPOS(29), YPOS(8), RXPOS(30) + 1, BYPOS(9) + 1 },
 };
-RECT S11_ee[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
+RECT S11_ee[] = {
+    {XPOS(0), YPOS(0), RXPOS(1) + 1, BYPOS(1) + 1 }, // 가장 왼쪽
+    {XPOS(0), YPOS(6), RXPOS(1) + 1, BYPOS(7) + 1 },
+    {XPOS(0), YPOS(7), RXPOS(1) + 1, BYPOS(8) + 1 },
+    {XPOS(0), YPOS(8), RXPOS(1) + 1, BYPOS(9) + 1 },
+    {XPOS(0), YPOS(9), RXPOS(1) + 1, BYPOS(10) + 1 },
+    {XPOS(6), YPOS(2), RXPOS(7) + 1, BYPOS(3) + 1 }, //왼쪽
+    {XPOS(8), YPOS(3), RXPOS(9) + 1, BYPOS(4) + 1 },
+    {XPOS(8), YPOS(4), RXPOS(9) + 1, BYPOS(5) + 1 },
+    {XPOS(4), YPOS(10), RXPOS(5) + 1, BYPOS(11) + 1 },
+    {XPOS(7), YPOS(10), RXPOS(8) + 1, BYPOS(11) + 1 },
+    {XPOS(5), YPOS(12), RXPOS(6) + 1, BYPOS(13) + 1 },
+    {XPOS(6), YPOS(12), RXPOS(7) + 1, BYPOS(13) + 1 },
+    {XPOS(7), YPOS(12), RXPOS(8) + 1, BYPOS(13) + 1 },
+    {XPOS(12), YPOS(8), RXPOS(13) + 1, BYPOS(9) + 1 }, // 가운데 기둥
+    {XPOS(12), YPOS(9), RXPOS(13) + 1, BYPOS(10) + 1 },
+    {XPOS(12), YPOS(10), RXPOS(13) + 1, BYPOS(11) + 1 },
+    {XPOS(12), YPOS(11), RXPOS(13) + 1, BYPOS(12) + 1 },
+    {XPOS(12), YPOS(12), RXPOS(13) + 1, BYPOS(13) + 1 },
+    {XPOS(18), YPOS(6), RXPOS(19) + 1, BYPOS(7) + 1 }, //오른쪽
+    {XPOS(19), YPOS(6), RXPOS(20) + 1, BYPOS(7) + 1 },
+    {XPOS(20), YPOS(6), RXPOS(21) + 1, BYPOS(7) + 1 },
+    {XPOS(15), YPOS(9), RXPOS(16) + 1, BYPOS(10) + 1 },
+    {XPOS(16), YPOS(12), RXPOS(17) + 1, BYPOS(13) + 1 },
+    {XPOS(17), YPOS(9), RXPOS(18) + 1, BYPOS(10) + 1 },
+    {XPOS(18), YPOS(12), RXPOS(19) + 1, BYPOS(13) + 1 },
+    {XPOS(19), YPOS(9), RXPOS(20) + 1, BYPOS(10) + 1 },
+    {XPOS(20), YPOS(12), RXPOS(21) + 1, BYPOS(13) + 1 },
+    {XPOS(22), YPOS(9), RXPOS(23) + 1, BYPOS(10) + 1 }, //조그만한 기둥
+    {XPOS(22), YPOS(10), RXPOS(23) + 1, BYPOS(11) + 1 },
+    {XPOS(22), YPOS(11), RXPOS(23) + 1, BYPOS(12) + 1 },
+    {XPOS(22), YPOS(12), RXPOS(23) + 1, BYPOS(13) + 1 },
+    {XPOS(24), YPOS(6), RXPOS(25) + 1, BYPOS(7) + 1}, //오른쪽 조금 짧은 블럭
+    {XPOS(24), YPOS(7), RXPOS(25) + 1, BYPOS(8) + 1 },
+    {XPOS(24), YPOS(8), RXPOS(25) + 1, BYPOS(9) + 1 },
+    {XPOS(24), YPOS(9), RXPOS(25) + 1, BYPOS(10) + 1 },
+    {XPOS(24), YPOS(10), RXPOS(25) + 1, BYPOS(11) + 1 },
+    {XPOS(24), YPOS(12), RXPOS(25) + 1, BYPOS(13) + 1 },
+    {XPOS(27), YPOS(4), RXPOS(28) + 1, BYPOS(5) + 1 },//오른쪽 긴 블럭
+    {XPOS(27), YPOS(5), RXPOS(28) + 1, BYPOS(6) + 1 },
+    {XPOS(27), YPOS(6), RXPOS(28) + 1, BYPOS(7) + 1 },
+    {XPOS(27), YPOS(7), RXPOS(28) + 1, BYPOS(8) + 1 },
+    {XPOS(27), YPOS(8), RXPOS(28) + 1, BYPOS(9) + 1 },
+    {XPOS(27), YPOS(9), RXPOS(28) + 1, BYPOS(10) + 1 },
+    {XPOS(27), YPOS(10), RXPOS(28) + 1, BYPOS(11) + 1 },
+    {XPOS(27), YPOS(11), RXPOS(28) + 1, BYPOS(12) + 1 },
+    {XPOS(27), YPOS(12), RXPOS(28) + 1, BYPOS(13) + 1 },
+    {XPOS(27), YPOS(13), RXPOS(28) + 1, BYPOS(14) + 1 },
+    {XPOS(26), YPOS(8), RXPOS(27) + 1, BYPOS(9) + 1 }, // 짜투리
+    {XPOS(25), YPOS(5), RXPOS(26) + 1, BYPOS(6) + 1 },
+};
 RECT S12_ee[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
 RECT S13_ee[] = { 
     {XPOS(11), YPOS(7), RXPOS(12) + 1, BYPOS(8) + 1 },

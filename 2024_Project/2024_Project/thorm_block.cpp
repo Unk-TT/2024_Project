@@ -74,7 +74,22 @@ RECT S9_tb[] = {
     { XPOS(22), YPOS(7), RXPOS(23) + 1, BYPOS(8) + 1 },
 };
 RECT S10_tb[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
-RECT S11_tb[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
+RECT S11_tb[] = {
+    {XPOS(4), YPOS(4), RXPOS(5) + 1, BYPOS(5) + 1 },
+    {XPOS(5), YPOS(4), RXPOS(6) + 1, BYPOS(5) + 1 },
+    {XPOS(10), YPOS(2), RXPOS(11) + 1, BYPOS(3) + 1 },
+    {XPOS(10), YPOS(4), RXPOS(11) + 1, BYPOS(5) + 1 },
+    {XPOS(11), YPOS(5), RXPOS(12) + 1, BYPOS(6) + 1 },
+    {XPOS(11), YPOS(7), RXPOS(12) + 1, BYPOS(8) + 1 },
+    {XPOS(2), YPOS(9), RXPOS(3) + 1, BYPOS(10) + 1 }, //
+    {XPOS(3), YPOS(9), RXPOS(4) + 1, BYPOS(10) + 1 },
+    {XPOS(5), YPOS(9), RXPOS(6) + 1, BYPOS(10) + 1 },
+    {XPOS(6), YPOS(9), RXPOS(7) + 1, BYPOS(10) + 1 },
+    {XPOS(8), YPOS(9), RXPOS(9) + 1, BYPOS(10) + 1 },
+    {XPOS(9), YPOS(9), RXPOS(10) + 1, BYPOS(10) + 1 },
+    {XPOS(2), YPOS(13), RXPOS(3) + 1, BYPOS(14) + 1 },
+    {XPOS(28), YPOS(12), RXPOS(29) + 1, BYPOS(13) + 1 },
+};
 RECT S12_tb[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
 RECT S13_tb[] = {
     {XPOS(20), YPOS(13), RXPOS(21) + 1, BYPOS(14) + 1 },
@@ -154,7 +169,22 @@ RECT S9_tbw[] = {
     { XPOS(22), YPOS(7.5), RXPOS(23) + 1, BYPOS(8) + 1 },
 };
 RECT S10_tbw[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
-RECT S11_tbw[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
+RECT S11_tbw[] = {
+    {XPOS(4), YPOS(4.5), RXPOS(5) + 1, BYPOS(5) + 1 },
+    {XPOS(5), YPOS(4.5), RXPOS(6) + 1, BYPOS(5) + 1 },
+    {XPOS(10), YPOS(2.5), RXPOS(11) + 1, BYPOS(3) + 1 },
+    {XPOS(10), YPOS(4.5), RXPOS(11) + 1, BYPOS(5) + 1 },
+    {XPOS(11), YPOS(5.5), RXPOS(12) + 1, BYPOS(6) + 1 },
+    {XPOS(11), YPOS(7.5), RXPOS(12) + 1, BYPOS(8) + 1 },
+    {XPOS(2), YPOS(9.5), RXPOS(3) + 1, BYPOS(10) + 1 }, //
+    {XPOS(3), YPOS(9.5), RXPOS(4) + 1, BYPOS(10) + 1 },
+    {XPOS(5), YPOS(9.5), RXPOS(6) + 1, BYPOS(10) + 1 },
+    {XPOS(6), YPOS(9.5), RXPOS(7) + 1, BYPOS(10) + 1 },
+    {XPOS(8), YPOS(9.5), RXPOS(9) + 1, BYPOS(10) + 1 },
+    {XPOS(9), YPOS(9.5), RXPOS(10) + 1, BYPOS(10) + 1 },
+    {XPOS(2), YPOS(13.5), RXPOS(3) + 1, BYPOS(14) + 1 },
+    {XPOS(28), YPOS(12.5), RXPOS(29) + 1, BYPOS(13) + 1 },
+};
 RECT S12_tbw[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
 RECT S13_tbw[] = {
     {XPOS(20), YPOS(13.5), RXPOS(21) + 1, BYPOS(14) + 1 },
@@ -235,7 +265,22 @@ RECT S9_tbt[] = {
     { XPOS(22), YPOS(7.2), RXPOS(23) + 1, BYPOS(7.5) + 1 },
 };
 RECT S10_tbt[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
-RECT S11_tbt[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
+RECT S11_tbt[] = {
+    {XPOS(4), YPOS(4,2), RXPOS(5) + 1, BYPOS(4.5) + 1 },
+    {XPOS(5), YPOS(4,2), RXPOS(6) + 1, BYPOS(4.5) + 1 },
+    {XPOS(10), YPOS(2,2), RXPOS(11) + 1, BYPOS(2.5) + 1 },
+    {XPOS(10), YPOS(4,2), RXPOS(11) + 1, BYPOS(4.5) + 1 },
+    {XPOS(11), YPOS(5,2), RXPOS(12) + 1, BYPOS(5.5) + 1 },
+    {XPOS(11), YPOS(7,2), RXPOS(12) + 1, BYPOS(7.5) + 1 },
+    {XPOS(2), YPOS(9,2), RXPOS(3) + 1, BYPOS(9.5) + 1 }, //
+    {XPOS(3), YPOS(9,2), RXPOS(4) + 1, BYPOS(9.5) + 1 },
+    {XPOS(5), YPOS(9,2), RXPOS(6) + 1, BYPOS(9.5) + 1 },
+    {XPOS(6), YPOS(9,2), RXPOS(7) + 1, BYPOS(9.5) + 1 },
+    {XPOS(8), YPOS(9,2), RXPOS(9) + 1, BYPOS(9.5) + 1 },
+    {XPOS(9), YPOS(9,2), RXPOS(10) + 1, BYPOS(9.5) + 1 },
+    {XPOS(2), YPOS(13,2), RXPOS(3) + 1, BYPOS(13.5) + 1 },
+    {XPOS(28), YPOS(12,2), RXPOS(29) + 1, BYPOS(12.5) + 1 },
+};
 RECT S12_tbt[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
 RECT S13_tbt[] = {
     {XPOS(20), YPOS(13.2), RXPOS(21) + 1, BYPOS(13.5) + 1 },

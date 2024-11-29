@@ -17,7 +17,7 @@ RECT S7_si[] = { XPOS(15), YPOS(12), RXPOS(16) + 1, BYPOS(13) + 1 };
 RECT S8_si[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
 RECT S9_si[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
 RECT S10_si[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
-RECT S11_si[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
+RECT S11_si[] = { XPOS(16), YPOS(5), RXPOS(17) + 1, BYPOS(6) + 1 };
 RECT S12_si[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
 RECT S13_si[] = { XPOS(16), YPOS(13), RXPOS(17) + 1, BYPOS(14) + 1 };
 

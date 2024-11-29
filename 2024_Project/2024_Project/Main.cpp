@@ -12,23 +12,24 @@ extern int b_Width;  // 볼 가로 크기
 extern int b_Height; // 볼 세로 크기
 extern int bF_frame;   // 볼 현재 프레임
 extern int bT_frame; // 볼 총 프레임 개수
+extern bool Stop;
+extern bool Stop2;
 RECT B_ball[] = { 0, 0, 0, 0 };
 
 RECT S_Start_B[] = {
-    {XPOS(-99), YPOS(-99), XPOS(-99) + 20 , YPOS(-99) + 20},
-    {XPOS(14.33), YPOS(7.33), XPOS(14.33) + 20 , YPOS(7.33) + 20},
-    { XPOS(11.33), YPOS(11.33), XPOS(11.33) + 20 , YPOS(11.33) + 20 },
-    { XPOS(9.33), YPOS(4.33), XPOS(9.33) + 20 , YPOS(4.33) + 20 },
-    { XPOS(6.33), YPOS(0.33), XPOS(6.33) + 20 , YPOS(0.33) + 20 },
-    { XPOS(4.33), YPOS(7.33), XPOS(4.33) + 20 , YPOS(7.33) + 20 },
-    { XPOS(4.33), YPOS(1.33), XPOS(4.33) + 20 , YPOS(1.33) + 20 },
-    { XPOS(4.33), YPOS(9.33), XPOS(4.33) + 20 , YPOS(9.33) + 20 },
-    { XPOS(12.33), YPOS(5.33), XPOS(12.33) + 20 , YPOS(5.33) + 20 },
-    { XPOS(8.33), YPOS(2.33), XPOS(8.33) + 20 , YPOS(2.33) + 20 },
-    { XPOS(14.33), YPOS(6.33), XPOS(14.33) + 20 , YPOS(6.33) + 20 },
-    { XPOS(0.33), YPOS(1.33), XPOS(0.33) + 20 , YPOS(1.33) + 20 },
-    { XPOS(0.33), YPOS(1.33), XPOS(0.33) + 20 , YPOS(1.33) + 20 },
-    { XPOS(13.33), YPOS(13.33), XPOS(13.33) + 20 , YPOS(13.33) + 20 },
+    {XPOS(-99), YPOS(-99), XPOS(-99) + 20 , YPOS(-99) + 20}, //99
+    {XPOS(14.33), YPOS(7.33), XPOS(14.33) + 20 , YPOS(7.33) + 20}, //0
+    { XPOS(11.33), YPOS(11.33), XPOS(11.33) + 20 , YPOS(11.33) + 20 }, //1
+    { XPOS(9.33), YPOS(4.33), XPOS(9.33) + 20 , YPOS(4.33) + 20 }, //2
+    { XPOS(6.33), YPOS(0.33), XPOS(6.33) + 20 , YPOS(0.33) + 20 }, //3
+    { XPOS(4.33), YPOS(7.33), XPOS(4.33) + 20 , YPOS(7.33) + 20 }, //4
+    { XPOS(4.33), YPOS(1.33), XPOS(4.33) + 20 , YPOS(1.33) + 20 }, //5
+    { XPOS(4.33), YPOS(9.33), XPOS(4.33) + 20 , YPOS(9.33) + 20 }, //6
+    { XPOS(12.33), YPOS(5.33), XPOS(12.33) + 20 , YPOS(5.33) + 20 }, //7
+    { XPOS(8.33), YPOS(2.33), XPOS(8.33) + 20 , YPOS(2.33) + 20 }, //8
+    { XPOS(14.33), YPOS(6.33), XPOS(14.33) + 20 , YPOS(6.33) + 20 }, //9
+    { XPOS(1.33), YPOS(1.33), XPOS(1.33) + 20 , YPOS(1.33) + 20 }, //10
+    { XPOS(13.33), YPOS(13.33), XPOS(13.33) + 20 , YPOS(13.33) + 20 }, //12
 };
 
 RECT Select_Re[] = {
@@ -44,7 +45,6 @@ RECT Select_Re[] = {
     {370, 489, 555, 674},
     {615, 489, 800, 674},
     {860, 489, 1045, 674},
-    {1105, 489, 1290, 674},
     {1350, 489, 1535, 674},
 };
 
@@ -61,7 +61,6 @@ int Select_St[] = {
     8,
     9,
     10,
-    98,
     12,
 };
 
@@ -84,14 +83,17 @@ void MainSelect(HDC MemDC) {
         MoveToEx(MemDC, x, y, NULL);
         RECT Mouse{ x, y, x + 1, y + 1 };
         RECT rect;
-        for (int i = 0; i < 14; i++) {
+        for (int i = 0; i < 13; i++) {
             RECT Sel = Select_Re[i];
             if (IntersectRect(&rect, &Sel, &Mouse)) {
                 PlaySound(TEXT("Select.wav"), NULL, SND_FILENAME | SND_ASYNC);
                 Stage = Select_St[i];
+                nb_ReSet(hWnd);
                 ball = S_Start_B[i];
                 Speed1 = 0;
                 Speed2 = 0;
+                Stop = false;
+                Stop2 = false;
                 x = 0;
                 y = 0;
             }
@@ -105,8 +107,25 @@ void MainSelect(HDC MemDC) {
         if (IntersectRect(&rect, &Mainb, &Mouse)) {
             PlaySound(TEXT("Select.wav"), NULL, SND_FILENAME | SND_ASYNC);
             Stage = 11;
+            nb_ReSet(hWnd);
+            ball = S_Start_B[12];
+            Speed1 = 0;
+            Speed2 = 0;
+            Stop = false;
+            Stop2 = false;
             ex = 0;
             ey = 0;
+        }
+    }
+    if (Stage == 98) {
+        MoveToEx(MemDC, x, y, NULL);
+        RECT Mouse{ x, y, x + 1, y + 1 };
+        RECT Mainb = { 1105, 489, 1290, 674 };
+        RECT rect;
+        if (IntersectRect(&rect, &Mainb, &Mouse)) {
+            PlaySound(TEXT("Select.wav"), NULL, SND_FILENAME | SND_ASYNC);
+            x = 0;
+            y = 0;
         }
     }
 }

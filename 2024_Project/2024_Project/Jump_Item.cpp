@@ -17,7 +17,10 @@ RECT S7_ji[] = {
 RECT S8_ji[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
 RECT S9_ji[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
 RECT S10_ji[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
-RECT S11_ji[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
+RECT S11_ji[] = { 
+    {XPOS(19), YPOS(12), RXPOS(20) + 1, BYPOS(13) + 1 },
+    {XPOS(26), YPOS(0), RXPOS(27) + 1, BYPOS(1) + 1 },
+};
 RECT S12_ji[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
 RECT S13_ji[] = { XPOS(5), YPOS(13), RXPOS(6) + 1, BYPOS(14) + 1 };
 

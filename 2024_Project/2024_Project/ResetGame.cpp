@@ -67,7 +67,18 @@ RECT New_S10_ss[] = {
     { XPOS(28), YPOS(12), RXPOS(29) + 1, BYPOS(13) + 1},
     { XPOS(4), YPOS(12), RXPOS(5) + 1, BYPOS(13) + 1},
 };
-RECT New_S11_ss[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
+RECT New_S11_ss[] = {
+    { XPOS(2), YPOS(0), RXPOS(3) + 1, BYPOS(1) + 1}, // 좌측
+    { XPOS(3), YPOS(5), RXPOS(4) + 1, BYPOS(6) + 1},
+    { XPOS(13), YPOS(12), RXPOS(14) + 1, BYPOS(13) + 1},
+    { XPOS(9), YPOS(2), RXPOS(10) + 1, BYPOS(3) + 1},
+    { XPOS(22), YPOS(7), RXPOS(23) + 1, BYPOS(8) + 1}, // 중단
+    { XPOS(28), YPOS(6), RXPOS(29) + 1, BYPOS(7) + 1}, // 우측
+    { XPOS(28), YPOS(7), RXPOS(29) + 1, BYPOS(8) + 1},
+    { XPOS(28), YPOS(8), RXPOS(29) + 1, BYPOS(9) + 1},
+    { XPOS(28), YPOS(9), RXPOS(29) + 1, BYPOS(10) + 1},
+    { XPOS(28), YPOS(10), RXPOS(29) + 1, BYPOS(11) + 1},
+};
 RECT New_S12_ss[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
 RECT New_S13_ss[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
 
@@ -176,7 +187,19 @@ RECT New_S10_bb[] = {
     { XPOS(4), YPOS(7), RXPOS(5) + 1, BYPOS(8) + 1},
     { XPOS(5), YPOS(7), RXPOS(6) + 1, BYPOS(8) + 1},
 };
-RECT New_S11_bb[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
+RECT New_S11_bb[] = {
+    { XPOS(5), YPOS(1), RXPOS(6) + 1, BYPOS(2) + 1}, // 상단
+    { XPOS(7), YPOS(2), RXPOS(8) + 1, BYPOS(3) + 1},
+    { XPOS(15), YPOS(13), RXPOS(16) + 1, BYPOS(14) + 1}, //오른쪽 하단
+    { XPOS(17), YPOS(13), RXPOS(18) + 1, BYPOS(14) + 1},
+    { XPOS(19), YPOS(13), RXPOS(20) + 1, BYPOS(14) + 1},
+    { XPOS(23), YPOS(13), RXPOS(24) + 1, BYPOS(14) + 1},
+    { XPOS(25), YPOS(13), RXPOS(26) + 1, BYPOS(14) + 1},
+    { XPOS(16), YPOS(10), RXPOS(17) + 1, BYPOS(11) + 1}, //오른쪽 중단
+    { XPOS(18), YPOS(10), RXPOS(19) + 1, BYPOS(11) + 1},
+    { XPOS(23), YPOS(8), RXPOS(24) + 1, BYPOS(9) + 1},
+    { XPOS(28), YPOS(4), RXPOS(29) + 1, BYPOS(5) + 1},
+};
 RECT New_S12_bb[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
 RECT New_S13_bb[] = { 
     {XPOS(18), YPOS(10), RXPOS(19) + 1, BYPOS(11) + 1 },
@@ -254,7 +277,7 @@ RECT S7_sin[] = { XPOS(15), YPOS(12), RXPOS(16) + 1, BYPOS(13) + 1 };
 RECT S8_sin[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
 RECT S9_sin[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
 RECT S10_sin[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
-RECT S11_sin[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
+RECT S11_sin[] = { XPOS(16), YPOS(5), RXPOS(17) + 1, BYPOS(6) + 1 };
 RECT S12_sin[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
 RECT S13_sin[] = { XPOS(16), YPOS(13), RXPOS(17) + 1, BYPOS(14) + 1 };
 
@@ -331,7 +354,10 @@ RECT S7_jin[] = {
 RECT S8_jin[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
 RECT S9_jin[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
 RECT S10_jin[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
-RECT S11_jin[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
+RECT S11_jin[] = {
+    {XPOS(19), YPOS(12), RXPOS(20) + 1, BYPOS(13) + 1 },
+    {XPOS(26), YPOS(0), RXPOS(27) + 1, BYPOS(1) + 1 },
+};
 RECT S12_jin[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
 RECT S13_jin[] = { XPOS(5), YPOS(13), RXPOS(6) + 1, BYPOS(14) + 1 };
 
@@ -402,8 +428,8 @@ RECT S7_Start = { XPOS(4.33), YPOS(9.33), XPOS(4.33) + 20 , YPOS(9.33) + 20 };
 RECT S8_Start = { XPOS(12.33), YPOS(5.33), XPOS(12.33) + 20 , YPOS(5.33) + 20 };
 RECT S9_Start = { XPOS(8.33), YPOS(2.33), XPOS(8.33) + 20 , YPOS(2.33) + 20 };
 RECT S10_Start = { XPOS(14.33), YPOS(6.33), XPOS(14.33) + 20 , YPOS(6.33) + 20 };
-RECT S11_Start = { XPOS(0.33), YPOS(1.33), XPOS(0.33) + 20 , YPOS(1.33) + 20 };
-RECT S12_Start = { XPOS(0.33), YPOS(1.33), XPOS(0.33) + 20 , YPOS(1.33) + 20 };
+RECT S11_Start = { XPOS(1.33), YPOS(1.33), XPOS(1.33) + 20 , YPOS(1.33) + 20 };
+RECT S12_Start = { XPOS(13.33), YPOS(10.33), XPOS(13.33) + 20 , YPOS(10.33) + 20 };
 RECT S13_Start = { XPOS(13.33), YPOS(13.33), XPOS(13.33) + 20 , YPOS(13.33) + 20 };
 
 RECT Start_b[] = {
@@ -417,8 +443,8 @@ RECT Start_b[] = {
     S8_Start,
     S9_Start,
     S10_Start,
-    S1_Start,
-    S2_Start,
+    S11_Start,
+    S12_Start,
     S13_Start,
 };
 

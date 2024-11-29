@@ -27,7 +27,6 @@ RECT S9_jw[] = {
     { XPOS(19), YPOS(7), RXPOS(20) + 1, BYPOS(8) + 1 },
     { XPOS(23), YPOS(7), RXPOS(24) + 1, BYPOS(8) + 1 },
     { XPOS(7), YPOS(13), RXPOS(8) + 1, BYPOS(14) + 1 },
-
 };
 RECT S10_jw[] = {
     { XPOS(0), YPOS(10), RXPOS(1) + 1, BYPOS(11) + 1 },
@@ -38,7 +37,12 @@ RECT S10_jw[] = {
     { XPOS(3), YPOS(6), RXPOS(4) + 1, BYPOS(7) + 1 },
 
 };
-RECT S11_jw[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
+RECT S11_jw[] = {
+    { XPOS(14), YPOS(10), RXPOS(15) + 1, BYPOS(11) + 1 },
+    { XPOS(26), YPOS(13), RXPOS(27) + 1, BYPOS(14) + 1 },
+    { XPOS(26), YPOS(7), RXPOS(27) + 1, BYPOS(8) + 1 },
+    { XPOS(25), YPOS(10), RXPOS(26) + 1, BYPOS(11) + 1 },
+};
 RECT S12_jw[] = { XPOS(-99), YPOS(-99), RXPOS(-99) + 1, BYPOS(-99) + 1 };
 RECT S13_jw[] = { 
     {XPOS(-1), YPOS(13), RXPOS(0) + 1, BYPOS(14) + 1},
